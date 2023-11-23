@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "uart_tx_triger",
+					"strict" : false
+				},
+				{
+					"name" : "BiPhase_tx_out",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "detected_bit",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

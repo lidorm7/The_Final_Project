@@ -1,0 +1,7 @@
+
+State Machine - |Led_Max_10|LED
+Name LED.s3 LED.s2 LED.s1 LED.s0 
+LED.s0 0 0 0 0 
+LED.s1 0 0 1 1 
+LED.s2 0 1 0 1 
+LED.s3 1 0 0 1 

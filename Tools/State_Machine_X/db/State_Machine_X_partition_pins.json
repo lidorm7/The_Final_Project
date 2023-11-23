@@ -1,0 +1,21 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "flag1",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

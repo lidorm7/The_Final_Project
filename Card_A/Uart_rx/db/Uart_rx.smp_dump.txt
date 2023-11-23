@@ -1,0 +1,9 @@
+
+State Machine - |Uart_rx|state_rx
+Name state_rx.s5 state_rx.s4 state_rx.s3 state_rx.s2 state_rx.s1 state_rx.s0 
+state_rx.s0 0 0 0 0 0 0 
+state_rx.s1 0 0 0 0 1 1 
+state_rx.s2 0 0 0 1 0 1 
+state_rx.s3 0 0 1 0 0 1 
+state_rx.s4 0 1 0 0 0 1 
+state_rx.s5 1 0 0 0 0 1 

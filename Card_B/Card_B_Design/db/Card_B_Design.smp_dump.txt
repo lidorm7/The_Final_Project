@@ -1,0 +1,36 @@
+
+State Machine - |Card_B_Design|RGB:RGB_Leds|state_leds
+Name state_leds.s9 state_leds.s8 state_leds.s7 state_leds.s6 state_leds.s5a state_leds.s5 state_leds.s4 state_leds.s3 state_leds.s2 state_leds.s1 state_leds.s0 
+state_leds.s0 0 0 0 0 0 0 0 0 0 0 0 
+state_leds.s1 0 0 0 0 0 0 0 0 0 1 1 
+state_leds.s2 0 0 0 0 0 0 0 0 1 0 1 
+state_leds.s3 0 0 0 0 0 0 0 1 0 0 1 
+state_leds.s4 0 0 0 0 0 0 1 0 0 0 1 
+state_leds.s5 0 0 0 0 0 1 0 0 0 0 1 
+state_leds.s5a 0 0 0 0 1 0 0 0 0 0 1 
+state_leds.s6 0 0 0 1 0 0 0 0 0 0 1 
+state_leds.s7 0 0 1 0 0 0 0 0 0 0 1 
+state_leds.s8 0 1 0 0 0 0 0 0 0 0 1 
+state_leds.s9 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Card_B_Design|Data_Orgenizer:DO|state_Do
+Name state_Do.s9 state_Do.s8 state_Do.s7 state_Do.s6 state_Do.s5a state_Do.s5 state_Do.s4 state_Do.s3 state_Do.s2 state_Do.s1 state_Do.s0 
+state_Do.s0 0 0 0 0 0 0 0 0 0 0 0 
+state_Do.s1 0 0 0 0 0 0 0 0 0 1 1 
+state_Do.s2 0 0 0 0 0 0 0 0 1 0 1 
+state_Do.s3 0 0 0 0 0 0 0 1 0 0 1 
+state_Do.s4 0 0 0 0 0 0 1 0 0 0 1 
+state_Do.s5 0 0 0 0 0 1 0 0 0 0 1 
+state_Do.s5a 0 0 0 0 1 0 0 0 0 0 1 
+state_Do.s6 0 0 0 1 0 0 0 0 0 0 1 
+state_Do.s7 0 0 1 0 0 0 0 0 0 0 1 
+state_Do.s8 0 1 0 0 0 0 0 0 0 0 1 
+state_Do.s9 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Card_B_Design|CRC8BIT:CRC8|state_crc
+Name state_crc.s4 state_crc.s3 state_crc.s2 state_crc.s1 state_crc.s0 
+state_crc.s0 0 0 0 0 0 
+state_crc.s1 0 0 0 1 1 
+state_crc.s2 0 0 1 0 1 
+state_crc.s3 0 1 0 0 1 
+state_crc.s4 1 0 0 0 1 

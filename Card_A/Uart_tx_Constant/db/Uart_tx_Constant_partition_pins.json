@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "uart_tx_triger",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "start_triger",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

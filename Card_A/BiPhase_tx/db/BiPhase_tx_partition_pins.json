@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "BiPhase_tx_out",
+					"strict" : false
+				},
+				{
+					"name" : "start_strobe_tx",
+					"strict" : false
+				},
+				{
+					"name" : "read_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "read_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "read_address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "read_address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "read_address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "read_address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rd",
+					"strict" : false
+				},
+				{
+					"name" : "toggle",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_ram[7]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_ram[6]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_ram[5]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_ram[4]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_ram[3]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_ram[2]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_ram[1]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_ram[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

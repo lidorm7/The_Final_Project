@@ -1,0 +1,131 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity RGB is
+    port(
+        resetn          : in std_logic;
+        sysclk          : in std_logic;
+        load_leds       : in std_logic;
+        green_leds      : in std_logic_vector(7 downto 0);
+        rgb_leds        : in std_logic_vector(95 downto 0)
+        OB_LED_RGB_DIN  : out std_logic;
+        LED_1           : out std_logic;
+        LED_2           : out std_logic;
+        LED_3           : out std_logic
+    );
+end RGB;
+
+architecture ab of RGB is
+
+    -- set components
+
+    -- set signals
+
+    type state is (s0,s1,s2,s3,s4,s5,s5a,s6,s7,s8,s9);
+    signal state_leds : state;
+
+    signal sig_cnt              : std_logic_vector(99 downto 0);
+    signal sig_cnt_loop         : std_logic_vector(99 downto 0);
+    signal sig_cnt_delay        : std_logic_vector(20000 downto 0);
+    signal sig_shift_led_rgb    : std_logic_vector(95 downto 0);
+    signal sig_OB_LED_RGB_DIN   : std_logic;
+    signal sig_bit              : std_logic;
+
+    begin
+
+        -- set port maps
+
+        -- set processes
+
+        set_leds : process( resetn, sysclk )
+        begin
+            if resetn = '0' then
+                state_leds          <= s0;
+                sig_cnt_delay       <= (others => '0');
+                sig_cnt             <= (others => '0');
+                sig_OB_LED_RGB_DIN  <= '0';
+                sig_shift_led_rgb   <= (others => '0');
+                sig_cnt_loop        <= (others => '0');
+
+            elsif rising_edge(sysclk) then
+                OB_LED_RGB_DIN <= sig_OB_LED_RGB_DIN;
+                case state_leds is 
+
+                    when s0 => 
+                    sig_OB_LED_RGB_DIN <= '0';
+                    sig_cnt_delay <= sig_cnt_delay + 1;
+                    if sig_cnt_delay = 15000 then
+                        sig_cnt_delay <= (others => '0');
+                        state_leds    <= s1;
+                    end if;
+                    
+                    when s1 =>
+                    if load_leds = '0' then
+                        sig_shift_led_rgb <= rgb_leds;
+                        LED_1       <= green_leds[0];
+                        LED_2       <= green_leds[1];
+                        LED_3       <= green_leds[2];
+                        state_leds  <= s2;
+                    end if;
+                    
+                    when s2 => 
+                    sig_bit     <= sig_shift_led_rgb(95);
+                    state_leds  <= s3;
+
+                    when s3 => 
+                    sig_shift_led_rgb <= sig_shift_led_rgb(94 downto 0) & '0';
+                    state_leds  <= s4;
+
+                    when s4 => 
+                    sig_cnt_loop <= sig_cnt_loop + 1;
+                    if sig_cnt_loop = 95 then
+                        state_leds      <= s0;
+                        sig_cnt_loop    <= (others => '0');
+                    else 
+                        state_leds  <= s5;
+                    end if;
+
+                    when s5 =>
+                    sig_OB_LED_RGB_DIN <= '1';
+                    if sig_bit = '0' then
+                        state_leds  <= s6;
+                    end if;
+                    if sig_bit = '1' then
+                        state_leds  <= s7;
+                    end if;  
+                    
+                    when s6 =>
+                    -- T0H
+                    sig_cnt <= sig_cnt + 1;
+                    if sig_cnt = 14 then
+                        sig_OB_LED_RGB_DIN <= '0';
+                    end if;
+                    -- T0L
+                    if sig_cnt = 50 then
+                        sig_cnt <= (others => '0');
+                        state_leds  <= s2;
+                    end if;
+
+                    when s7 =>
+                    -- T1H
+                    sig_cnt <= sig_cnt + 1;
+                    if sig_cnt = 36 then
+                        sig_OB_LED_RGB_DIN <= '0';
+                    end if;
+                    -- T1L
+                    if sig_cnt = 50 then
+                        sig_cnt <= (others => '0');
+                        state_leds  <= s2;
+                    end if;
+
+                    when others =>
+                    state_leds  <= s0;
+
+                end case;
+            end if;
+
+        end process set_leds;
+
+end ab;

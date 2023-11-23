@@ -1,0 +1,34 @@
+
+State Machine - |Test_CRC_DO|state_t
+Name state_t.s7 state_t.s6 state_t.s5 state_t.s4 state_t.s3 state_t.s2 state_t.s1 state_t.s0 state_t.s0a 
+state_t.s0a 0 0 0 0 0 0 0 0 0 
+state_t.s0 0 0 0 0 0 0 0 1 1 
+state_t.s1 0 0 0 0 0 0 1 0 1 
+state_t.s2 0 0 0 0 0 1 0 0 1 
+state_t.s3 0 0 0 0 1 0 0 0 1 
+state_t.s4 0 0 0 1 0 0 0 0 1 
+state_t.s5 0 0 1 0 0 0 0 0 1 
+state_t.s6 0 1 0 0 0 0 0 0 1 
+state_t.s7 1 0 0 0 0 0 0 0 1 
+
+State Machine - |Test_CRC_DO|Data_Orgenizer:og|state_Do
+Name state_Do.s9 state_Do.s8 state_Do.s7 state_Do.s6 state_Do.s5a state_Do.s5 state_Do.s4 state_Do.s3 state_Do.s2 state_Do.s1 state_Do.s0 
+state_Do.s0 0 0 0 0 0 0 0 0 0 0 0 
+state_Do.s1 0 0 0 0 0 0 0 0 0 1 1 
+state_Do.s2 0 0 0 0 0 0 0 0 1 0 1 
+state_Do.s3 0 0 0 0 0 0 0 1 0 0 1 
+state_Do.s4 0 0 0 0 0 0 1 0 0 0 1 
+state_Do.s5 0 0 0 0 0 1 0 0 0 0 1 
+state_Do.s5a 0 0 0 0 1 0 0 0 0 0 1 
+state_Do.s6 0 0 0 1 0 0 0 0 0 0 1 
+state_Do.s7 0 0 1 0 0 0 0 0 0 0 1 
+state_Do.s8 0 1 0 0 0 0 0 0 0 0 1 
+state_Do.s9 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Test_CRC_DO|CRC8BIT:crc|state_crc
+Name state_crc.s4 state_crc.s3 state_crc.s2 state_crc.s1 state_crc.s0 
+state_crc.s0 0 0 0 0 0 
+state_crc.s1 0 0 0 1 1 
+state_crc.s2 0 0 1 0 1 
+state_crc.s3 0 1 0 0 1 
+state_crc.s4 1 0 0 0 1 

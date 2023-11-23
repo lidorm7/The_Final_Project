@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "OB_LED_RGB_Din",
+					"strict" : false
+				},
+				{
+					"name" : "LED_1",
+					"strict" : false
+				},
+				{
+					"name" : "LED_2",
+					"strict" : false
+				},
+				{
+					"name" : "LED_3",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "BiPhase_rx_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

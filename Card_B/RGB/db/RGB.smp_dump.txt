@@ -1,0 +1,14 @@
+
+State Machine - |RGB|state_leds
+Name state_leds.s9 state_leds.s8 state_leds.s7 state_leds.s6 state_leds.s5a state_leds.s5 state_leds.s4 state_leds.s3 state_leds.s2 state_leds.s1 state_leds.s0 
+state_leds.s0 0 0 0 0 0 0 0 0 0 0 0 
+state_leds.s1 0 0 0 0 0 0 0 0 0 1 1 
+state_leds.s2 0 0 0 0 0 0 0 0 1 0 1 
+state_leds.s3 0 0 0 0 0 0 0 1 0 0 1 
+state_leds.s4 0 0 0 0 0 0 1 0 0 0 1 
+state_leds.s5 0 0 0 0 0 1 0 0 0 0 1 
+state_leds.s5a 0 0 0 0 1 0 0 0 0 0 1 
+state_leds.s6 0 0 0 1 0 0 0 0 0 0 1 
+state_leds.s7 0 0 1 0 0 0 0 0 0 0 1 
+state_leds.s8 0 1 0 0 0 0 0 0 0 0 1 
+state_leds.s9 1 0 0 0 0 0 0 0 0 0 1 

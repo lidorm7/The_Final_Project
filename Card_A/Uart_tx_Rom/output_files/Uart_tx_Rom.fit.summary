@@ -1,0 +1,18 @@
+Fitter Status : Successful - Wed Sep  6 16:09:28 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : Uart_tx_Rom
+Top-level Entity Name : Uart_tx_Rom
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 73 / 49,760 ( < 1 % )
+    Total combinational functions : 62 / 49,760 ( < 1 % )
+    Dedicated logic registers : 51 / 49,760 ( < 1 % )
+Total registers : 51
+Total pins : 4 / 360 ( 1 % )
+Total virtual pins : 0
+Total memory bits : 256 / 1,677,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

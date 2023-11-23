@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "shift_reg_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_reg_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_reg_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_reg_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_reg_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_reg_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_reg_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_reg_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Araising",
+					"strict" : false
+				},
+				{
+					"name" : "q_rom_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "q_rom_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "q_rom_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "q_rom_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "q_rom_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "q_rom_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "q_rom_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "q_rom_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Timing_Pulse",
+					"strict" : false
+				},
+				{
+					"name" : "Address_cnt[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Address_cnt[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Address_cnt[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Address_cnt[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Address_cnt[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Address_cnt[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

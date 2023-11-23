@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "clk_7",
+					"strict" : false
+				},
+				{
+					"name" : "clk_6",
+					"strict" : false
+				},
+				{
+					"name" : "signal_A_q",
+					"strict" : false
+				},
+				{
+					"name" : "signal_A_q_not",
+					"strict" : false
+				},
+				{
+					"name" : "signal_A_r",
+					"strict" : false
+				},
+				{
+					"name" : "signal_A_f",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

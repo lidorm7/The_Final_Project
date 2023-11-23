@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Aug 14 12:56:19 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : Test_CRC_DO
+Top-level Entity Name : Test_CRC_DO
+Family : MAX 10
+Total logic elements : 490
+    Total combinational functions : 219
+    Dedicated logic registers : 414
+Total registers : 414
+Total pins : 118
+Total virtual pins : 0
+Total memory bits : 256
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

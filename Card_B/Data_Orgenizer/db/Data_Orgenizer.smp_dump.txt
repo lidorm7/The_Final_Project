@@ -1,0 +1,14 @@
+
+State Machine - |Data_Orgenizer|state_Do
+Name state_Do.s9 state_Do.s8 state_Do.s7 state_Do.s6 state_Do.s5a state_Do.s5 state_Do.s4 state_Do.s3 state_Do.s2 state_Do.s1 state_Do.s0 
+state_Do.s0 0 0 0 0 0 0 0 0 0 0 0 
+state_Do.s1 0 0 0 0 0 0 0 0 0 1 1 
+state_Do.s2 0 0 0 0 0 0 0 0 1 0 1 
+state_Do.s3 0 0 0 0 0 0 0 1 0 0 1 
+state_Do.s4 0 0 0 0 0 0 1 0 0 0 1 
+state_Do.s5 0 0 0 0 0 1 0 0 0 0 1 
+state_Do.s5a 0 0 0 0 1 0 0 0 0 0 1 
+state_Do.s6 0 0 0 1 0 0 0 0 0 0 1 
+state_Do.s7 0 0 1 0 0 0 0 0 0 0 1 
+state_Do.s8 0 1 0 0 0 0 0 0 0 0 1 
+state_Do.s9 1 0 0 0 0 0 0 0 0 0 1 

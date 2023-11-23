@@ -1,0 +1,76 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+-- polynome : x^8 + x^2 + x + 1 => "1 00000111"
+
+entity CRC8BIT is
+    port(
+        resetn      : in std_logic;
+        sysclk      : in std_logic;
+        nrzl_in     : in std_logic;
+        main_clk    : in std_logic;
+        crc8bit_out : out std_logic;
+    );
+end CRC8BIT;
+
+architecture ab of CRC8BIT is
+    
+    -- set components 
+
+    -- set signals
+
+    signal crc_reg8bit          : std_logic_vector(7 downto 0);
+    signal sig_cut_main_clk     : std_logic;
+    signal sig_cut_main_clk_not : std_logic;
+    signal sig_main_clk_r       : std_logic;
+    signal sig_report           : std_logic;
+
+
+    begin
+
+        -- set port maps 
+
+        -- set processes
+
+        cut_main_clk : process
+        begin
+            if resetn = '0' then
+                sig_cut_main_clk     <= '0';
+                sig_cut_main_clk_not <= '1';
+            elsif rising_edge(sysclk) then
+                sig_cut_main_clk     <= main_clk;
+                sig_cut_main_clk_not <= sig_cut_main_clk;    
+        end process cut_main_clk;
+
+        sig_main_clk_r <= sig_cut_main_clk and sig_cut_main_clk_not;
+
+        crc8bit_operation : process
+        begin
+            if resetn = '0' then
+                crc8bit_out <= '1';-- crc8bit_out <= '0' is data ok else '1'
+                crc_reg8bit <= (others => '0');
+                sig_report  <= '0';
+            elsif rising_edge(sysclk) then 
+                if sig_main_clk_r = '1' then
+                    crc_reg8bit(0) <= crc_reg8bit(7) xor nrzl_in;
+                    crc_reg8bit(1) <= (crc_reg8bit(7) xor nrzl_in) xor crc_reg8bit(1);
+                    crc_reg8bit(2) <= (crc_reg8bit(7) xor nrzl_in) xor crc_reg8bit(2);
+                    crc_reg8bit(3) <= crc_reg8bit(2);
+                    crc_reg8bit(4) <= crc_reg8bit(3);
+                    crc_reg8bit(5) <= crc_reg8bit(4);
+                    crc_reg8bit(6) <= crc_reg8bit(5);
+                    crc_reg8bit(7) <= crc_reg8bit(6); 
+                end if;
+                if crc_reg8bit != X"00" then
+                    sig_report  <= '1';
+                end if;
+                if crc_reg8bit = X"00" and sig_report  = '1' then
+                    crc8bit_out  <= '1';
+                end if;
+            end if;
+        end process crc8bit_operation;
+
+end ab;
+

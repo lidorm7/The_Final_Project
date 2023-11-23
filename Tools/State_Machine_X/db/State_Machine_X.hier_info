@@ -1,0 +1,8 @@
+|State_Machine_X
+resetn => flag1~reg0.ACLR
+resetn => state~3.DATAIN
+sysclk => flag1~reg0.CLK
+sysclk => state~1.DATAIN
+flag1 << flag1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

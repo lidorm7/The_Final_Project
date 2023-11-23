@@ -1,0 +1,78 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Test_Uart_rx is
+    port(
+        resetn                 : in std_logic;
+        sysclk                 : in std_logic;
+        start_tx               : in std_logic;
+        baud_clk               : out std_logic;
+        baud_clk_rising_edge   : out std_logic;
+        ram_address            : out std_logic_vector(5 downto 0);
+        detected_byte          : out std_logic_vector(7 downto 0);
+        q_ram                  : out std_logic_vector(7 downto 0)	      
+       
+    );
+end Test_Uart_rx;
+
+architecture ab of Test_Uart_rx is
+
+-- set components
+
+component Uart_tx_Rom
+	port
+	(
+		resetn		          :	 in std_logic;
+		sysclk		          :	 in std_logic;
+		start_triger		  :	 in std_logic;
+		baud_clk		      :	 out std_logic;
+		baud_clk_rising_edge  :	 out std_logic;
+		uart_tx_triger		  :	 out std_logic
+	);
+END component;
+
+component Uart_rx
+	port
+	(
+		resetn		    :	 in std_logic;
+		sysclk		    :	 in std_logic;
+		toggle		    :	 in std_logic;
+		detected_bit    :	 in std_logic;
+		ram_address		:	 out std_logic_vector(5 DOWNTO 0);
+		detected_byte	:	 out std_logic_vector(7 DOWNTO 0);
+		q_ram		    :	 out std_logic_vector(7 DOWNTO 0)
+	);
+END component;
+
+-- set signals
+
+signal sig_detected_bit : std_logic;
+
+    begin
+
+        -- set port maps
+
+        trns : Uart_tx_Rom
+        port map (
+            resetn                => resetn,
+            sysclk                => sysclk,
+            start_triger          => start_tx,
+            baud_clk              => baud_clk,
+            baud_clk_rising_edge  => baud_clk_rising_edge, 
+            uart_tx_triger        => sig_detected_bit   
+        );  
+
+        recv : Uart_rx
+        port map (
+            resetn                => resetn,
+            sysclk                => sysclk,
+            toggle                => '1',
+            detected_bit          => sig_detected_bit,
+            ram_address           => ram_address
+            detected_byte         => detected_byte, 
+            q_ram                 => q_ram
+        );
+
+end ab;         

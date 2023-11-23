@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Oct 19 19:16:05 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : Data_Orgenizer
+Top-level Entity Name : Data_Orgenizer
+Family : MAX 10
+Total logic elements : 407
+    Total combinational functions : 166
+    Dedicated logic registers : 348
+Total registers : 348
+Total pins : 110
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

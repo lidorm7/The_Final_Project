@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon May  8 12:54:12 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : Test_Uart_rx
+Top-level Entity Name : Test_Uart_rx
+Family : MAX 10
+Total logic elements : 182
+    Total combinational functions : 148
+    Dedicated logic registers : 129
+Total registers : 129
+Total pins : 27
+Total virtual pins : 0
+Total memory bits : 768
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

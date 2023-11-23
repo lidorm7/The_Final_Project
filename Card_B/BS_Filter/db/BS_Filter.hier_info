@@ -1,0 +1,40 @@
+|BS_Filter
+resetn => sig_filter[0].ACLR
+resetn => sig_filter[1].ACLR
+resetn => sig_filter[2].ACLR
+resetn => sig_filter[3].ACLR
+resetn => sig_filter[4].ACLR
+resetn => sig_filter[5].ACLR
+resetn => sig_filter[6].ACLR
+resetn => sig_filter[7].ACLR
+resetn => signal_out~reg0.ACLR
+resetn => sig_check_6.PRESET
+resetn => sig_check_5.PRESET
+resetn => sig_check_4.PRESET
+resetn => sig_check_3.PRESET
+resetn => sig_check_2.PRESET
+resetn => sig_check_1.PRESET
+resetn => sig_check_0.PRESET
+resetn => sig_total_check.PRESET
+sysclk => signal_out~reg0.CLK
+sysclk => sig_total_check.CLK
+sysclk => sig_check_6.CLK
+sysclk => sig_check_5.CLK
+sysclk => sig_check_4.CLK
+sysclk => sig_check_3.CLK
+sysclk => sig_check_2.CLK
+sysclk => sig_check_1.CLK
+sysclk => sig_check_0.CLK
+sysclk => sig_filter[0].CLK
+sysclk => sig_filter[1].CLK
+sysclk => sig_filter[2].CLK
+sysclk => sig_filter[3].CLK
+sysclk => sig_filter[4].CLK
+sysclk => sig_filter[5].CLK
+sysclk => sig_filter[6].CLK
+sysclk => sig_filter[7].CLK
+bi_pahse_out => sig_filter[0].DATAIN
+bi_pahse_out => signal_out~reg0.DATAIN
+signal_out << signal_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

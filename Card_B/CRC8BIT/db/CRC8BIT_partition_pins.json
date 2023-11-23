@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "crc8bit_out",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "main_clk",
+					"strict" : false
+				},
+				{
+					"name" : "nrzl_in",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

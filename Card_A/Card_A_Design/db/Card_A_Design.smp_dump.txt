@@ -1,0 +1,43 @@
+
+State Machine - |Card_A_Design|Uart_rx:rx|state_rx
+Name state_rx.s5 state_rx.s4 state_rx.s3 state_rx.s2 state_rx.s1 state_rx.s0 
+state_rx.s0 0 0 0 0 0 0 
+state_rx.s1 0 0 0 0 1 1 
+state_rx.s2 0 0 0 1 0 1 
+state_rx.s3 0 0 1 0 0 1 
+state_rx.s4 0 1 0 0 0 1 
+state_rx.s5 1 0 0 0 0 1 
+
+State Machine - |Card_A_Design|Uart_tx_Rom:tx|state_tx
+Name state_tx.s10 state_tx.s9 state_tx.s8 state_tx.s7 state_tx.s6 state_tx.s5 state_tx.s4 state_tx.s3 state_tx.s2 state_tx.s1 state_tx.s0 
+state_tx.s0 0 0 0 0 0 0 0 0 0 0 0 
+state_tx.s1 0 0 0 0 0 0 0 0 0 1 1 
+state_tx.s2 0 0 0 0 0 0 0 0 1 0 1 
+state_tx.s3 0 0 0 0 0 0 0 1 0 0 1 
+state_tx.s4 0 0 0 0 0 0 1 0 0 0 1 
+state_tx.s5 0 0 0 0 0 1 0 0 0 0 1 
+state_tx.s6 0 0 0 0 1 0 0 0 0 0 1 
+state_tx.s7 0 0 0 1 0 0 0 0 0 0 1 
+state_tx.s8 0 0 1 0 0 0 0 0 0 0 1 
+state_tx.s9 0 1 0 0 0 0 0 0 0 0 1 
+state_tx.s10 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Card_A_Design|BiPhase_tx:biphase|state_mini
+Name state_mini.s5a state_mini.s4a state_mini.s3a state_mini.s2a state_mini.s1a state_mini.s0a 
+state_mini.s0a 0 0 0 0 0 0 
+state_mini.s1a 0 0 0 0 1 1 
+state_mini.s2a 0 0 0 1 0 1 
+state_mini.s3a 0 0 1 0 0 1 
+state_mini.s4a 0 1 0 0 0 1 
+state_mini.s5a 1 0 0 0 0 1 
+
+State Machine - |Card_A_Design|BiPhase_tx:biphase|state_bi
+Name state_bi.s7 state_bi.s6 state_bi.s5 state_bi.s4 state_bi.s3 state_bi.s2 state_bi.s1 state_bi.s0 
+state_bi.s0 0 0 0 0 0 0 0 0 
+state_bi.s1 0 0 0 0 0 0 1 1 
+state_bi.s2 0 0 0 0 0 1 0 1 
+state_bi.s3 0 0 0 0 1 0 0 1 
+state_bi.s4 0 0 0 1 0 0 0 1 
+state_bi.s5 0 0 1 0 0 0 0 1 
+state_bi.s6 0 1 0 0 0 0 0 1 
+state_bi.s7 1 0 0 0 0 0 0 1 

@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon May 15 13:16:56 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : Led_Max_10
+Top-level Entity Name : Led_Max_10
+Family : MAX 10
+Total logic elements : 59
+    Total combinational functions : 57
+    Dedicated logic registers : 41
+Total registers : 41
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

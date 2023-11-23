@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "wr_ram",
+					"strict" : false
+				},
+				{
+					"name" : "ram_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ram_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ram_address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ram_address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ram_address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ram_address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "detected_byte[0]",
+					"strict" : false
+				},
+				{
+					"name" : "detected_byte[1]",
+					"strict" : false
+				},
+				{
+					"name" : "detected_byte[2]",
+					"strict" : false
+				},
+				{
+					"name" : "detected_byte[3]",
+					"strict" : false
+				},
+				{
+					"name" : "detected_byte[4]",
+					"strict" : false
+				},
+				{
+					"name" : "detected_byte[5]",
+					"strict" : false
+				},
+				{
+					"name" : "detected_byte[6]",
+					"strict" : false
+				},
+				{
+					"name" : "detected_byte[7]",
+					"strict" : false
+				},
+				{
+					"name" : "q_ram[0]",
+					"strict" : false
+				},
+				{
+					"name" : "q_ram[1]",
+					"strict" : false
+				},
+				{
+					"name" : "q_ram[2]",
+					"strict" : false
+				},
+				{
+					"name" : "q_ram[3]",
+					"strict" : false
+				},
+				{
+					"name" : "q_ram[4]",
+					"strict" : false
+				},
+				{
+					"name" : "q_ram[5]",
+					"strict" : false
+				},
+				{
+					"name" : "q_ram[6]",
+					"strict" : false
+				},
+				{
+					"name" : "q_ram[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "toggle",
+					"strict" : false
+				},
+				{
+					"name" : "start_tx",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

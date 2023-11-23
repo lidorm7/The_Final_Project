@@ -1,0 +1,498 @@
+Analysis & Synthesis report for Card_B_Design
+Thu Oct 19 19:16:58 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Card_B_Design|RGB:RGB_Leds|state_leds
+  9. State Machine - |Card_B_Design|Data_Orgenizer:DO|state_Do
+ 10. State Machine - |Card_B_Design|CRC8BIT:CRC8|state_crc
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Oct 19 19:16:58 2023          ;
+; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                      ; Card_B_Design                                  ;
+; Top-level Entity Name              ; Card_B_Design                                  ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; 931                                            ;
+;     Total combinational functions  ; 671                                            ;
+;     Dedicated logic registers      ; 736                                            ;
+; Total registers                    ; 736                                            ;
+; Total pins                         ; 7                                              ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; Card_B_Design      ; Card_B_Design      ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++---------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
++---------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
+; ../RGB/RGB.vhdl                       ; yes             ; User VHDL File  ; C:/Final_Project/The_Final_Project/Card_B/RGB/RGB.vhdl                       ;         ;
+; ../Data_Orgenizer/Data_Orgenizer.vhdl ; yes             ; User VHDL File  ; C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl ;         ;
+; ../CRC8BIT/CRC8BIT.vhdl               ; yes             ; User VHDL File  ; C:/Final_Project/The_Final_Project/Card_B/CRC8BIT/CRC8BIT.vhdl               ;         ;
+; ../Simple_BS/Simple_BS.vhdl           ; yes             ; User VHDL File  ; C:/Final_Project/The_Final_Project/Card_B/Simple_BS/Simple_BS.vhdl           ;         ;
+; ../BS_Filter/BS_Filter.vhdl           ; yes             ; User VHDL File  ; C:/Final_Project/The_Final_Project/Card_B/BS_Filter/BS_Filter.vhdl           ;         ;
+; Card_B_Design.vhdl                    ; yes             ; User VHDL File  ; C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl   ;         ;
++---------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 931          ;
+;                                             ;              ;
+; Total combinational functions               ; 671          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 164          ;
+;     -- 3 input functions                    ; 137          ;
+;     -- <=2 input functions                  ; 370          ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 339          ;
+;     -- arithmetic mode                      ; 332          ;
+;                                             ;              ;
+; Total registers                             ; 736          ;
+;     -- Dedicated logic registers            ; 736          ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 7            ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; sysclk~input ;
+; Maximum fan-out                             ; 736          ;
+; Total fan-out                               ; 4703         ;
+; Average fan-out                             ; 3.31         ;
++---------------------------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name              ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+----------------+--------------+
+; |Card_B_Design             ; 671 (0)             ; 736 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 7    ; 0            ; 0          ; |Card_B_Design                   ; Card_B_Design  ; work         ;
+;    |BS_Filter:Filter|      ; 10 (10)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|BS_Filter:Filter  ; BS_Filter      ; work         ;
+;    |CRC8BIT:CRC8|          ; 35 (35)             ; 54 (54)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|CRC8BIT:CRC8      ; CRC8BIT        ; work         ;
+;    |Data_Orgenizer:DO|     ; 167 (167)           ; 316 (316)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|Data_Orgenizer:DO ; Data_Orgenizer ; work         ;
+;    |RGB:RGB_Leds|          ; 430 (430)           ; 325 (325)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|RGB:RGB_Leds      ; RGB            ; work         ;
+;    |Simple_BS:Simple|      ; 29 (29)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|Simple_BS:Simple  ; Simple_BS      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Card_B_Design|RGB:RGB_Leds|state_leds                                                                                                                                          ;
++----------------+---------------+---------------+---------------+---------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; Name           ; state_leds.s9 ; state_leds.s8 ; state_leds.s7 ; state_leds.s6 ; state_leds.s5a ; state_leds.s5 ; state_leds.s4 ; state_leds.s3 ; state_leds.s2 ; state_leds.s1 ; state_leds.s0 ;
++----------------+---------------+---------------+---------------+---------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; state_leds.s0  ; 0             ; 0             ; 0             ; 0             ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; state_leds.s1  ; 0             ; 0             ; 0             ; 0             ; 0              ; 0             ; 0             ; 0             ; 0             ; 1             ; 1             ;
+; state_leds.s2  ; 0             ; 0             ; 0             ; 0             ; 0              ; 0             ; 0             ; 0             ; 1             ; 0             ; 1             ;
+; state_leds.s3  ; 0             ; 0             ; 0             ; 0             ; 0              ; 0             ; 0             ; 1             ; 0             ; 0             ; 1             ;
+; state_leds.s4  ; 0             ; 0             ; 0             ; 0             ; 0              ; 0             ; 1             ; 0             ; 0             ; 0             ; 1             ;
+; state_leds.s5  ; 0             ; 0             ; 0             ; 0             ; 0              ; 1             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state_leds.s5a ; 0             ; 0             ; 0             ; 0             ; 1              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state_leds.s6  ; 0             ; 0             ; 0             ; 1             ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state_leds.s7  ; 0             ; 0             ; 1             ; 0             ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state_leds.s8  ; 0             ; 1             ; 0             ; 0             ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; state_leds.s9  ; 1             ; 0             ; 0             ; 0             ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
++----------------+---------------+---------------+---------------+---------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Card_B_Design|Data_Orgenizer:DO|state_Do                                                                                                               ;
++--------------+-------------+-------------+-------------+-------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; Name         ; state_Do.s9 ; state_Do.s8 ; state_Do.s7 ; state_Do.s6 ; state_Do.s5a ; state_Do.s5 ; state_Do.s4 ; state_Do.s3 ; state_Do.s2 ; state_Do.s1 ; state_Do.s0 ;
++--------------+-------------+-------------+-------------+-------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; state_Do.s0  ; 0           ; 0           ; 0           ; 0           ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ;
+; state_Do.s1  ; 0           ; 0           ; 0           ; 0           ; 0            ; 0           ; 0           ; 0           ; 0           ; 1           ; 1           ;
+; state_Do.s2  ; 0           ; 0           ; 0           ; 0           ; 0            ; 0           ; 0           ; 0           ; 1           ; 0           ; 1           ;
+; state_Do.s3  ; 0           ; 0           ; 0           ; 0           ; 0            ; 0           ; 0           ; 1           ; 0           ; 0           ; 1           ;
+; state_Do.s4  ; 0           ; 0           ; 0           ; 0           ; 0            ; 0           ; 1           ; 0           ; 0           ; 0           ; 1           ;
+; state_Do.s5  ; 0           ; 0           ; 0           ; 0           ; 0            ; 1           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; state_Do.s5a ; 0           ; 0           ; 0           ; 0           ; 1            ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; state_Do.s6  ; 0           ; 0           ; 0           ; 1           ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; state_Do.s7  ; 0           ; 0           ; 1           ; 0           ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; state_Do.s8  ; 0           ; 1           ; 0           ; 0           ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; state_Do.s9  ; 1           ; 0           ; 0           ; 0           ; 0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
++--------------+-------------+-------------+-------------+-------------+--------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |Card_B_Design|CRC8BIT:CRC8|state_crc                                   ;
++--------------+--------------+--------------+--------------+--------------+--------------+
+; Name         ; state_crc.s4 ; state_crc.s3 ; state_crc.s2 ; state_crc.s1 ; state_crc.s0 ;
++--------------+--------------+--------------+--------------+--------------+--------------+
+; state_crc.s0 ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; state_crc.s1 ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; state_crc.s2 ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; state_crc.s3 ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; state_crc.s4 ; 1            ; 0            ; 0            ; 0            ; 1            ;
++--------------+--------------+--------------+--------------+--------------+--------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                          ;
++----------------------------------------+----------------------------------------------------+
+; Register name                          ; Reason for Removal                                 ;
++----------------------------------------+----------------------------------------------------+
+; Simple_BS:Simple|sig_00_cut            ; Merged with Data_Orgenizer:DO|sig_main_clk_cut     ;
+; CRC8BIT:CRC8|sig_cut_main_clk          ; Merged with Data_Orgenizer:DO|sig_main_clk_cut     ;
+; Simple_BS:Simple|sig_00_cut_not        ; Merged with Data_Orgenizer:DO|sig_main_clk_cut_not ;
+; CRC8BIT:CRC8|sig_cut_main_clk_not      ; Merged with Data_Orgenizer:DO|sig_main_clk_cut_not ;
+; Data_Orgenizer:DO|sig_sf_reg[31]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[31]            ;
+; Data_Orgenizer:DO|sig_sf_reg[17]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[17]            ;
+; Data_Orgenizer:DO|sig_sf_reg[16]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[16]            ;
+; Data_Orgenizer:DO|sig_sf_reg[15]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[15]            ;
+; Data_Orgenizer:DO|sig_sf_reg[14]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[14]            ;
+; Data_Orgenizer:DO|sig_sf_reg[13]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[13]            ;
+; Data_Orgenizer:DO|sig_sf_reg[12]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[12]            ;
+; Data_Orgenizer:DO|sig_sf_reg[11]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[11]            ;
+; Data_Orgenizer:DO|sig_sf_reg[10]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[10]            ;
+; Data_Orgenizer:DO|sig_sf_reg[9]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[9]             ;
+; Data_Orgenizer:DO|sig_sf_reg[8]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[8]             ;
+; Data_Orgenizer:DO|sig_sf_reg[7]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[7]             ;
+; Data_Orgenizer:DO|sig_sf_reg[6]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[6]             ;
+; Data_Orgenizer:DO|sig_sf_reg[5]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[5]             ;
+; Data_Orgenizer:DO|sig_sf_reg[4]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[4]             ;
+; Data_Orgenizer:DO|sig_sf_reg[3]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[3]             ;
+; Data_Orgenizer:DO|sig_sf_reg[2]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[2]             ;
+; Data_Orgenizer:DO|sig_sf_reg[1]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[1]             ;
+; Data_Orgenizer:DO|sig_sf_reg[0]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[0]             ;
+; Data_Orgenizer:DO|sig_sf_reg[18]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[18]            ;
+; Data_Orgenizer:DO|sig_sf_reg[19]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[19]            ;
+; Data_Orgenizer:DO|sig_sf_reg[20]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[20]            ;
+; Data_Orgenizer:DO|sig_sf_reg[21]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[21]            ;
+; Data_Orgenizer:DO|sig_sf_reg[22]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[22]            ;
+; Data_Orgenizer:DO|sig_sf_reg[23]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[23]            ;
+; Data_Orgenizer:DO|sig_sf_reg[24]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[24]            ;
+; Data_Orgenizer:DO|sig_sf_reg[25]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[25]            ;
+; Data_Orgenizer:DO|sig_sf_reg[26]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[26]            ;
+; Data_Orgenizer:DO|sig_sf_reg[27]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[27]            ;
+; Data_Orgenizer:DO|sig_sf_reg[28]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[28]            ;
+; Data_Orgenizer:DO|sig_sf_reg[29]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[29]            ;
+; Data_Orgenizer:DO|sig_sf_reg[30]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[30]            ;
+; RGB:RGB_Leds|state_leds.s5a            ; Lost fanout                                        ;
+; RGB:RGB_Leds|state_leds.s8             ; Lost fanout                                        ;
+; RGB:RGB_Leds|state_leds.s9             ; Lost fanout                                        ;
+; Total Number of Removed Registers = 39 ;                                                    ;
++----------------------------------------+----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 736   ;
+; Number of registers using Synchronous Clear  ; 115   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 621   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 684   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; Data_Orgenizer:DO|load_leds                   ; 5       ;
+; Data_Orgenizer:DO|sig_main_clk_cut_not        ; 8       ;
+; Simple_BS:Simple|sig_00_clk                   ; 4       ;
+; CRC8BIT:CRC8|crc8bit_out                      ; 3       ;
+; Simple_BS:Simple|sig_bi_phase_filterd_cut_not ; 2       ;
+; BS_Filter:Filter|sig_total_check              ; 1       ;
+; Simple_BS:Simple|sig_90_cut_not               ; 2       ;
+; BS_Filter:Filter|sig_check_0                  ; 1       ;
+; BS_Filter:Filter|sig_check_1                  ; 1       ;
+; BS_Filter:Filter|sig_check_2                  ; 1       ;
+; BS_Filter:Filter|sig_check_3                  ; 1       ;
+; BS_Filter:Filter|sig_check_4                  ; 1       ;
+; BS_Filter:Filter|sig_check_5                  ; 1       ;
+; BS_Filter:Filter|sig_check_6                  ; 1       ;
+; Total number of inverted registers = 14       ;         ;
++-----------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 100 bits  ; 200 LEs       ; 100 LEs              ; 100 LEs                ; Yes        ; |Card_B_Design|RGB:RGB_Leds|sig_cnt[8]            ;
+; 4:1                ; 95 bits   ; 190 LEs       ; 95 LEs               ; 95 LEs                 ; Yes        ; |Card_B_Design|RGB:RGB_Leds|sig_shift_led_rgb[86] ;
+; 7:1                ; 101 bits  ; 404 LEs       ; 101 LEs              ; 303 LEs                ; Yes        ; |Card_B_Design|Data_Orgenizer:DO|sig_cnt[18]      ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 15 LEs               ; 10 LEs                 ; No         ; |Card_B_Design|RGB:RGB_Leds|Selector3             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |Card_B_Design|RGB:RGB_Leds|Selector8             ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Card_B_Design|Data_Orgenizer:DO|state_Do         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 7                           ;
+; cycloneiii_ff         ; 736                         ;
+;     CLR               ; 37                          ;
+;     CLR SCLR          ; 14                          ;
+;     ENA               ; 114                         ;
+;     ENA CLR           ; 469                         ;
+;     ENA CLR SCLR      ; 101                         ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 671                         ;
+;     arith             ; 332                         ;
+;         2 data inputs ; 332                         ;
+;     normal            ; 339                         ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 137                         ;
+;         4 data inputs ; 164                         ;
+;                       ;                             ;
+; Max LUT depth         ; 11.90                       ;
+; Average LUT depth     ; 5.59                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Thu Oct 19 19:16:50 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Card_B_Design -c Card_B_Design
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (12021): Found 1 design units, including 1 entities, in source file /final_project/the_final_project/card_a/rom_x/rom_x.v
+    Info (12023): Found entity 1: Rom_X File: C:/Final_Project/The_Final_Project/Card_A/Rom_X/Rom_X.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /final_project/the_final_project/card_a/ram2_x/ram2_x.v
+    Info (12023): Found entity 1: Ram2_X File: C:/Final_Project/The_Final_Project/Card_A/Ram2_X/Ram2_X.v Line: 40
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a/uart_rx/uart_rx.vhdl
+    Info (12022): Found design unit 1: Uart_rx-ab File: C:/Final_Project/The_Final_Project/Card_A/Uart_rx/Uart_rx.vhdl Line: 18
+    Info (12023): Found entity 1: Uart_rx File: C:/Final_Project/The_Final_Project/Card_A/Uart_rx/Uart_rx.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a/uart_tx_rom/uart_tx_rom.vhd
+    Info (12022): Found design unit 1: Uart_tx_Rom-ab File: C:/Final_Project/The_Final_Project/Card_A/Uart_tx_Rom/Uart_tx_Rom.vhd Line: 15
+    Info (12023): Found entity 1: Uart_tx_Rom File: C:/Final_Project/The_Final_Project/Card_A/Uart_tx_Rom/Uart_tx_Rom.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a/biphase_tx/biphase_tx.vhdl
+    Info (12022): Found design unit 1: BiPhase_tx-ab File: C:/Final_Project/The_Final_Project/Card_A/BiPhase_tx/BiPhase_tx.vhdl Line: 22
+    Info (12023): Found entity 1: BiPhase_tx File: C:/Final_Project/The_Final_Project/Card_A/BiPhase_tx/BiPhase_tx.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a/card_a_design/card_a_design.vhdl
+    Info (12022): Found design unit 1: Card_A_Design-ab File: C:/Final_Project/The_Final_Project/Card_A/Card_A_Design/Card_A_Design.vhdl Line: 18
+    Info (12023): Found entity 1: Card_A_Design File: C:/Final_Project/The_Final_Project/Card_A/Card_A_Design/Card_A_Design.vhdl Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file /final_project/the_final_project/tools/biphase_generator/rom_g/rom_g.v
+    Info (12023): Found entity 1: Rom_G File: C:/Final_Project/The_Final_Project/Tools/BiPhase_Generator/Rom_G/Rom_G.v Line: 40
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/tools/biphase_generator/biphase_generator.vhdl
+    Info (12022): Found design unit 1: BiPhase_Generator-ab File: C:/Final_Project/The_Final_Project/Tools/BiPhase_Generator/BiPhase_Generator.vhdl Line: 17
+    Info (12023): Found entity 1: BiPhase_Generator File: C:/Final_Project/The_Final_Project/Tools/BiPhase_Generator/BiPhase_Generator.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/rgb/rgb.vhdl
+    Info (12022): Found design unit 1: RGB-ab File: C:/Final_Project/The_Final_Project/Card_B/RGB/RGB.vhdl Line: 20
+    Info (12023): Found entity 1: RGB File: C:/Final_Project/The_Final_Project/Card_B/RGB/RGB.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/data_orgenizer/data_orgenizer.vhdl
+    Info (12022): Found design unit 1: Data_Orgenizer-ab File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 19
+    Info (12023): Found entity 1: Data_Orgenizer File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/crc8bit/crc8bit.vhdl
+    Info (12022): Found design unit 1: CRC8BIT-ab File: C:/Final_Project/The_Final_Project/Card_B/CRC8BIT/CRC8BIT.vhdl Line: 19
+    Info (12023): Found entity 1: CRC8BIT File: C:/Final_Project/The_Final_Project/Card_B/CRC8BIT/CRC8BIT.vhdl Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/simple_bs/simple_bs.vhdl
+    Info (12022): Found design unit 1: Simple_BS-ab File: C:/Final_Project/The_Final_Project/Card_B/Simple_BS/Simple_BS.vhdl Line: 16
+    Info (12023): Found entity 1: Simple_BS File: C:/Final_Project/The_Final_Project/Card_B/Simple_BS/Simple_BS.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/bs_filter/bs_filter.vhdl
+    Info (12022): Found design unit 1: BS_Filter-ab File: C:/Final_Project/The_Final_Project/Card_B/BS_Filter/BS_Filter.vhdl Line: 15
+    Info (12023): Found entity 1: BS_Filter File: C:/Final_Project/The_Final_Project/Card_B/BS_Filter/BS_Filter.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file card_b_design.vhdl
+    Info (12022): Found design unit 1: Card_B_Design-ab File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 19
+    Info (12023): Found entity 1: Card_B_Design File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 6
+Info (12127): Elaborating entity "Card_B_Design" for the top level hierarchy
+Info (12128): Elaborating entity "BS_Filter" for hierarchy "BS_Filter:Filter" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 133
+Info (12128): Elaborating entity "Simple_BS" for hierarchy "Simple_BS:Simple" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 141
+Info (12128): Elaborating entity "CRC8BIT" for hierarchy "CRC8BIT:CRC8" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 150
+Info (12128): Elaborating entity "Data_Orgenizer" for hierarchy "Data_Orgenizer:DO" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 160
+Info (12128): Elaborating entity "RGB" for hierarchy "RGB:RGB_Leds" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 174
+Info (13000): Registers with preset signals will power-up high File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 13
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 950 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 943 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Thu Oct 19 19:16:58 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:14
+
+

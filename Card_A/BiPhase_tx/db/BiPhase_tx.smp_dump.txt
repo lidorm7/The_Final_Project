@@ -1,0 +1,20 @@
+
+State Machine - |BiPhase_tx|state_mini
+Name state_mini.s5a state_mini.s4a state_mini.s3a state_mini.s2a state_mini.s1a state_mini.s0a 
+state_mini.s0a 0 0 0 0 0 0 
+state_mini.s1a 0 0 0 0 1 1 
+state_mini.s2a 0 0 0 1 0 1 
+state_mini.s3a 0 0 1 0 0 1 
+state_mini.s4a 0 1 0 0 0 1 
+state_mini.s5a 1 0 0 0 0 1 
+
+State Machine - |BiPhase_tx|state_bi
+Name state_bi.s7 state_bi.s6 state_bi.s5 state_bi.s4 state_bi.s3 state_bi.s2 state_bi.s1 state_bi.s0 
+state_bi.s0 0 0 0 0 0 0 0 0 
+state_bi.s1 0 0 0 0 0 0 1 1 
+state_bi.s2 0 0 0 0 0 1 0 1 
+state_bi.s3 0 0 0 0 1 0 0 1 
+state_bi.s4 0 0 0 1 0 0 0 1 
+state_bi.s5 0 0 1 0 0 0 0 1 
+state_bi.s6 0 1 0 0 0 0 0 1 
+state_bi.s7 1 0 0 0 0 0 0 1 

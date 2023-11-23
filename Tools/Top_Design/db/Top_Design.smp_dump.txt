@@ -1,0 +1,77 @@
+
+State Machine - |Top_Design|Card_B_Design:Card_B|RGB:RGB_Leds|state_leds
+Name state_leds.s9 state_leds.s8 state_leds.s7 state_leds.s6 state_leds.s5a state_leds.s5 state_leds.s4 state_leds.s3 state_leds.s2 state_leds.s1 state_leds.s0 
+state_leds.s0 0 0 0 0 0 0 0 0 0 0 0 
+state_leds.s1 0 0 0 0 0 0 0 0 0 1 1 
+state_leds.s2 0 0 0 0 0 0 0 0 1 0 1 
+state_leds.s3 0 0 0 0 0 0 0 1 0 0 1 
+state_leds.s4 0 0 0 0 0 0 1 0 0 0 1 
+state_leds.s5 0 0 0 0 0 1 0 0 0 0 1 
+state_leds.s5a 0 0 0 0 1 0 0 0 0 0 1 
+state_leds.s6 0 0 0 1 0 0 0 0 0 0 1 
+state_leds.s7 0 0 1 0 0 0 0 0 0 0 1 
+state_leds.s8 0 1 0 0 0 0 0 0 0 0 1 
+state_leds.s9 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Top_Design|Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do
+Name state_Do.s9 state_Do.s8 state_Do.s7 state_Do.s6 state_Do.s5a state_Do.s5 state_Do.s4 state_Do.s3 state_Do.s2 state_Do.s1 state_Do.s0 
+state_Do.s0 0 0 0 0 0 0 0 0 0 0 0 
+state_Do.s1 0 0 0 0 0 0 0 0 0 1 1 
+state_Do.s2 0 0 0 0 0 0 0 0 1 0 1 
+state_Do.s3 0 0 0 0 0 0 0 1 0 0 1 
+state_Do.s4 0 0 0 0 0 0 1 0 0 0 1 
+state_Do.s5 0 0 0 0 0 1 0 0 0 0 1 
+state_Do.s5a 0 0 0 0 1 0 0 0 0 0 1 
+state_Do.s6 0 0 0 1 0 0 0 0 0 0 1 
+state_Do.s7 0 0 1 0 0 0 0 0 0 0 1 
+state_Do.s8 0 1 0 0 0 0 0 0 0 0 1 
+state_Do.s9 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Top_Design|Card_B_Design:Card_B|CRC8BIT:CRC8|state_crc
+Name state_crc.s4 state_crc.s3 state_crc.s2 state_crc.s1 state_crc.s0 
+state_crc.s0 0 0 0 0 0 
+state_crc.s1 0 0 0 1 1 
+state_crc.s2 0 0 1 0 1 
+state_crc.s3 0 1 0 0 1 
+state_crc.s4 1 0 0 0 1 
+
+State Machine - |Top_Design|Card_A_Design_Python:Card_A|Uart_rx:rx|state_rx
+Name state_rx.s5 state_rx.s4 state_rx.s3 state_rx.s2 state_rx.s1 state_rx.s0 
+state_rx.s0 0 0 0 0 0 0 
+state_rx.s1 0 0 0 0 1 1 
+state_rx.s2 0 0 0 1 0 1 
+state_rx.s3 0 0 1 0 0 1 
+state_rx.s4 0 1 0 0 0 1 
+state_rx.s5 1 0 0 0 0 1 
+
+State Machine - |Top_Design|Card_A_Design_Python:Card_A|Uart_tx_Constant:tx|state_tx
+Name state_tx.s8 state_tx.s7 state_tx.s6 state_tx.s5 state_tx.s4 state_tx.s3 state_tx.s2 state_tx.s1 state_tx.s0 
+state_tx.s0 0 0 0 0 0 0 0 0 0 
+state_tx.s1 0 0 0 0 0 0 0 1 1 
+state_tx.s2 0 0 0 0 0 0 1 0 1 
+state_tx.s3 0 0 0 0 0 1 0 0 1 
+state_tx.s4 0 0 0 0 1 0 0 0 1 
+state_tx.s5 0 0 0 1 0 0 0 0 1 
+state_tx.s6 0 0 1 0 0 0 0 0 1 
+state_tx.s7 0 1 0 0 0 0 0 0 1 
+state_tx.s8 1 0 0 0 0 0 0 0 1 
+
+State Machine - |Top_Design|Card_A_Design_Python:Card_A|BiPhase_tx:biphase|state_mini
+Name state_mini.s5a state_mini.s4a state_mini.s3a state_mini.s2a state_mini.s1a state_mini.s0a 
+state_mini.s0a 0 0 0 0 0 0 
+state_mini.s1a 0 0 0 0 1 1 
+state_mini.s2a 0 0 0 1 0 1 
+state_mini.s3a 0 0 1 0 0 1 
+state_mini.s4a 0 1 0 0 0 1 
+state_mini.s5a 1 0 0 0 0 1 
+
+State Machine - |Top_Design|Card_A_Design_Python:Card_A|BiPhase_tx:biphase|state_bi
+Name state_bi.s7 state_bi.s6 state_bi.s5 state_bi.s4 state_bi.s3 state_bi.s2 state_bi.s1 state_bi.s0 
+state_bi.s0 0 0 0 0 0 0 0 0 
+state_bi.s1 0 0 0 0 0 0 1 1 
+state_bi.s2 0 0 0 0 0 1 0 1 
+state_bi.s3 0 0 0 0 1 0 0 1 
+state_bi.s4 0 0 0 1 0 0 0 1 
+state_bi.s5 0 0 1 0 0 0 0 1 
+state_bi.s6 0 1 0 0 0 0 0 1 
+state_bi.s7 1 0 0 0 0 0 0 1 

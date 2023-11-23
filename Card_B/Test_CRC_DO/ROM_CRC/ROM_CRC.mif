@@ -1,0 +1,45 @@
+
+
+depth = 32;
+width = 8;
+address_radix = HEX;
+data_radix = hex;
+content
+begin
+
+0:01;
+1:C0;
+2:CA;
+3:FE;
+4:AB;
+
+5:00;
+6:11;
+7:00;
+8:00;
+9:11;
+A:00;
+B:00;
+C:11;
+D:00;
+E:AA;
+F:AB;
+
+10:AC;
+11:AD;
+12:AE;
+13:AF;
+14:B0;
+15:B1;
+16:B2;
+17:B3;
+18:B4;
+19:B5;
+1A:B6;
+1B:B7;
+1C:B8;
+1D:B9;
+1E:BA;
+1F:61; -- 88 for crc8 
+
+end;

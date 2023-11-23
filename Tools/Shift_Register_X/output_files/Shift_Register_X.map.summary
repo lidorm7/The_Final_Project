@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sat Apr 29 19:56:59 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : Shift_Register_X
+Top-level Entity Name : Shift_Register_X
+Family : MAX 10
+Total logic elements : 26
+    Total combinational functions : 24
+    Dedicated logic registers : 25
+Total registers : 25
+Total pins : 26
+Total virtual pins : 0
+Total memory bits : 512
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

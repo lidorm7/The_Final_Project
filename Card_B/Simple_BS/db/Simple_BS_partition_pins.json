@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "main_clk",
+					"strict" : false
+				},
+				{
+					"name" : "nrzl_data",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "bi_phase_filtered",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

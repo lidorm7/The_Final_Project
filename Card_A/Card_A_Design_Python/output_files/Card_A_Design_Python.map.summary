@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Sep 11 11:14:31 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : Card_A_Design_Python
+Top-level Entity Name : Card_A_Design_Python
+Family : MAX 10
+Total logic elements : 229
+    Total combinational functions : 185
+    Dedicated logic registers : 169
+Total registers : 169
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 512
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

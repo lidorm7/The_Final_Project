@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "main_clk",
+					"strict" : false
+				},
+				{
+					"name" : "nrzl_data",
+					"strict" : false
+				},
+				{
+					"name" : "main_rising_edge",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_bit",
+					"strict" : false
+				},
+				{
+					"name" : "rd_rising_edge",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

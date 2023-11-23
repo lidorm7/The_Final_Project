@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon May  8 12:48:05 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : Rom_X
+Top-level Entity Name : Rom_X
+Family : MAX 10
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 256
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
