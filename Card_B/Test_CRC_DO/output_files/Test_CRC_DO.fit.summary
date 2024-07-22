@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon Aug 14 12:56:35 2023
+Fitter Status : Successful - Wed Jul 10 11:38:36 2024
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : Test_CRC_DO
 Top-level Entity Name : Test_CRC_DO
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 475 / 49,760 ( < 1 % )
-    Total combinational functions : 221 / 49,760 ( < 1 % )
-    Dedicated logic registers : 414 / 49,760 ( < 1 % )
-Total registers : 414
-Total pins : 118 / 360 ( 33 % )
+Total logic elements : 514 / 49,760 ( 1 % )
+    Total combinational functions : 265 / 49,760 ( < 1 % )
+    Dedicated logic registers : 443 / 49,760 ( < 1 % )
+Total registers : 443
+Total pins : 123 / 360 ( 34 % )
 Total virtual pins : 0
 Total memory bits : 256 / 1,677,312 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

@@ -5,10 +5,10 @@ use ieee.std_logic_unsigned.all;
 
 entity Uart_tx_Constant is 
   	port(
-        resetn                 : in std_logic;
-        sysclk                 : in std_logic;-- 50mhz 
-        start_triger           : in std_logic; 
-	    uart_tx_triger	       : out std_logic
+        resetn                 : in std_logic; -- Asynchronous reset input
+        sysclk                 : in std_logic; -- System clock input (operating at 50 MHz)
+        start_triger           : in std_logic; -- Input signal that triggers the start of UART transmission in pulse form 
+	    uart_tx_triger	       : out std_logic -- Output signal representing UART transmission trigger, the output bit by bit of the UART packet
     	);
 end Uart_tx_Constant;
 
@@ -19,16 +19,16 @@ architecture ab of Uart_tx_Constant is
 -- set signals
 
 type state is (s0,s1,s2,s3,s4,s5,s6,s7,s8);
-signal state_tx         : state;
+signal state_tx         : state; -- Signal representing the current state of the finite state machine
 
-signal signal_A_q       : std_logic;
-signal signal_A_q_not   : std_logic;
-signal sig_arising_edge : std_logic;
-signal sig_bit          : std_logic;
-signal sig_baud_clk     : std_logic;
-signal sig_byte         : std_logic_vector (7 downto 0);
-signal sig_packet       : std_logic_vector (11 downto 0);
--- signal sig_byte_t     : std_logic_vector (7 downto 0);
+signal signal_A_q       : std_logic; -- Signal for generate rising edge
+signal signal_A_q_not   : std_logic; -- Signal for generate rising edge
+signal sig_arising_edge : std_logic; -- Signal indicating the rising edge of "sig_baud_clk"
+signal sig_bit          : std_logic; -- A signal to store one bit of the output "uart_tx_triger"
+signal sig_baud_clk     : std_logic; -- Signal representing the baud clock 38,400Hz
+signal sig_byte         : std_logic_vector (7 downto 0); -- Signal representing an 8-bit data byte
+signal sig_packet       : std_logic_vector (11 downto 0); -- Signal representing a UART packet
+-- signal sig_byte_t     : std_logic_vector (7 downto 0); 
   
 begin 
 	
@@ -37,7 +37,7 @@ begin
 	-- set processes
   
   	baud_clock : process(sysclk,resetn)
-  	variable cnt_baud : integer range 0 to 655;
+  	variable cnt_baud : integer range 0 to 655; -- A variable  used for counting
   	begin
   	  	if resetn = '0' then
   	    	sig_baud_clk <= '0';
@@ -66,9 +66,9 @@ begin
 
   	transmission : process(sysclk,resetn)
 
-  	variable sig_cntr  : integer range 0 to 15;
-  	constant end_bit   : std_logic_vector(2 downto 0) := "111";
-  	constant start_bit : std_logic := '0'; 
+  	variable sig_cntr  : integer range 0 to 15; -- A variable used for counting
+  	constant end_bit   : std_logic_vector(2 downto 0) := "111"; -- Constant representing the end bit = "111"
+  	constant start_bit : std_logic := '0'; -- Constant representing the start bit = '0'
 
   	begin
 

@@ -73,14 +73,13 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_location_assignment PIN_C13 -to main_clk
-set_location_assignment PIN_C8 -to main_rising_edge
 set_location_assignment PIN_B15 -to nrzl_data
-set_location_assignment PIN_A7 -to q_data_bit
-set_location_assignment PIN_B12 -to rd_rising_edge
 set_location_assignment PIN_M9 -to resetn
 set_location_assignment PIN_M8 -to sysclk
 set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (VHDL)"
 set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Final_Project/The_Final_Project/Card_B/Test_BS" -section_id eda_simulation
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_location_assignment PIN_C8 -to enable
+set_location_assignment PIN_E11 -to clk90
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,5 +1,5 @@
 Fitter report for Test_Uart_rx
-Mon May  8 12:54:19 2023
+Mon Feb 26 15:09:53 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Mon May  8 12:54:19 2023          ;
+; Fitter Status                      ; Successful - Mon Feb 26 15:09:53 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Test_Uart_rx                                   ;
 ; Top-level Entity Name              ; Test_Uart_rx                                   ;
@@ -232,7 +232,7 @@ The pin-out file can be found in C:/Final_Project/The_Final_Project/Card_A/Uart_
 ;     -- Dedicated logic registers            ; 129 / 49,760 ( < 1 % )     ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )          ;
 ;                                             ;                            ;
-; Total LABs:  partially or completely used   ; 18 / 3,110 ( < 1 % )       ;
+; Total LABs:  partially or completely used   ; 15 / 3,110 ( < 1 % )       ;
 ; Virtual pins                                ; 0                          ;
 ; I/O pins                                    ; 27 / 360 ( 8 % )           ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )             ;
@@ -253,7 +253,7 @@ The pin-out file can be found in C:/Final_Project/The_Final_Project/Card_A/Uart_
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )              ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )              ;
 ; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%         ;
-; Peak interconnect usage (total/H/V)         ; 1.3% / 1.3% / 1.5%         ;
+; Peak interconnect usage (total/H/V)         ; 1.1% / 1.0% / 1.2%         ;
 ; Maximum fan-out                             ; 132                        ;
 ; Highest non-global fan-out                  ; 21                         ;
 ; Total fan-out                               ; 942                        ;
@@ -289,7 +289,7 @@ The pin-out file can be found in C:/Final_Project/The_Final_Project/Card_A/Uart_
 ;     -- Dedicated logic registers            ; 129 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 18 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 15 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 27                    ; 0                              ;
@@ -987,9 +987,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; q_ram[6]         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; q_ram[7]         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sysclk           ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; resetn           ; Input    ; (0) 0 ps      ; (0) 0 ps      ; --                    ; --  ; --   ;
+; resetn           ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
 ; toggle           ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; start_tx         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; start_tx         ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 +------------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1000,27 +1000,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------------------+---------+
 ; sysclk                                       ;                   ;         ;
 ; resetn                                       ;                   ;         ;
-;      - Uart_rx:rx|sig_wr_ram                 ; 1                 ; 0       ;
-;      - Uart_tx_Rom:tx|sig_packet[11]         ; 1                 ; 0       ;
-;      - Uart_rx:rx|sig_ram_address[0]~5       ; 1                 ; 0       ;
-;      - Uart_rx:rx|detected_byte[0]~0         ; 1                 ; 0       ;
-;      - Uart_rx:rx|sig_data_bit~0             ; 1                 ; 0       ;
-;      - Uart_rx:rx|sig_detected_byte[0]~0     ; 1                 ; 0       ;
-;      - Uart_rx:rx|\baud_rate_clk:var_cntr[2] ; 1                 ; 0       ;
-;      - Uart_rx:rx|\baud_rate_clk:var_cntr[1] ; 1                 ; 0       ;
-;      - Uart_rx:rx|\baud_rate_clk:var_cntr[0] ; 1                 ; 0       ;
-;      - Uart_rx:rx|\baud_rate_clk:var_cntr[3] ; 1                 ; 0       ;
-;      - Uart_rx:rx|\baud_rate_clk:var_cntr[4] ; 1                 ; 0       ;
-;      - Uart_rx:rx|\baud_rate_clk:var_cntr[5] ; 1                 ; 0       ;
-;      - Uart_rx:rx|\baud_rate_clk:var_cntr[6] ; 1                 ; 0       ;
-;      - Uart_tx_Rom:tx|sig_packet[10]~1       ; 1                 ; 0       ;
-;      - Uart_tx_Rom:tx|sig_byte[7]~0          ; 1                 ; 0       ;
+;      - Uart_rx:rx|sig_wr_ram                 ; 0                 ; 6       ;
+;      - Uart_tx_Rom:tx|sig_packet[0]          ; 0                 ; 6       ;
+;      - Uart_rx:rx|sig_ram_address[0]~5       ; 0                 ; 6       ;
+;      - Uart_rx:rx|detected_byte[0]~0         ; 0                 ; 6       ;
+;      - Uart_rx:rx|sig_data_bit~0             ; 0                 ; 6       ;
+;      - Uart_rx:rx|sig_detected_byte[0]~0     ; 0                 ; 6       ;
+;      - Uart_rx:rx|\baud_rate_clk:var_cntr[2] ; 0                 ; 6       ;
+;      - Uart_rx:rx|\baud_rate_clk:var_cntr[1] ; 0                 ; 6       ;
+;      - Uart_rx:rx|\baud_rate_clk:var_cntr[0] ; 0                 ; 6       ;
+;      - Uart_rx:rx|\baud_rate_clk:var_cntr[3] ; 0                 ; 6       ;
+;      - Uart_rx:rx|\baud_rate_clk:var_cntr[4] ; 0                 ; 6       ;
+;      - Uart_rx:rx|\baud_rate_clk:var_cntr[5] ; 0                 ; 6       ;
+;      - Uart_rx:rx|\baud_rate_clk:var_cntr[6] ; 0                 ; 6       ;
+;      - Uart_tx_Rom:tx|sig_packet[1]~1        ; 0                 ; 6       ;
+;      - Uart_tx_Rom:tx|sig_byte[0]~0          ; 0                 ; 6       ;
 ; toggle                                       ;                   ;         ;
 ;      - Uart_rx:rx|Selector5~0                ; 0                 ; 6       ;
 ; start_tx                                     ;                   ;         ;
-;      - Uart_tx_Rom:tx|Selector2~0            ; 0                 ; 6       ;
-;      - Uart_tx_Rom:tx|Selector1~0            ; 0                 ; 6       ;
-;      - Uart_tx_Rom:tx|Selector0~0            ; 0                 ; 6       ;
+;      - Uart_tx_Rom:tx|Selector2~0            ; 1                 ; 6       ;
+;      - Uart_tx_Rom:tx|Selector1~0            ; 1                 ; 6       ;
+;      - Uart_tx_Rom:tx|Selector0~0            ; 1                 ; 6       ;
 +----------------------------------------------+-------------------+---------+
 
 
@@ -1029,18 +1029,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                       ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Uart_rx:rx|Selector11~0                    ; LCCOMB_X49_Y48_N0  ; 21      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_rx:rx|\main_rx:var_bit_cntr[3]~0      ; LCCOMB_X45_Y45_N18 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_rx:rx|\main_rx:var_clk_cntr[0]~0      ; LCCOMB_X45_Y45_N28 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_rx:rx|detected_byte[0]~0              ; LCCOMB_X51_Y48_N14 ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_rx:rx|sig_detected_byte[0]~0          ; LCCOMB_X49_Y48_N2  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_rx:rx|sig_ram_address[0]~8            ; LCCOMB_X49_Y47_N20 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_rx:rx|sig_wr_ram                      ; FF_X49_Y48_N9      ; 3       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; Uart_tx_Rom:tx|\transmission:sig_cntr[2]~2 ; LCCOMB_X34_Y35_N26 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_tx_Rom:tx|sig_byte[7]~0               ; LCCOMB_X31_Y38_N24 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_tx_Rom:tx|sig_packet[10]~1            ; LCCOMB_X34_Y35_N8  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_tx_Rom:tx|state_tx.s3                 ; FF_X34_Y37_N1      ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Uart_tx_Rom:tx|state_tx.s9                 ; FF_X34_Y35_N3      ; 16      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; Uart_rx:rx|Selector11~0                    ; LCCOMB_X49_Y49_N8  ; 21      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_rx:rx|\main_rx:var_bit_cntr[3]~0      ; LCCOMB_X47_Y49_N24 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_rx:rx|\main_rx:var_clk_cntr[0]~0      ; LCCOMB_X47_Y49_N12 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_rx:rx|detected_byte[0]~0              ; LCCOMB_X49_Y48_N22 ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_rx:rx|sig_detected_byte[0]~0          ; LCCOMB_X49_Y49_N2  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_rx:rx|sig_ram_address[0]~8            ; LCCOMB_X49_Y48_N20 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_rx:rx|sig_wr_ram                      ; FF_X49_Y49_N1      ; 3       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; Uart_tx_Rom:tx|\transmission:sig_cntr[2]~2 ; LCCOMB_X32_Y23_N26 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_tx_Rom:tx|sig_byte[0]~0               ; LCCOMB_X32_Y24_N2  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_tx_Rom:tx|sig_packet[1]~1             ; LCCOMB_X34_Y23_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_tx_Rom:tx|state_tx.s3                 ; FF_X32_Y24_N27     ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Uart_tx_Rom:tx|state_tx.s9                 ; FF_X32_Y23_N19     ; 16      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
 ; resetn                                     ; PIN_M9             ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; resetn                                     ; PIN_M9             ; 76      ; Async. clear               ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 ; sysclk                                     ; PIN_M8             ; 131     ; Clock                      ; yes    ; Global Clock         ; GCLK3            ; --                        ;
@@ -1063,7 +1063,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                               ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF             ; Location       ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-----------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ALTSYNCRAM            ; AUTO ; Simple Dual Port ; Single Clock ; 64           ; 8            ; 64           ; 8            ; yes                    ; no                      ; yes                    ; yes                     ; 512  ; 64                          ; 8                           ; 64                          ; 8                           ; 512                 ; 1    ; Ram2_X_data.mif ; M9K_X53_Y51_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; Single Clock ; 32           ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 256  ; 32                          ; 8                           ; --                          ; --                          ; 256                 ; 1    ; Rom_X_data.mif  ; M9K_X33_Y38_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; Single Clock ; 32           ; 8            ; --           ; --           ; yes                    ; yes                     ; --                     ; --                      ; 256  ; 32                          ; 8                           ; --                          ; --                          ; 256                 ; 1    ; Rom_X_data.mif  ; M9K_X33_Y24_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-----------------+----------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1090,10 +1090,10 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
 +----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
-;0;(11000000) (300) (192) (C0)    ;(11001010) (312) (202) (CA)   ;(11111110) (376) (254) (FE)   ;(10101011) (253) (171) (AB)   ;(10100001) (241) (161) (A1)   ;(10100010) (242) (162) (A2)   ;(10100011) (243) (163) (A3)   ;(10100100) (244) (164) (A4)   ;
-;8;(10100101) (245) (165) (A5)    ;(10100110) (246) (166) (A6)   ;(10100111) (247) (167) (A7)   ;(10101000) (250) (168) (A8)   ;(10101001) (251) (169) (A9)   ;(10101010) (252) (170) (AA)   ;(10101011) (253) (171) (AB)   ;(10101100) (254) (172) (AC)   ;
-;16;(10101101) (255) (173) (AD)    ;(10101110) (256) (174) (AE)   ;(10101111) (257) (175) (AF)   ;(10110000) (260) (176) (B0)   ;(10110001) (261) (177) (B1)   ;(10110010) (262) (178) (B2)   ;(10110011) (263) (179) (B3)   ;(10110100) (264) (180) (B4)   ;
-;24;(10110101) (265) (181) (B5)    ;(10110110) (266) (182) (B6)   ;(10110111) (267) (183) (B7)   ;(10111000) (270) (184) (B8)   ;(10111001) (271) (185) (B9)   ;(10111010) (272) (186) (BA)   ;(10111011) (273) (187) (BB)   ;(10111100) (274) (188) (BC)   ;
+;0;(00000001) (1) (1) (01)    ;(11000000) (300) (192) (C0)   ;(11001010) (312) (202) (CA)   ;(11111110) (376) (254) (FE)   ;(10101011) (253) (171) (AB)   ;(00000000) (0) (0) (00)   ;(00100010) (42) (34) (22)   ;(00000000) (0) (0) (00)   ;
+;8;(00000000) (0) (0) (00)    ;(00100010) (42) (34) (22)   ;(00000000) (0) (0) (00)   ;(00000000) (0) (0) (00)   ;(00100010) (42) (34) (22)   ;(00000000) (0) (0) (00)   ;(00000000) (0) (0) (00)   ;(00100010) (42) (34) (22)   ;
+;16;(00000000) (0) (0) (00)    ;(10101101) (255) (173) (AD)   ;(10101110) (256) (174) (AE)   ;(10101111) (257) (175) (AF)   ;(10110000) (260) (176) (B0)   ;(10110001) (261) (177) (B1)   ;(10110010) (262) (178) (B2)   ;(10110011) (263) (179) (B3)   ;
+;24;(10110100) (264) (180) (B4)    ;(10110101) (265) (181) (B5)   ;(10110110) (266) (182) (B6)   ;(10110111) (267) (183) (B7)   ;(10111000) (270) (184) (B8)   ;(10111001) (271) (185) (B9)   ;(10111010) (272) (186) (BA)   ;(01100101) (145) (101) (65)   ;
 
 
 +-------------------------------------------------+
@@ -1101,71 +1101,71 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 167 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 10 / 5,382 ( < 1 % )    ;
-; C4 interconnects      ; 81 / 106,704 ( < 1 % )  ;
-; Direct links          ; 44 / 148,641 ( < 1 % )  ;
+; Block interconnects   ; 164 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 8 / 5,382 ( < 1 % )     ;
+; C4 interconnects      ; 63 / 106,704 ( < 1 % )  ;
+; Direct links          ; 55 / 148,641 ( < 1 % )  ;
 ; Global clocks         ; 2 / 20 ( 10 % )         ;
 ; Local interconnects   ; 130 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 3 / 5,406 ( < 1 % )     ;
-; R4 interconnects      ; 95 / 147,764 ( < 1 % )  ;
+; R24 interconnects     ; 5 / 5,406 ( < 1 % )     ;
+; R4 interconnects      ; 81 / 147,764 ( < 1 % )  ;
 +-----------------------+-------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Logic Elements                                                        ;
-+--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 9.94) ; Number of LABs  (Total = 18) ;
-+--------------------------------------------+------------------------------+
-; 1                                          ; 4                            ;
-; 2                                          ; 1                            ;
-; 3                                          ; 1                            ;
-; 4                                          ; 0                            ;
-; 5                                          ; 1                            ;
-; 6                                          ; 0                            ;
-; 7                                          ; 0                            ;
-; 8                                          ; 0                            ;
-; 9                                          ; 0                            ;
-; 10                                         ; 0                            ;
-; 11                                         ; 1                            ;
-; 12                                         ; 0                            ;
-; 13                                         ; 1                            ;
-; 14                                         ; 1                            ;
-; 15                                         ; 1                            ;
-; 16                                         ; 7                            ;
-+--------------------------------------------+------------------------------+
++----------------------------------------------------------------------------+
+; LAB Logic Elements                                                         ;
++---------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 11.93) ; Number of LABs  (Total = 15) ;
++---------------------------------------------+------------------------------+
+; 1                                           ; 2                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 0                            ;
+; 16                                          ; 8                            ;
++---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.11) ; Number of LABs  (Total = 18) ;
+; LAB-wide Signals  (Average = 2.20) ; Number of LABs  (Total = 15) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 13                           ;
-; 1 Clock                            ; 16                           ;
+; 1 Async. clear                     ; 11                           ;
+; 1 Clock                            ; 14                           ;
 ; 1 Clock enable                     ; 4                            ;
 ; 1 Sync. load                       ; 1                            ;
-; 2 Clock enables                    ; 4                            ;
+; 2 Clock enables                    ; 3                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.78) ; Number of LABs  (Total = 18) ;
+; Number of Signals Sourced  (Average = 20.13) ; Number of LABs  (Total = 15) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 2                            ;
-; 2                                            ; 2                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
+; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
+; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 1                            ;
-; 10                                           ; 0                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
@@ -1178,11 +1178,11 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 1                            ;
-; 23                                           ; 4                            ;
-; 24                                           ; 0                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 2                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 2                            ;
-; 27                                           ; 2                            ;
+; 26                                           ; 4                            ;
+; 27                                           ; 1                            ;
 ; 28                                           ; 0                            ;
 ; 29                                           ; 0                            ;
 ; 30                                           ; 0                            ;
@@ -1194,36 +1194,36 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 3.72) ; Number of LABs  (Total = 18) ;
+; Number of Signals Sourced Out  (Average = 4.33) ; Number of LABs  (Total = 15) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 5                            ;
-; 2                                               ; 3                            ;
+; 1                                               ; 3                            ;
+; 2                                               ; 1                            ;
 ; 3                                               ; 2                            ;
-; 4                                               ; 1                            ;
+; 4                                               ; 3                            ;
 ; 5                                               ; 0                            ;
-; 6                                               ; 4                            ;
+; 6                                               ; 2                            ;
 ; 7                                               ; 2                            ;
-; 8                                               ; 1                            ;
+; 8                                               ; 2                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 5.83) ; Number of LABs  (Total = 18) ;
+; Number of Distinct Inputs  (Average = 6.33) ; Number of LABs  (Total = 15) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 2                            ;
-; 4                                           ; 3                            ;
-; 5                                           ; 3                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 3                            ;
-; 10                                          ; 1                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 2                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 3                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 3                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 2                            ;
 ; 11                                          ; 0                            ;
 ; 12                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
@@ -1362,7 +1362,7 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; sysclk          ; sysclk               ; 1.1               ;
+; sysclk          ; sysclk               ; 4.6               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1373,26 +1373,27 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register               ; Destination Register                                                                                                    ; Delay Added in ns ;
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------+
-; Uart_rx:rx|detected_byte[2]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a2~porta_datain_reg0             ; 0.089             ;
-; Uart_rx:rx|detected_byte[7]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_datain_reg0             ; 0.072             ;
-; Uart_rx:rx|detected_byte[3]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a3~porta_datain_reg0             ; 0.072             ;
-; Uart_rx:rx|sig_ram_address[3] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.071             ;
-; Uart_rx:rx|detected_byte[4]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a4~porta_datain_reg0             ; 0.062             ;
-; Uart_rx:rx|detected_byte[0]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_datain_reg0             ; 0.062             ;
-; Uart_tx_Rom:tx|sig_address[2] ; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ram_block1a7~porta_address_reg0 ; 0.055             ;
-; Uart_tx_Rom:tx|sig_address[1] ; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ram_block1a7~porta_address_reg0 ; 0.055             ;
-; Uart_rx:rx|sig_ram_address[0] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.046             ;
-; Uart_rx:rx|sig_ram_address[1] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.046             ;
-; Uart_rx:rx|sig_ram_address[2] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.046             ;
-; Uart_rx:rx|sig_ram_address[4] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.046             ;
-; Uart_rx:rx|sig_ram_address[5] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.046             ;
-; Uart_tx_Rom:tx|sig_address[3] ; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ram_block1a7~porta_address_reg0 ; 0.045             ;
-; Uart_tx_Rom:tx|sig_address[4] ; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ram_block1a7~porta_address_reg0 ; 0.045             ;
-; Uart_rx:rx|detected_byte[6]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a6~porta_datain_reg0             ; 0.036             ;
-; Uart_rx:rx|detected_byte[5]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a5~porta_datain_reg0             ; 0.029             ;
-; Uart_rx:rx|detected_byte[1]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a1~porta_datain_reg0             ; 0.029             ;
+; Uart_tx_Rom:tx|sig_address[0] ; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.384             ;
+; Uart_rx:rx|detected_byte[0]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_datain_reg0             ; 0.368             ;
+; Uart_rx:rx|detected_byte[7]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_datain_reg0             ; 0.368             ;
+; Uart_rx:rx|detected_byte[6]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a6~porta_datain_reg0             ; 0.368             ;
+; Uart_rx:rx|detected_byte[5]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a5~porta_datain_reg0             ; 0.368             ;
+; Uart_rx:rx|detected_byte[4]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a4~porta_datain_reg0             ; 0.368             ;
+; Uart_rx:rx|detected_byte[3]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a3~porta_datain_reg0             ; 0.368             ;
+; Uart_rx:rx|detected_byte[2]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a2~porta_datain_reg0             ; 0.368             ;
+; Uart_rx:rx|detected_byte[1]   ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a1~porta_datain_reg0             ; 0.368             ;
+; Uart_tx_Rom:tx|sig_address[4] ; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.111             ;
+; Uart_tx_Rom:tx|sig_address[3] ; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.110             ;
+; Uart_tx_Rom:tx|sig_address[2] ; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.107             ;
+; Uart_rx:rx|sig_ram_address[0] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.094             ;
+; Uart_rx:rx|sig_ram_address[2] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.094             ;
+; Uart_rx:rx|sig_ram_address[4] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.094             ;
+; Uart_rx:rx|sig_ram_address[1] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.092             ;
+; Uart_rx:rx|sig_ram_address[5] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.092             ;
+; Uart_rx:rx|sig_ram_address[3] ; Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_address_reg0            ; 0.090             ;
+; Uart_tx_Rom:tx|sig_address[1] ; Uart_tx_Rom:tx|Rom_X:dut|altsyncram:altsyncram_component|altsyncram_pt81:auto_generated|ram_block1a0~porta_address_reg0 ; 0.028             ;
 +-------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 18 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 19 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1447,7 +1448,7 @@ Info (176353): Automatically promoted node resetn~input (placed in PIN M9 (CLK1p
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node Uart_rx:rx|sig_wr_ram File: C:/Final_Project/The_Final_Project/Card_A/Uart_rx/Uart_rx.vhdl Line: 106
-        Info (176357): Destination node Uart_tx_Rom:tx|sig_packet[11] File: C:/Final_Project/The_Final_Project/Card_A/Uart_tx_Rom/Uart_tx_Rom.vhd Line: 86
+        Info (176357): Destination node Uart_tx_Rom:tx|sig_packet[0] File: C:/Final_Project/The_Final_Project/Card_A/Uart_tx_Rom/Uart_tx_Rom.vhd Line: 92
         Info (176357): Destination node Uart_rx:rx|sig_ram_address[0]~5 File: C:/Final_Project/The_Final_Project/Card_A/Uart_rx/Uart_rx.vhdl Line: 106
         Info (176357): Destination node Uart_rx:rx|detected_byte[0]~0 File: C:/Final_Project/The_Final_Project/Card_A/Uart_rx/Uart_rx.vhdl Line: 106
         Info (176357): Destination node Uart_rx:rx|sig_data_bit~0 File: C:/Final_Project/The_Final_Project/Card_A/Uart_rx/Uart_rx.vhdl Line: 31
@@ -1482,8 +1483,8 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Final_Project/The_Final_Project/Card_A/Uart_rx/Test_Uart_rx/output_files/Test_Uart_rx.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 5640 megabytes
-    Info: Processing ended: Mon May  8 12:54:19 2023
+    Info: Peak virtual memory: 5645 megabytes
+    Info: Processing ended: Mon Feb 26 15:09:54 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:08
 

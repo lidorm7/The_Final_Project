@@ -7,11 +7,10 @@ entity Test_BS is
 port(
     resetn              :   in std_logic;
     sysclk              :   in std_logic;
+    clk90               :   out std_logic; -- for simulation
+    enable              :   out std_logic; -- for simulation
     main_clk            :   out std_logic;
-    nrzl_data           :   out std_logic;
-    main_rising_edge    :   out std_logic;
-    q_data_bit          :   out std_logic;
-    rd_rising_edge      :   out std_logic
+    nrzl_data           :   out std_logic
 );
 end Test_BS;
 
@@ -25,6 +24,8 @@ component Simple_BS
 		resetn		        :   in std_logic;
 		sysclk		        :   in std_logic;
 		bi_phase_filtered	:   in std_logic;
+        clk90               :   out std_logic; -- for simulation
+        enable              :   out std_logic; -- for simulation
 		main_clk		    :   out std_logic;
 		nrzl_data		    :   out std_logic
 	);  
@@ -45,9 +46,6 @@ component Card_A_Design
 	(
 		resetn		        :   in std_logic;
 		sysclk		        :   in std_logic;
-		main_rising_edge	:   out std_logic;
-		q_data_bit		    :   out std_logic;
-		rd_rising_edge		:   out std_logic;
 		BiPhase_tx_out		:   out std_logic
 	);
     end component;
@@ -66,6 +64,8 @@ signal sig_bi_phase_filtered : std_logic;
             resetn              => resetn,
             sysclk              => sysclk,
             bi_phase_filtered   => sig_bi_phase_filtered,
+            clk90               => clk90,
+            enable              => enable, 
             main_clk            => main_clk,           
             nrzl_data           => nrzl_data
         );
@@ -82,9 +82,6 @@ signal sig_bi_phase_filtered : std_logic;
         port map(
             resetn              => resetn,
             sysclk              => sysclk,
-            main_rising_edge    => main_rising_edge,
-            q_data_bit          => q_data_bit,
-            rd_rising_edge      => rd_rising_edge,
             BiPhase_tx_out      => sig_BiPhase_tx_out
         );
 

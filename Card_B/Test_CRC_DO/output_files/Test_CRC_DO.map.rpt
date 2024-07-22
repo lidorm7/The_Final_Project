@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Test_CRC_DO
-Mon Aug 14 12:56:19 2023
+Wed Jul 10 11:38:23 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -18,17 +18,18 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
  10. State Machine - |Test_CRC_DO|state_t
  11. State Machine - |Test_CRC_DO|Data_Orgenizer:og|state_Do
  12. State Machine - |Test_CRC_DO|CRC8BIT:crc|state_crc
- 13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Inverted Register Statistics
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for ROM_CRC:MEMORY|altsyncram:altsyncram_component|altsyncram_jiq3:auto_generated
- 19. Parameter Settings for User Entity Instance: ROM_CRC:MEMORY|altsyncram:altsyncram_component
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 13. State Machine - |Test_CRC_DO|CRC8BIT:crc|state_xor
+ 14. Registers Removed During Synthesis
+ 15. Removed Registers Triggering Further Register Optimizations
+ 16. General Register Statistics
+ 17. Inverted Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Source assignments for ROM_CRC:MEMORY|altsyncram:altsyncram_component|altsyncram_jiq3:auto_generated
+ 20. Parameter Settings for User Entity Instance: ROM_CRC:MEMORY|altsyncram:altsyncram_component
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -55,16 +56,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 14 12:56:19 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 10 11:38:23 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Test_CRC_DO                                    ;
 ; Top-level Entity Name              ; Test_CRC_DO                                    ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 490                                            ;
-;     Total combinational functions  ; 219                                            ;
-;     Dedicated logic registers      ; 414                                            ;
-; Total registers                    ; 414                                            ;
-; Total pins                         ; 118                                            ;
+; Total logic elements               ; 550                                            ;
+;     Total combinational functions  ; 263                                            ;
+;     Dedicated logic registers      ; 443                                            ;
+; Total registers                    ; 443                                            ;
+; Total pins                         ; 123                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 256                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -206,31 +207,31 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 490          ;
+; Estimated Total logic elements              ; 550          ;
 ;                                             ;              ;
-; Total combinational functions               ; 219          ;
+; Total combinational functions               ; 263          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 69           ;
-;     -- 3 input functions                    ; 25           ;
-;     -- <=2 input functions                  ; 125          ;
+;     -- 4 input functions                    ; 97           ;
+;     -- 3 input functions                    ; 34           ;
+;     -- <=2 input functions                  ; 132          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 104          ;
-;     -- arithmetic mode                      ; 115          ;
+;     -- normal mode                          ; 144          ;
+;     -- arithmetic mode                      ; 119          ;
 ;                                             ;              ;
-; Total registers                             ; 414          ;
-;     -- Dedicated logic registers            ; 414          ;
+; Total registers                             ; 443          ;
+;     -- Dedicated logic registers            ; 443          ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
-; I/O pins                                    ; 118          ;
+; I/O pins                                    ; 123          ;
 ; Total memory bits                           ; 256          ;
 ;                                             ;              ;
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; sysclk~input ;
-; Maximum fan-out                             ; 422          ;
-; Total fan-out                               ; 2500         ;
-; Average fan-out                             ; 2.85         ;
+; Maximum fan-out                             ; 451          ;
+; Total fan-out                               ; 2748         ;
+; Average fan-out                             ; 2.86         ;
 +---------------------------------------------+--------------+
 
 
@@ -239,9 +240,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                        ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Test_CRC_DO                              ; 219 (24)            ; 414 (31)                  ; 256         ; 0          ; 0            ; 0       ; 0         ; 118  ; 0            ; 0          ; |Test_CRC_DO                                                                               ; Test_CRC_DO     ; work         ;
-;    |CRC8BIT:crc|                          ; 29 (29)             ; 54 (54)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Test_CRC_DO|CRC8BIT:crc                                                                   ; CRC8BIT         ; work         ;
-;    |Data_Orgenizer:og|                    ; 166 (166)           ; 329 (329)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Test_CRC_DO|Data_Orgenizer:og                                                             ; Data_Orgenizer  ; work         ;
+; |Test_CRC_DO                              ; 263 (24)            ; 443 (31)                  ; 256         ; 0          ; 0            ; 0       ; 0         ; 123  ; 0            ; 0          ; |Test_CRC_DO                                                                               ; Test_CRC_DO     ; work         ;
+;    |CRC8BIT:crc|                          ; 84 (84)             ; 93 (93)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Test_CRC_DO|CRC8BIT:crc                                                                   ; CRC8BIT         ; work         ;
+;    |Data_Orgenizer:og|                    ; 155 (155)           ; 319 (319)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Test_CRC_DO|Data_Orgenizer:og                                                             ; Data_Orgenizer  ; work         ;
 ;    |ROM_CRC:MEMORY|                       ; 0 (0)               ; 0 (0)                     ; 256         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Test_CRC_DO|ROM_CRC:MEMORY                                                                ; ROM_CRC         ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 256         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Test_CRC_DO|ROM_CRC:MEMORY|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;          |altsyncram_jiq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 256         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Test_CRC_DO|ROM_CRC:MEMORY|altsyncram:altsyncram_component|altsyncram_jiq3:auto_generated ; altsyncram_jiq3 ; work         ;
@@ -319,6 +320,48 @@ Encoding Type:  One-Hot
 +--------------+--------------+--------------+--------------+--------------+--------------+
 
 
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Test_CRC_DO|CRC8BIT:crc|state_xor                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Name          ; state_xor.s32 ; state_xor.s31 ; state_xor.s30 ; state_xor.s29 ; state_xor.s28 ; state_xor.s27 ; state_xor.s26 ; state_xor.s25 ; state_xor.s24 ; state_xor.s23 ; state_xor.s22 ; state_xor.s21 ; state_xor.s20 ; state_xor.s19 ; state_xor.s18 ; state_xor.s17 ; state_xor.s16 ; state_xor.s15 ; state_xor.s14 ; state_xor.s13 ; state_xor.s12 ; state_xor.s11 ; state_xor.s10 ; state_xor.s9 ; state_xor.s8 ; state_xor.s7 ; state_xor.s6 ; state_xor.s5 ; state_xor.s4 ; state_xor.s3 ; state_xor.s2 ; state_xor.s1 ; state_xor.s0 ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; state_xor.s0  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; state_xor.s1  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; state_xor.s2  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; state_xor.s3  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; state_xor.s4  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s5  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s6  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s7  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s8  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s9  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s10 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s11 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s12 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s13 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s14 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s15 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s16 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s17 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s18 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s19 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s20 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s21 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s22 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s23 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s24 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s25 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s26 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s27 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s28 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s29 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s30 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s31 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s32 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+
+
 +-------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                  ;
 +--------------------------------------------+----------------------------------------+
@@ -330,40 +373,8 @@ Encoding Type:  One-Hot
 ; Data_Orgenizer:og|sig_main_clk_cut         ; Merged with sig_cut                    ;
 ; CRC8BIT:crc|sig_cut_main_clk_not           ; Merged with sig_cut_not                ;
 ; Data_Orgenizer:og|sig_main_clk_cut_not     ; Merged with sig_cut_not                ;
-; Data_Orgenizer:og|sig_sf_reg[31]           ; Merged with CRC8BIT:crc|sig_sf_reg[31] ;
-; Data_Orgenizer:og|sig_sf_reg[17]           ; Merged with CRC8BIT:crc|sig_sf_reg[17] ;
-; Data_Orgenizer:og|sig_sf_reg[16]           ; Merged with CRC8BIT:crc|sig_sf_reg[16] ;
-; Data_Orgenizer:og|sig_sf_reg[15]           ; Merged with CRC8BIT:crc|sig_sf_reg[15] ;
-; Data_Orgenizer:og|sig_sf_reg[14]           ; Merged with CRC8BIT:crc|sig_sf_reg[14] ;
-; Data_Orgenizer:og|sig_sf_reg[13]           ; Merged with CRC8BIT:crc|sig_sf_reg[13] ;
-; Data_Orgenizer:og|sig_sf_reg[12]           ; Merged with CRC8BIT:crc|sig_sf_reg[12] ;
-; Data_Orgenizer:og|sig_sf_reg[11]           ; Merged with CRC8BIT:crc|sig_sf_reg[11] ;
-; Data_Orgenizer:og|sig_sf_reg[10]           ; Merged with CRC8BIT:crc|sig_sf_reg[10] ;
-; Data_Orgenizer:og|sig_sf_reg[9]            ; Merged with CRC8BIT:crc|sig_sf_reg[9]  ;
-; Data_Orgenizer:og|sig_sf_reg[8]            ; Merged with CRC8BIT:crc|sig_sf_reg[8]  ;
-; Data_Orgenizer:og|sig_sf_reg[7]            ; Merged with CRC8BIT:crc|sig_sf_reg[7]  ;
-; Data_Orgenizer:og|sig_sf_reg[6]            ; Merged with CRC8BIT:crc|sig_sf_reg[6]  ;
-; Data_Orgenizer:og|sig_sf_reg[5]            ; Merged with CRC8BIT:crc|sig_sf_reg[5]  ;
-; Data_Orgenizer:og|sig_sf_reg[4]            ; Merged with CRC8BIT:crc|sig_sf_reg[4]  ;
-; Data_Orgenizer:og|sig_sf_reg[3]            ; Merged with CRC8BIT:crc|sig_sf_reg[3]  ;
-; Data_Orgenizer:og|sig_sf_reg[2]            ; Merged with CRC8BIT:crc|sig_sf_reg[2]  ;
-; Data_Orgenizer:og|sig_sf_reg[1]            ; Merged with CRC8BIT:crc|sig_sf_reg[1]  ;
-; Data_Orgenizer:og|sig_sf_reg[0]            ; Merged with CRC8BIT:crc|sig_sf_reg[0]  ;
-; Data_Orgenizer:og|sig_sf_reg[18]           ; Merged with CRC8BIT:crc|sig_sf_reg[18] ;
-; Data_Orgenizer:og|sig_sf_reg[19]           ; Merged with CRC8BIT:crc|sig_sf_reg[19] ;
-; Data_Orgenizer:og|sig_sf_reg[20]           ; Merged with CRC8BIT:crc|sig_sf_reg[20] ;
-; Data_Orgenizer:og|sig_sf_reg[21]           ; Merged with CRC8BIT:crc|sig_sf_reg[21] ;
-; Data_Orgenizer:og|sig_sf_reg[22]           ; Merged with CRC8BIT:crc|sig_sf_reg[22] ;
-; Data_Orgenizer:og|sig_sf_reg[23]           ; Merged with CRC8BIT:crc|sig_sf_reg[23] ;
-; Data_Orgenizer:og|sig_sf_reg[24]           ; Merged with CRC8BIT:crc|sig_sf_reg[24] ;
-; Data_Orgenizer:og|sig_sf_reg[25]           ; Merged with CRC8BIT:crc|sig_sf_reg[25] ;
-; Data_Orgenizer:og|sig_sf_reg[26]           ; Merged with CRC8BIT:crc|sig_sf_reg[26] ;
-; Data_Orgenizer:og|sig_sf_reg[27]           ; Merged with CRC8BIT:crc|sig_sf_reg[27] ;
-; Data_Orgenizer:og|sig_sf_reg[28]           ; Merged with CRC8BIT:crc|sig_sf_reg[28] ;
-; Data_Orgenizer:og|sig_sf_reg[29]           ; Merged with CRC8BIT:crc|sig_sf_reg[29] ;
-; Data_Orgenizer:og|sig_sf_reg[30]           ; Merged with CRC8BIT:crc|sig_sf_reg[30] ;
 ; sig_main[7..13]                            ; Lost fanout                            ;
-; Total Number of Removed Registers = 53     ;                                        ;
+; Total Number of Removed Registers = 21     ;                                        ;
 +--------------------------------------------+----------------------------------------+
 
 
@@ -390,12 +401,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 414   ;
+; Total registers                              ; 443   ;
 ; Number of registers using Synchronous Clear  ; 101   ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 296   ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 325   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 403   ;
+; Number of registers using Clock Enable       ; 398   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -405,21 +416,27 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
+; CRC8BIT:crc|sig_correlation[0]         ; 3       ;
+; CRC8BIT:crc|sig_correlation[1]         ; 3       ;
+; CRC8BIT:crc|sig_correlation[2]         ; 3       ;
+; CRC8BIT:crc|sig_correlation[3]         ; 3       ;
+; CRC8BIT:crc|sig_correlation[4]         ; 6       ;
 ; Data_Orgenizer:og|load_leds            ; 2       ;
 ; CRC8BIT:crc|crc8bit_out                ; 4       ;
 ; sig_cut_not                            ; 12      ;
-; Total number of inverted registers = 3 ;         ;
+; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 7:1                ; 101 bits  ; 404 LEs       ; 101 LEs              ; 303 LEs                ; Yes        ; |Test_CRC_DO|Data_Orgenizer:og|sig_cnt[94] ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Test_CRC_DO|Data_Orgenizer:og|state_Do    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 7:1                ; 101 bits  ; 404 LEs       ; 101 LEs              ; 303 LEs                ; Yes        ; |Test_CRC_DO|Data_Orgenizer:og|sig_cnt[50]  ;
+; 34:1               ; 5 bits    ; 110 LEs       ; 5 LEs                ; 105 LEs                ; Yes        ; |Test_CRC_DO|CRC8BIT:crc|sig_correlation[3] ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |Test_CRC_DO|Data_Orgenizer:og|state_Do     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -517,26 +534,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 118                         ;
-; cycloneiii_ff         ; 414                         ;
-;     CLR               ; 11                          ;
+; boundary_port         ; 123                         ;
+; cycloneiii_ff         ; 443                         ;
+;     CLR               ; 45                          ;
 ;     ENA               ; 118                         ;
-;     ENA CLR           ; 184                         ;
+;     ENA CLR           ; 174                         ;
 ;     ENA CLR SCLR      ; 101                         ;
-; cycloneiii_lcell_comb ; 222                         ;
-;     arith             ; 115                         ;
-;         2 data inputs ; 113                         ;
+;     ENA CLR SLD       ; 5                           ;
+; cycloneiii_lcell_comb ; 271                         ;
+;     arith             ; 119                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 116                         ;
 ;         3 data inputs ; 2                           ;
-;     normal            ; 107                         ;
+;     normal            ; 152                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 69                          ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 97                          ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 4.10                        ;
+; Average LUT depth     ; 4.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -555,23 +574,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Mon Aug 14 12:56:11 2023
+    Info: Processing started: Wed Jul 10 11:38:14 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Test_CRC_DO -c Test_CRC_DO
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/data_orgenizer/data_orgenizer.vhdl
-    Info (12022): Found design unit 1: Data_Orgenizer-ab File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 19
+    Info (12022): Found design unit 1: Data_Orgenizer-ab File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 20
     Info (12023): Found entity 1: Data_Orgenizer File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/crc8bit/crc8bit.vhdl
-    Info (12022): Found design unit 1: CRC8BIT-ab File: C:/Final_Project/The_Final_Project/Card_B/CRC8BIT/CRC8BIT.vhdl Line: 19
+    Info (12022): Found design unit 1: CRC8BIT-ab File: C:/Final_Project/The_Final_Project/Card_B/CRC8BIT/CRC8BIT.vhdl Line: 20
     Info (12023): Found entity 1: CRC8BIT File: C:/Final_Project/The_Final_Project/Card_B/CRC8BIT/CRC8BIT.vhdl Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file rom_crc/rom_crc.vhd
     Info (12022): Found design unit 1: rom_crc-SYN File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/ROM_CRC/ROM_CRC.vhd Line: 53
     Info (12023): Found entity 1: ROM_CRC File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/ROM_CRC/ROM_CRC.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file test_crc_do.vhdl
-    Info (12022): Found design unit 1: Test_CRC_DO-ab File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 20
+    Info (12022): Found design unit 1: Test_CRC_DO-ab File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 21
     Info (12023): Found entity 1: Test_CRC_DO File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 6
 Info (12127): Elaborating entity "Test_CRC_DO" for the top level hierarchy
-Info (12128): Elaborating entity "ROM_CRC" for hierarchy "ROM_CRC:MEMORY" File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 82
+Info (12128): Elaborating entity "ROM_CRC" for hierarchy "ROM_CRC:MEMORY" File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 86
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_CRC:MEMORY|altsyncram:altsyncram_component" File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/ROM_CRC/ROM_CRC.vhd Line: 60
 Info (12130): Elaborated megafunction instantiation "ROM_CRC:MEMORY|altsyncram:altsyncram_component" File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/ROM_CRC/ROM_CRC.vhd Line: 60
 Info (12133): Instantiated megafunction "ROM_CRC:MEMORY|altsyncram:altsyncram_component" with the following parameter: File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/ROM_CRC/ROM_CRC.vhd Line: 60
@@ -628,9 +647,9 @@ Info (12133): Instantiated megafunction "ROM_CRC:MEMORY|altsyncram:altsyncram_co
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jiq3.tdf
     Info (12023): Found entity 1: altsyncram_jiq3 File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/db/altsyncram_jiq3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_jiq3" for hierarchy "ROM_CRC:MEMORY|altsyncram:altsyncram_component|altsyncram_jiq3:auto_generated" File: c:/final_project/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "CRC8BIT" for hierarchy "CRC8BIT:crc" File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 90
-Info (12128): Elaborating entity "Data_Orgenizer" for hierarchy "Data_Orgenizer:og" File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 101
-Info (13000): Registers with preset signals will power-up high File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 13
+Info (12128): Elaborating entity "CRC8BIT" for hierarchy "CRC8BIT:crc" File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 94
+Info (12128): Elaborating entity "Data_Orgenizer" for hierarchy "Data_Orgenizer:og" File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 106
+Info (13000): Registers with preset signals will power-up high File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 14
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "green_leds[3]" is stuck at GND File: C:/Final_Project/The_Final_Project/Card_B/Test_CRC_DO/Test_CRC_DO.vhdl Line: 13
@@ -642,15 +661,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 7 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 620 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 685 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 116 output pins
-    Info (21061): Implemented 494 logic cells
+    Info (21059): Implemented 121 output pins
+    Info (21061): Implemented 554 logic cells
     Info (21064): Implemented 8 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4803 megabytes
-    Info: Processing ended: Mon Aug 14 12:56:19 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Wed Jul 10 11:38:23 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:16
 
 

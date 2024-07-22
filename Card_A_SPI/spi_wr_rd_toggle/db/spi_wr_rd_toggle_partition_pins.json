@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "cs",
+					"strict" : false
+				},
+				{
+					"name" : "mosi",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "read_cs",
+					"strict" : false
+				},
+				{
+					"name" : "write_cs",
+					"strict" : false
+				},
+				{
+					"name" : "wr_rd_toggle",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "read_mosi",
+					"strict" : false
+				},
+				{
+					"name" : "write_mosi",
+					"strict" : false
+				},
+				{
+					"name" : "read_clk",
+					"strict" : false
+				},
+				{
+					"name" : "write_clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

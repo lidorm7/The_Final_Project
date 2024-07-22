@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Oct 19 19:16:18 2023
+Fitter Status : Successful - Wed Jul 10 11:49:35 2024
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : Data_Orgenizer
 Top-level Entity Name : Data_Orgenizer
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 396 / 49,760 ( < 1 % )
-    Total combinational functions : 167 / 49,760 ( < 1 % )
-    Dedicated logic registers : 348 / 49,760 ( < 1 % )
-Total registers : 348
-Total pins : 110 / 360 ( 31 % )
+Total logic elements : 369 / 49,760 ( < 1 % )
+    Total combinational functions : 159 / 49,760 ( < 1 % )
+    Dedicated logic registers : 321 / 49,760 ( < 1 % )
+Total registers : 321
+Total pins : 115 / 360 ( 32 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

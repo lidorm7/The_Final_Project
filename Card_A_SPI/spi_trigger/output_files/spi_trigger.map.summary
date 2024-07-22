@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Jul  4 14:30:15 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : spi_trigger
+Top-level Entity Name : spi_trigger
+Family : MAX 10
+Total logic elements : 79
+    Total combinational functions : 78
+    Dedicated logic registers : 29
+Total registers : 29
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

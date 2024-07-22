@@ -1,0 +1,12 @@
+
+State Machine - |spi_display_modelsim|state_machine
+Name state_machine.s8 state_machine.s7 state_machine.s6 state_machine.s5 state_machine.s4 state_machine.s3 state_machine.s2 state_machine.s1 state_machine.s0 
+state_machine.s0 0 0 0 0 0 0 0 0 0 
+state_machine.s1 0 0 0 0 0 0 0 1 1 
+state_machine.s2 0 0 0 0 0 0 1 0 1 
+state_machine.s3 0 0 0 0 0 1 0 0 1 
+state_machine.s4 0 0 0 0 1 0 0 0 1 
+state_machine.s5 0 0 0 1 0 0 0 0 1 
+state_machine.s6 0 0 1 0 0 0 0 0 1 
+state_machine.s7 0 1 0 0 0 0 0 0 1 
+state_machine.s8 1 0 0 0 0 0 0 0 1 

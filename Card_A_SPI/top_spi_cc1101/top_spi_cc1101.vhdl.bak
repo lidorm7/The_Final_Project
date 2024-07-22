@@ -1,0 +1,97 @@
+-- libraries
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+-- entity
+entity top_spi_cc1101 is
+    port
+    (
+        resetn           : in  std_logic; -- AB9
+        sysclk           : in  std_logic; -- N14 -- 50mHz
+        -- miso	         : in  std_logic; -- AB8
+        mosi             : out std_logic; -- AA5
+        cs 		         : out std_logic; -- AA8
+        spi_clock        : out std_logic; -- AB5
+        -- d0_out           : out std_logic; -- AA16
+        -- tx_rs232         : out std_logic; -- AB7
+        -- mosi_monitor     : out std_logic  -- AA7
+    );
+    end top_spi_cc1101;
+
+architecture ab of top_spi_cc1101 is
+
+    -- set component 
+
+    component spi_cc1101_read
+	port
+	(
+		resetn		            :	 in std_logic;
+		sysclk		            :	 in std_logic;
+		start_state_machine		:	 in std_logic;
+		cs		                :	 out std_logic;
+		mosi		            :	 out std_logic;
+		spi_clock		        :	 out std_logic
+	);
+    end component;
+
+    component spi_trigger
+	port
+	(
+		resetn		            :	 in std_logic;
+		sysclk		            :	 in std_logic;
+		start_state_machine		:	 out std_logic
+	);
+    end component;
+
+    component spi_miso_RAM
+	port
+	(
+		clock		            : in std_logic := '1';
+		data		            : in std_logic_vector (7 downto 0);
+		rdaddress		        : in std_logic_vector (5 downto 0);
+		wraddress		        : in std_logic_vector (5 downto 0);
+		wren		            : in std_logic := '0';
+		q		                : out std_logic_vector (7 downto 0)
+	);
+    end component;
+
+    -- set signals
+    signal  sig_start_state_machine     :   std_logic;
+    signal  sig_2                       :   std_logic_vector(7 downto 0);
+
+    begin
+
+        -- set port maps
+        spi_trigger : trigger
+        port map (
+            resetn              => resetn,
+            sysclk              => sysclk,
+            start_state_machine => sig_start_state_machine
+        );
+
+        spi_cc1101_read : reading
+        port map (
+            resetn              => resetn,
+            sysclk              => sysclk,
+            start_state_machine => sig_start_state_machine,
+            cs                  => cs,
+            mosi                => mosi,
+            spi_clock           => spi_clock
+        );
+
+        -- spi_miso_RAM : memory
+        -- port map (
+        --     clock               => sysclk,
+        --     data                => ,
+        --     rdaddress           => ,
+        --     wraddress           => ,
+        --     wren                => , 
+        --     q                   =>
+        -- );
+
+
+        -- set processes 
+    
+    end ab;       

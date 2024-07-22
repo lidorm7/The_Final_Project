@@ -1,0 +1,21 @@
+|spi_wr_rd_toggle
+resetn => clk~reg0.ACLR
+resetn => mosi~reg0.ACLR
+resetn => cs~reg0.ACLR
+sysclk => clk~reg0.CLK
+sysclk => mosi~reg0.CLK
+sysclk => cs~reg0.CLK
+wr_rd_toggle => cs.OUTPUTSELECT
+wr_rd_toggle => mosi.OUTPUTSELECT
+wr_rd_toggle => clk.OUTPUTSELECT
+write_cs => cs.DATAB
+write_mosi => mosi.DATAB
+write_clk => clk.DATAB
+read_cs => cs.DATAA
+read_mosi => mosi.DATAA
+read_clk => clk.DATAA
+cs << cs~reg0.DB_MAX_OUTPUT_PORT_TYPE
+mosi << mosi~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk << clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

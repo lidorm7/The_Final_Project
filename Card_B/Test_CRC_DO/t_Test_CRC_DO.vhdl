@@ -11,7 +11,8 @@ entity t_Test_CRC_DO is
         green_leds      : out std_logic_vector(7 downto 0);
         rgb_leds        : out std_logic_vector(95 downto 0);
         main_clk        : out std_logic; 
-        crc8bit_out     : out std_logic
+        crc8bit_out     : out std_logic;
+        correlation     : out std_logic_vector(4 downto 0)
     );
 end t_Test_CRC_DO;
 
@@ -28,7 +29,8 @@ architecture only of t_Test_CRC_DO is
         green_leds      : out std_logic_vector(7 downto 0);
         rgb_leds        : out std_logic_vector(95 downto 0); 
         main_clk        : out std_logic;
-        crc8bit_out     : out std_logic
+        crc8bit_out     : out std_logic;
+        correlation     : out std_logic_vector(4 downto 0)
     );
     end component;
 
@@ -50,7 +52,8 @@ architecture only of t_Test_CRC_DO is
         green_leds      => green_leds,
         rgb_leds        => rgb_leds,
         main_clk        => main_clk,
-        crc8bit_out     => crc8bit_out
+        crc8bit_out     => crc8bit_out,
+        correlation     => correlation 
         );
 
         -- set processes

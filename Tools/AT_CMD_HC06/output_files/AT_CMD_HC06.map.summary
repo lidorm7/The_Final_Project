@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Jul 19 15:10:38 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : AT_CMD_HC06
+Top-level Entity Name : AT_CMD_HC06
+Family : MAX 10
+Total logic elements : 157
+    Total combinational functions : 112
+    Dedicated logic registers : 130
+Total registers : 130
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

@@ -9,9 +9,8 @@ entity t_Test_BS is
 port (
     main_clk            : out std_logic;
     nrzl_data           : out std_logic;
-    main_rising_edge    : out std_logic;
-    q_data_bit          : out std_logic;
-    rd_rising_edge      : out std_logic	
+    clk90               : out std_logic;
+    enable              : out std_logic	
 	);
 end t_Test_BS;
 
@@ -26,11 +25,10 @@ component Test_BS
 	(
 		resetn              : in std_logic;
         sysclk              : in std_logic;
+        clk90               : out std_logic; -- for simulation
+        enable              : out std_logic; -- for simulation
         main_clk            : out std_logic;
-        nrzl_data           : out std_logic;
-        main_rising_edge    : out std_logic;
-        q_data_bit          : out std_logic;
-        rd_rising_edge      : out std_logic   
+        nrzl_data           : out std_logic   
 	);
 end component;
 
@@ -50,9 +48,8 @@ begin
         sysclk              =>  sig_sysclk,
         main_clk            =>  main_clk,
         nrzl_data           =>  nrzl_data,
-        main_rising_edge    =>  main_rising_edge,
-        q_data_bit          =>  q_data_bit,
-        rd_rising_edge      =>  rd_rising_edge
+        clk90               =>  clk90, 
+        enable              =>  enable 
  	);
    
 -- set processes

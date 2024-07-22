@@ -448,6 +448,26 @@
 					"strict" : false
 				},
 				{
+					"name" : "correlation[0]",
+					"strict" : false
+				},
+				{
+					"name" : "correlation[1]",
+					"strict" : false
+				},
+				{
+					"name" : "correlation[2]",
+					"strict" : false
+				},
+				{
+					"name" : "correlation[3]",
+					"strict" : false
+				},
+				{
+					"name" : "correlation[4]",
+					"strict" : false
+				},
+				{
 					"name" : "sysclk",
 					"strict" : false
 				},

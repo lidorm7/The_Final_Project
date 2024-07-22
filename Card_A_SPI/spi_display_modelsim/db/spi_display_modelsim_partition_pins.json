@@ -1,0 +1,109 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "RAM_rd_adr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_rd_adr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_rd_adr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_rd_adr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_rd_adr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_rd_adr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_q_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_q_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_q_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_q_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_q_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_q_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_q_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RAM_q_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "modelsim_trigger",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

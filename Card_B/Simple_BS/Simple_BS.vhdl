@@ -5,11 +5,13 @@ use ieee.std_logic_unsigned.all;
 
 entity Simple_BS is
     port(
-        resetn              : in std_logic;
-        sysclk              : in std_logic;
-        bi_phase_filtered   : in std_logic;
-        main_clk            : out std_logic;
-        nrzl_data           : out std_logic
+        resetn              : in std_logic; -- Asynchronous reset input
+        sysclk              : in std_logic; -- System clock input (operating at 50 MHz)
+        bi_phase_filtered   : in std_logic; -- The input BiPhase signal after filtering from "BS_Filter"
+        --clk90               : out std_logic; -- for simulation
+        --enable              : out std_logic; -- for simulation
+        main_clk            : out std_logic; -- The clock output signal
+        nrzl_data           : out std_logic -- The data output signal
     ); 
 end Simple_BS;
 
@@ -19,26 +21,26 @@ architecture ab of Simple_BS is
 
     -- set signals
     
-    signal sig_00_clk                    : std_logic;
-    signal sig_00_cut                    : std_logic;
-    signal sig_00_cut_not                : std_logic;
-    signal sig_00_r                      : std_logic;
+    signal sig_00_clk                    : std_logic; -- This signal used to represent the clock derived from counter
+    signal sig_00_cut                    : std_logic; -- Signal used to create a rising edge detector for "sig_00_clk "
+    signal sig_00_cut_not                : std_logic; -- Signal used to create a rising edge detector for "sig_00_clk "
+    signal sig_00_r                      : std_logic; -- This signal indicates the rising edge of the "sig_00_clk"
 
-    signal sig_90_clk                    : std_logic;
-    signal sig_90_cut                    : std_logic;
-    signal sig_90_cut_not                : std_logic;
-    signal sig_90_r                      : std_logic;
-    signal sig_90_f                      : std_logic;
+    signal sig_90_clk                    : std_logic; -- This signal used to represent the clock derived from counter.
+    signal sig_90_cut                    : std_logic; -- Signal used to create a rising and falling edge detector for "sig_90_clk"
+    signal sig_90_cut_not                : std_logic; -- Signal used to create a rising and falling edge detector for "sig_90_clk"
+    signal sig_90_r                      : std_logic; -- This signal indicates the rising edge of the "sig_90_clk"
+    signal sig_90_f                      : std_logic; -- This signal indicates the falling edge of "sig_90_clk"
 
-    signal sig_bi_phase_filterd_cut      : std_logic;
-    signal sig_bi_phase_filterd_cut_not  : std_logic;
-    signal sig_bi_phase_filterd_r        : std_logic;
-    signal sig_bi_phase_filterd_f        : std_logic;
-
-    signal sig_enable                    : std_logic;
-    signal sig_ff_A                      : std_logic;
-    signal sig_ff_B                      : std_logic;
-    signal cnt_clk                       : std_logic_vector(13 downto 0);
+    signal sig_bi_phase_filterd_cut      : std_logic; -- Signal used to create a rising and falling edge detector for "sig_bi_phase_filterd"
+    signal sig_bi_phase_filterd_cut_not  : std_logic; -- Signal used to create a rising and falling edge detector for "sig_bi_phase_filterd"
+    signal sig_bi_phase_filterd_r        : std_logic; -- This signal indicates the rising edge of the "sig_bi_phase_filterd"    
+    signal sig_bi_phase_filterd_f        : std_logic; -- This signal indicates the falling edge of "sig_bi_phase_filterd"
+    
+    signal sig_enable                    : std_logic; -- This signal used to represent the enable derived from counter
+    signal sig_ff_A                      : std_logic; -- This signal represent the samples from "sig_bi_phase_filterd"
+    signal sig_ff_B                      : std_logic; -- This signal represent the samples from "sig_bi_phase_filterd"
+    signal cnt_clk                       : std_logic_vector(13 downto 0); -- This signal used to represent counter numbers of "sysclk" to generate clocks or pulses
 
     begin
         
@@ -160,4 +162,6 @@ architecture ab of Simple_BS is
             end if;
         end process nrzl_creation;
         
+        --enable <= sig_enable; -- for simulation
+        --clk90 <= sig_90_clk; -- for simulation
 end ab;

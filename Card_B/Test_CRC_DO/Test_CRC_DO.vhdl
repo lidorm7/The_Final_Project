@@ -13,7 +13,8 @@ entity Test_CRC_DO is
         green_leds      : out std_logic_vector(7 downto 0);
         rgb_leds        : out std_logic_vector(95 downto 0); 
         main_clk        : out std_logic;
-        crc8bit_out     : out std_logic
+        crc8bit_out     : out std_logic;
+        correlation     : out std_logic_vector(4 downto 0) 
     );
 end Test_CRC_DO;
 
@@ -39,7 +40,8 @@ component CRC8BIT
 		nrzl_in		    :	 in std_logic;
 		main_clk		:	 in std_logic;
         crc_reg8bit_out :    out std_logic_vector(7 downto 0); 
-		crc8bit_out		:	 out std_logic
+		crc8bit_out		:	 out std_logic;
+        correlation     :    out std_logic_vector(4 downto 0)
 	);
 end component;
 
@@ -50,6 +52,7 @@ port(
     main_clk    : in std_logic;
     nrzl_data   : in std_logic;
     crc8bit_in  : in std_logic;
+    correlation : in std_logic_vector(4 downto 0);
     load_leds   : out std_logic;
     green_leds  : out std_logic_vector(7 downto 0);
     rgb_leds    : out std_logic_vector(95 downto 0)
@@ -74,6 +77,7 @@ end component;
     signal sig_main_rising_edge : std_logic;
 
     signal sig_crc8bit_out      : std_logic;
+    signal sig_correlation      : std_logic_vector(4 downto 0);
 
     begin
 
@@ -94,7 +98,8 @@ end component;
             nrzl_in             => sig_rom_sf(7),
             main_clk            => sig_main_clk,
             crc_reg8bit_out     => crc_reg8bit_out,
-            crc8bit_out         => sig_crc8bit_out           
+            crc8bit_out         => sig_crc8bit_out,
+            correlation         => sig_correlation
         );
         nrzl_data <= sig_rom_sf(7);
 
@@ -105,13 +110,14 @@ end component;
             main_clk            => sig_main_clk,
             nrzl_data           => sig_rom_sf(7),
             crc8bit_in          => sig_crc8bit_out,
+            correlation         => sig_correlation,
             load_leds           => load_leds,
             green_leds          => green_leds,
             rgb_leds            => rgb_leds
         );
 
         crc8bit_out <= sig_crc8bit_out;
-
+        correlation <= sig_correlation;
         -- set processes
 		
         main_clock : process(resetn,sysclk)

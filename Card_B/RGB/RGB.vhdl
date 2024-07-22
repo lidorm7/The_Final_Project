@@ -5,15 +5,15 @@ use ieee.std_logic_unsigned.all;
 
 entity RGB is
     port(
-        resetn          : in std_logic;
-        sysclk          : in std_logic;
-        load_leds       : in std_logic;
-        green_leds      : in std_logic_vector(7 downto 0);
-        rgb_leds        : in std_logic_vector(95 downto 0);
-        OB_LED_RGB_DIN  : out std_logic;
-        LED_1           : out std_logic; -- AA14
-        LED_2           : out std_logic; -- AA15
-        LED_3           : out std_logic -- AB15
+        resetn          : in std_logic; -- Asynchronous reset input
+        sysclk          : in std_logic; -- System clock input (operating at 50 MHz)
+        load_leds       : in std_logic; -- Control signal to load LED data
+        green_leds      : in std_logic_vector(7 downto 0); -- Input signal for displaying data on green LEDs
+        rgb_leds        : in std_logic_vector(95 downto 0); -- Output signal for displaying data on RGB LEDs
+        OB_LED_RGB_DIN  : out std_logic; -- Output signal to drive RGB LEDs' data input
+        LED_1           : out std_logic; -- AA14 -- Output signals for specific LEDs
+        LED_2           : out std_logic; -- AA15 -- Output signals for specific LEDs
+        LED_3           : out std_logic -- AB15 -- Output signals for specific LEDs
     );
 end RGB;
 
@@ -24,13 +24,13 @@ architecture ab of RGB is
     -- set signals
 
     type state is (s0,s1,s2,s3,s4,s5,s5a,s6,s7,s8,s9);
-    signal state_leds : state;
+    signal state_leds : state; -- This signal represents the current state of the LED controller's finite state machine (FSM)
 
-    signal sig_cnt              : std_logic_vector(99 downto 0);
-    signal sig_cnt_loop         : std_logic_vector(99 downto 0);
-    signal sig_shift_led_rgb    : std_logic_vector(95 downto 0);
-    signal sig_OB_LED_RGB_DIN   : std_logic;
-    signal sig_bit              : std_logic;
+    signal sig_cnt              : std_logic_vector(99 downto 0); -- This signal is used for counting clock cycles or generating timing pulses
+    signal sig_cnt_loop         : std_logic_vector(99 downto 0); -- This signal is used to keep track of the number of iterations in a loop
+    signal sig_shift_led_rgb    : std_logic_vector(95 downto 0); -- This signal holds the RGB LED data that needs to be shifted out to the LEDs
+    signal sig_OB_LED_RGB_DIN   : std_logic; -- This signal represents the data input for the RGB LEDs
+    signal sig_bit              : std_logic; -- This signal holds the value of a single bit from the "sig_shift_led_rgb" signal
 
     begin
 

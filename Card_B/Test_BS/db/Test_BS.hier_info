@@ -5,11 +5,10 @@ resetn => Card_A_Design:card_a.resetn
 sysclk => Simple_BS:simplebs.sysclk
 sysclk => BS_Filter:bsfilter.sysclk
 sysclk => Card_A_Design:card_a.sysclk
+clk90 << Simple_BS:simplebs.clk90
+enable << Simple_BS:simplebs.enable
 main_clk << Simple_BS:simplebs.main_clk
 nrzl_data << Simple_BS:simplebs.nrzl_data
-main_rising_edge << Card_A_Design:card_a.main_rising_edge
-q_data_bit << Card_A_Design:card_a.q_data_bit
-rd_rising_edge << Card_A_Design:card_a.rd_rising_edge
 
 
 |Test_BS|Simple_BS:simplebs
@@ -28,13 +27,13 @@ resetn => cnt_clk[10].ACLR
 resetn => cnt_clk[11].ACLR
 resetn => cnt_clk[12].ACLR
 resetn => cnt_clk[13].ACLR
+resetn => sig_90_clk.ACLR
 resetn => sig_00_clk.PRESET
 resetn => nrzl_data~reg0.ACLR
 resetn => sig_bi_phase_filterd_cut_not.PRESET
 resetn => sig_bi_phase_filterd_cut.ACLR
 resetn => sig_00_cut_not.PRESET
 resetn => sig_00_cut.ACLR
-resetn => sig_90_clk.ACLR
 resetn => sig_90_cut_not.PRESET
 resetn => sig_90_cut.ACLR
 resetn => sig_ff_B.ACLR
@@ -68,6 +67,8 @@ sysclk => sig_bi_phase_filterd_cut.CLK
 bi_phase_filtered => sig_bi_phase_filterd_cut.DATAIN
 bi_phase_filtered => sig_ff_A.DATAIN
 bi_phase_filtered => sig_ff_B.DATAIN
+clk90 <= sig_90_clk.DB_MAX_OUTPUT_PORT_TYPE
+enable <= sig_enable.DB_MAX_OUTPUT_PORT_TYPE
 main_clk <= sig_00_clk.DB_MAX_OUTPUT_PORT_TYPE
 nrzl_data <= nrzl_data~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -120,9 +121,6 @@ sysclk => BiPhase_tx:biphase.sysclk
 sysclk => Uart_tx_Rom:tx.sysclk
 sysclk => Uart_rx:rx.sysclk
 sysclk => Ram2_X:memory.clock
-main_rising_edge <= BiPhase_tx:biphase.main_rising_edge
-q_data_bit <= BiPhase_tx:biphase.q_data_bit
-rd_rising_edge <= BiPhase_tx:biphase.rd
 BiPhase_tx_out <= BiPhase_tx:biphase.BiPhase_tx_out
 
 
@@ -134,14 +132,6 @@ resetn => sig_read_address_cnt[2].ACLR
 resetn => sig_read_address_cnt[3].ACLR
 resetn => sig_read_address_cnt[4].ACLR
 resetn => sig_BiPhase_tx_out.ACLR
-resetn => sig_shift_data[0].ACLR
-resetn => sig_shift_data[1].ACLR
-resetn => sig_shift_data[2].ACLR
-resetn => sig_shift_data[3].ACLR
-resetn => sig_shift_data[4].ACLR
-resetn => sig_shift_data[5].ACLR
-resetn => sig_shift_data[6].ACLR
-resetn => sig_shift_data[7].ACLR
 resetn => sig_main[0].ACLR
 resetn => sig_main[1].ACLR
 resetn => sig_main[2].ACLR
@@ -161,6 +151,14 @@ resetn => sig_cut.ACLR
 resetn => sig_read.ACLR
 resetn => sig_cut_rd_not.PRESET
 resetn => sig_cut_rd.ACLR
+resetn => sig_shift_data[0].ACLR
+resetn => sig_shift_data[1].ACLR
+resetn => sig_shift_data[2].ACLR
+resetn => sig_shift_data[3].ACLR
+resetn => sig_shift_data[4].ACLR
+resetn => sig_shift_data[5].ACLR
+resetn => sig_shift_data[6].ACLR
+resetn => sig_shift_data[7].ACLR
 resetn => state_mini~9.DATAIN
 resetn => state_bi~3.DATAIN
 resetn => sig_read_address[0].ENA
@@ -233,8 +231,6 @@ read_address[4] <= sig_read_address[4].DB_MAX_OUTPUT_PORT_TYPE
 read_address[5] <= sig_read_address[5].DB_MAX_OUTPUT_PORT_TYPE
 rd <= sig_rd_rising_edge.DB_MAX_OUTPUT_PORT_TYPE
 toggle <= sig_toggle.DB_MAX_OUTPUT_PORT_TYPE
-q_data_bit <= sig_shift_data[7].DB_MAX_OUTPUT_PORT_TYPE
-main_rising_edge <= sig_main_rising_edge.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Test_BS|Card_A_Design:card_a|Uart_tx_Rom:tx

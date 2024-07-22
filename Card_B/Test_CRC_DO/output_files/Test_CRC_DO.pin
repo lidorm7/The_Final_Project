@@ -71,17 +71,17 @@ CHIP  "Test_CRC_DO"  ASSIGNED TO AN: 10M50DAF484C7G
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 GND                          : A1        : gnd    :                   :         :           :                
-rgb_leds[68]                 : A2        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
-rgb_leds[67]                 : A4        : output : 2.5 V             :         : 8         : N              
-rgb_leds[71]                 : A5        : output : 2.5 V             :         : 8         : N              
-rgb_leds[17]                 : A6        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 7         :                
+rgb_leds[26]                 : A2        : output : 2.5 V             :         : 8         : N              
+rgb_leds[31]                 : A3        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
+correlation[4]               : A5        : output : 2.5 V             :         : 8         : N              
+rgb_leds[23]                 : A6        : output : 2.5 V             :         : 8         : N              
+crc_reg8bit_out[0]           : A7        : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A11       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
+correlation[0]               : A12       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
@@ -94,60 +94,60 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A21       :        :                   :      
 GND                          : A22       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA1       :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA2       :        :                   :         : 3         :                
-rgb_leds[54]                 : AA3       : output : 2.5 V             :         : 3         : N              
+rgb_leds[53]                 : AA3       : output : 2.5 V             :         : 3         : N              
 GND                          : AA4       : gnd    :                   :         :           :                
-rgb_leds[25]                 : AA5       : output : 2.5 V             :         : 3         : N              
-rgb_leds[33]                 : AA6       : output : 2.5 V             :         : 3         : N              
-rgb_leds[31]                 : AA7       : output : 2.5 V             :         : 3         : N              
-rgb_leds[63]                 : AA8       : output : 2.5 V             :         : 3         : N              
-rgb_leds[87]                 : AA9       : output : 2.5 V             :         : 3         : N              
-rgb_leds[34]                 : AA10      : output : 2.5 V             :         : 3         : N              
-rgb_leds[16]                 : AA11      : output : 2.5 V             :         : 4         : N              
-crc_reg8bit_out[6]           : AA12      : output : 2.5 V             :         : 4         : N              
-rgb_leds[51]                 : AA13      : output : 2.5 V             :         : 4         : N              
-rgb_leds[53]                 : AA14      : output : 2.5 V             :         : 4         : N              
-rgb_leds[55]                 : AA15      : output : 2.5 V             :         : 4         : N              
-rgb_leds[91]                 : AA16      : output : 2.5 V             :         : 4         : N              
-rgb_leds[89]                 : AA17      : output : 2.5 V             :         : 4         : N              
+rgb_leds[92]                 : AA5       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA6       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA7       :        :                   :         : 3         :                
+rgb_leds[54]                 : AA8       : output : 2.5 V             :         : 3         : N              
+rgb_leds[41]                 : AA9       : output : 2.5 V             :         : 3         : N              
+rgb_leds[48]                 : AA10      : output : 2.5 V             :         : 3         : N              
+rgb_leds[36]                 : AA11      : output : 2.5 V             :         : 4         : N              
+rgb_leds[55]                 : AA12      : output : 2.5 V             :         : 4         : N              
+rgb_leds[58]                 : AA13      : output : 2.5 V             :         : 4         : N              
+rgb_leds[86]                 : AA14      : output : 2.5 V             :         : 4         : N              
+rgb_leds[82]                 : AA15      : output : 2.5 V             :         : 4         : N              
+rgb_leds[59]                 : AA16      : output : 2.5 V             :         : 4         : N              
+rgb_leds[62]                 : AA17      : output : 2.5 V             :         : 4         : N              
 GND                          : AA18      : gnd    :                   :         :           :                
-rgb_leds[93]                 : AA19      : output : 2.5 V             :         : 4         : N              
-rgb_leds[95]                 : AA20      : output : 2.5 V             :         : 4         : N              
-rgb_leds[6]                  : AA21      : output : 2.5 V             :         : 5         : N              
-rgb_leds[8]                  : AA22      : output : 2.5 V             :         : 5         : N              
+rgb_leds[81]                 : AA19      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 5         :                
+green_leds[5]                : AA22      : output : 2.5 V             :         : 5         : N              
 GND                          : AB1       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB2       :        :                   :         : 3         :                
-rgb_leds[26]                 : AB3       : output : 2.5 V             :         : 3         : N              
-rgb_leds[30]                 : AB4       : output : 2.5 V             :         : 3         : N              
-rgb_leds[58]                 : AB5       : output : 2.5 V             :         : 3         : N              
-rgb_leds[32]                 : AB6       : output : 2.5 V             :         : 3         : N              
-rgb_leds[29]                 : AB7       : output : 2.5 V             :         : 3         : N              
-rgb_leds[64]                 : AB8       : output : 2.5 V             :         : 3         : N              
-rgb_leds[37]                 : AB9       : output : 2.5 V             :         : 3         : N              
-rgb_leds[81]                 : AB10      : output : 2.5 V             :         : 4         : N              
-rgb_leds[85]                 : AB11      : output : 2.5 V             :         : 4         : N              
-rgb_leds[14]                 : AB12      : output : 2.5 V             :         : 4         : N              
-rgb_leds[48]                 : AB13      : output : 2.5 V             :         : 4         : N              
-rgb_leds[46]                 : AB14      : output : 2.5 V             :         : 4         : N              
-rgb_leds[5]                  : AB15      : output : 2.5 V             :         : 4         : N              
-rgb_leds[13]                 : AB16      : output : 2.5 V             :         : 4         : N              
-rgb_leds[7]                  : AB17      : output : 2.5 V             :         : 4         : N              
-rgb_leds[0]                  : AB18      : output : 2.5 V             :         : 4         : N              
-crc_reg8bit_out[3]           : AB19      : output : 2.5 V             :         : 4         : N              
-rgb_leds[44]                 : AB20      : output : 2.5 V             :         : 4         : N              
-rgb_leds[1]                  : AB21      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 3         :                
+rgb_leds[91]                 : AB5       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB6       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB7       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 3         :                
+rgb_leds[45]                 : AB9       : output : 2.5 V             :         : 3         : N              
+rgb_leds[50]                 : AB10      : output : 2.5 V             :         : 4         : N              
+rgb_leds[34]                 : AB11      : output : 2.5 V             :         : 4         : N              
+rgb_leds[39]                 : AB12      : output : 2.5 V             :         : 4         : N              
+rgb_leds[51]                 : AB13      : output : 2.5 V             :         : 4         : N              
+rgb_leds[95]                 : AB14      : output : 2.5 V             :         : 4         : N              
+rgb_leds[57]                 : AB15      : output : 2.5 V             :         : 4         : N              
+rgb_leds[88]                 : AB16      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 4         :                
+rgb_leds[63]                 : AB19      : output : 2.5 V             :         : 4         : N              
+rgb_leds[66]                 : AB20      : output : 2.5 V             :         : 4         : N              
+rgb_leds[64]                 : AB21      : output : 2.5 V             :         : 4         : N              
 GND                          : AB22      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B2        :        :                   :         : 8         :                
-rgb_leds[72]                 : B3        : output : 2.5 V             :         : 8         : N              
+rgb_leds[32]                 : B1        : output : 2.5 V             :         : 8         : N              
+rgb_leds[33]                 : B2        : output : 2.5 V             :         : 8         : N              
+rgb_leds[27]                 : B3        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
 GND                          : B6        : gnd    :                   :         :           :                
-rgb_leds[18]                 : B7        : output : 2.5 V             :         : 8         : N              
+rgb_leds[17]                 : B7        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 7         :                
 GND                          : B9        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
+crc_reg8bit_out[5]           : B11       : output : 2.5 V             :         : 7         : N              
+crc_reg8bit_out[6]           : B12       : output : 2.5 V             :         : 7         : N              
 GND                          : B13       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 7         :                
@@ -158,20 +158,20 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : B20       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :         : 6         :                
-green_leds[3]                : C1        : output : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C1        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C4        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C5        :        :                   :         : 8         :                
-rgb_leds[69]                 : C6        : output : 2.5 V             :         : 8         : N              
-rgb_leds[20]                 : C7        : output : 2.5 V             :         : 8         : N              
-rgb_leds[22]                 : C8        : output : 2.5 V             :         : 8         : N              
+rgb_leds[28]                 : C6        : output : 2.5 V             :         : 8         : N              
+rgb_leds[18]                 : C7        : output : 2.5 V             :         : 8         : N              
+crc_reg8bit_out[7]           : C8        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :         : 7         :                
-crc_reg8bit_out[2]           : C11       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
+load_leds                    : C14       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 7         :                
@@ -184,12 +184,12 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : D2        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 1B        :                
 GND                          : D4        : gnd    :                   :         :           :                
-green_leds[6]                : D5        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
-rgb_leds[66]                 : D7        : output : 2.5 V             :         : 8         : N              
-rgb_leds[24]                 : D8        : output : 2.5 V             :         : 8         : N              
-rgb_leds[19]                 : D9        : output : 2.5 V             :         : 8         : N              
-rgb_leds[82]                 : D10       : output : 2.5 V             :         : 8         : N              
+rgb_leds[29]                 : D7        : output : 2.5 V             :         : 8         : N              
+crc_reg8bit_out[3]           : D8        : output : 2.5 V             :         : 8         : N              
+rgb_leds[20]                 : D9        : output : 2.5 V             :         : 8         : N              
+correlation[2]               : D10       : output : 2.5 V             :         : 8         : N              
 GND                          : D11       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 7         :                
@@ -209,12 +209,12 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :      
 NC                           : E5        :        :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
 GND                          : E7        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
-rgb_leds[65]                 : E9        : output : 2.5 V             :         : 8         : N              
+rgb_leds[30]                 : E8        : output : 2.5 V             :         : 8         : N              
+rgb_leds[22]                 : E9        : output : 2.5 V             :         : 8         : N              
 rgb_leds[21]                 : E10       : output : 2.5 V             :         : 8         : N              
-rgb_leds[84]                 : E11       : output : 2.5 V             :         : 8         : N              
+rgb_leds[19]                 : E11       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
-green_leds[7]                : E13       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E15       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E16       :        :                   :         : 7         :                
@@ -230,7 +230,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 1A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1A        :                
 NC                           : F6        :        :                   :         :           :                
-rgb_leds[70]                 : F7        : output : 2.5 V             :         : 8         : N              
+green_leds[3]                : F7        : output : 2.5 V             :         : 8         : N              
 ~ALTERA_CONF_DONE~ / RESERVED_INPUT : F8        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
 VCCIO8                       : F9        : power  :                   : 2.5V    : 8         :                
 GND                          : F10       : gnd    :                   :         :           :                
@@ -245,7 +245,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F18       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : F19       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F20       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 6         :                
+rgb_leds[9]                  : F22       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1B        :                
 ~ALTERA_TCK~ / RESERVED_INPUT : G2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1A        :                
@@ -265,9 +265,9 @@ VCCD_PLL2                    : G16       : power  :                   : 1.2V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 6         :                
 GND                          : G18       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G19       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G20       :        :                   :         : 6         :                
+nrzl_data                    : G20       : output : 2.5 V             :         : 6         : N              
 GND                          : G21       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G22       :        :                   :         : 6         :                
+crc_reg8bit_out[4]           : G22       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H1        :        :                   :         : 1B        :                
 ~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1A        :                
@@ -278,9 +278,9 @@ VCCA_ADC                     : H7        : power  :                   : 2.5V    
 VCCA3                        : H8        : power  :                   : 2.5V    :           :                
 ~ALTERA_nCONFIG~ / RESERVED_INPUT : H9        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
 ~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : H10       : input  : 2.5 V             :         : 8         : N              
-rgb_leds[23]                 : H11       : output : 2.5 V             :         : 8         : N              
+rgb_leds[24]                 : H11       : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H12       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H13       :        :                   :         : 7         :                
+correlation[3]               : H13       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H14       :        :                   :         : 7         :                
 VCCA2                        : H15       : power  :                   : 2.5V    :           :                
 VCCIO6                       : H16       : power  :                   : 2.5V    : 6         :                
@@ -288,9 +288,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : H17       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : H18       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H19       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H20       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H21       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H22       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J1        :        :                   :         : 1B        :                
+green_leds[2]                : H21       : output : 2.5 V             :         : 6         : N              
+rgb_leds[12]                 : H22       : output : 2.5 V             :         : 6         : N              
+green_leds[6]                : J1        : output : 2.5 V             :         : 1B        : N              
 GND                          : J2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1A        :                
@@ -299,8 +299,8 @@ GND                          : J6        : gnd    :                   :         
 VCCINT                       : J7        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J8        :        :                   :         : 1A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :         : 1A        :                
-rgb_leds[45]                 : J10       : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J11       :        :                   :         : 7         :                
+crc_reg8bit_out[2]           : J10       : output : 2.5 V             :         : 8         : N              
+crc_reg8bit_out[1]           : J11       : output : 2.5 V             :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : J12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J14       :        :                   :         : 6         :                
@@ -310,8 +310,8 @@ VCCIO6                       : J17       : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : J18       :        :                   :         : 6         :                
 GND                          : J19       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J20       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J21       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J22       :        :                   :         : 6         :                
+green_leds[1]                : J21       : output : 2.5 V             :         : 6         : N              
+rgb_leds[8]                  : J22       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 1B        :                
 GND                          : K3        : gnd    :                   :         :           :                
@@ -319,7 +319,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : K4        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 1A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K6        :        :                   :         : 1A        :                
 VCCIO1A                      : K7        : power  :                   : 2.5V    : 1A        :                
-green_leds[4]                : K8        : output : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K9        :        :                   :         : 1B        :                
 GND                          : K10       : gnd    :                   :         :           :                
 VCC                          : K11       : power  :                   : 1.2V    :           :                
@@ -332,8 +332,8 @@ VCCIO6                       : K17       : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : K18       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K19       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K20       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K21       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K22       :        :                   :         : 6         :                
+rgb_leds[14]                 : K21       : output : 2.5 V             :         : 6         : N              
+rgb_leds[10]                 : K22       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 1B        :                
 DNU                          : L3        :        :                   :         :           :                
@@ -355,7 +355,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : L18       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : L19       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L20       :        :                   :         : 6         :                
 GND                          : L21       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L22       :        :                   :         : 5         :                
+rgb_leds[13]                 : L22       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : M1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 1B        :                
@@ -369,30 +369,30 @@ GND                          : M10       : gnd    :                   :         
 VCC                          : M11       : power  :                   : 1.2V    :           :                
 VCC                          : M12       : power  :                   : 1.2V    :           :                
 VCC                          : M13       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M14       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M15       :        :                   :         : 6         :                
+rgb_leds[16]                 : M14       : output : 2.5 V             :         : 6         : N              
+green_leds[0]                : M15       : output : 2.5 V             :         : 6         : N              
 GND                          : M16       : gnd    :                   :         :           :                
 VCCIO6                       : M17       : power  :                   : 2.5V    : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M18       :        :                   :         : 6         :                
 GND                          : M19       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M20       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M21       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M22       :        :                   :         : 5         :                
-rgb_leds[77]                 : N1        : output : 2.5 V             :         : 2         : N              
+rgb_leds[2]                  : M21       : output : 2.5 V             :         : 5         : N              
+correlation[1]               : M22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N5        :        :                   :         : 2         :                
 VCCIO2                       : N6        : power  :                   : 2.5V    : 2         :                
 VCCIO2                       : N7        : power  :                   : 2.5V    : 2         :                
-rgb_leds[76]                 : N8        : output : 2.5 V             :         : 2         : N              
-rgb_leds[78]                 : N9        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 2         :                
 VCC                          : N10       : power  :                   : 1.2V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
 VCC                          : N12       : power  :                   : 1.2V    :           :                
 GND                          : N13       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N14       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :         : 6         :                
+rgb_leds[11]                 : N14       : output : 2.5 V             :         : 6         : N              
+rgb_leds[15]                 : N15       : output : 2.5 V             :         : 6         : N              
 VCCIO5                       : N16       : power  :                   : 2.5V    : 5         :                
 VCCIO6                       : N17       : power  :                   : 2.5V    : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N18       :        :                   :         : 6         :                
@@ -403,25 +403,25 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : N22       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
 GND                          : P2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P3        :        :                   :         : 2         :                
-green_leds[5]                : P4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P4        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P5        :        :                   :         : 2         :                
 GND                          : P6        : gnd    :                   :         :           :                
 VCCIO2                       : P7        : power  :                   : 2.5V    : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P9        :        :                   :         : 3         :                
-rgb_leds[61]                 : P10       : output : 2.5 V             :         : 3         : N              
-rgb_leds[83]                 : P11       : output : 2.5 V             :         : 3         : N              
-rgb_leds[42]                 : P12       : output : 2.5 V             :         : 4         : N              
-rgb_leds[49]                 : P13       : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P15       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P10       :        :                   :         : 3         :                
+rgb_leds[43]                 : P11       : output : 2.5 V             :         : 3         : N              
+rgb_leds[52]                 : P12       : output : 2.5 V             :         : 4         : N              
+rgb_leds[93]                 : P13       : output : 2.5 V             :         : 4         : N              
+crc8bit_out                  : P14       : output : 2.5 V             :         : 5         : N              
+rgb_leds[0]                  : P15       : output : 2.5 V             :         : 5         : N              
 VCCIO5                       : P16       : power  :                   : 2.5V    : 5         :                
 GND                          : P17       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P18       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P19       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P20       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P21       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P22       :        :                   :         : 5         :                
+rgb_leds[4]                  : P18       : output : 2.5 V             :         : 5         : N              
+rgb_leds[7]                  : P19       : output : 2.5 V             :         : 5         : N              
+rgb_leds[6]                  : P20       : output : 2.5 V             :         : 5         : N              
+rgb_leds[3]                  : P21       : output : 2.5 V             :         : 5         : N              
+rgb_leds[5]                  : P22       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 2         :                
@@ -430,23 +430,23 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :      
 VCCIO2                       : R6        : power  :                   : 2.5V    : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 2         :                
 VCCA1                        : R8        : power  :                   : 2.5V    :           :                
-rgb_leds[62]                 : R9        : output : 2.5 V             :         : 3         : N              
-rgb_leds[28]                 : R10       : output : 2.5 V             :         : 3         : N              
-rgb_leds[35]                 : R11       : output : 2.5 V             :         : 3         : N              
-rgb_leds[11]                 : R12       : output : 2.5 V             :         : 4         : N              
-rgb_leds[43]                 : R13       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R9        :        :                   :         : 3         :                
+rgb_leds[89]                 : R10       : output : 2.5 V             :         : 3         : N              
+rgb_leds[49]                 : R11       : output : 2.5 V             :         : 3         : N              
+rgb_leds[56]                 : R12       : output : 2.5 V             :         : 4         : N              
+rgb_leds[84]                 : R13       : output : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R15       :        :                   :         : 5         :                
 VCCIO5                       : R16       : power  :                   : 2.5V    : 5         :                
 VCCIO5                       : R17       : power  :                   : 2.5V    : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R18       :        :                   :         : 5         :                
+rgb_leds[1]                  : R18       : output : 2.5 V             :         : 5         : N              
 GND                          : R19       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R20       :        :                   :         : 5         :                
 GND                          : R21       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T2        :        :                   :         : 2         :                
-rgb_leds[79]                 : T3        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 2         :                
 GND                          : T4        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 2         :                
@@ -466,11 +466,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : T19       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : T20       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T22       :        :                   :         : 5         :                
-rgb_leds[75]                 : U1        : output : 2.5 V             :         : 2         : N              
-rgb_leds[80]                 : U2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 2         :                
-rgb_leds[73]                 : U5        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U5        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U6        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U7        :        :                   :         : 3         :                
 VCCIO3                       : U8        : power  :                   : 2.5V    : 3         :                
@@ -480,15 +480,15 @@ VCCIO4                       : U11       : power  :                   : 2.5V    
 VCCIO4                       : U12       : power  :                   : 2.5V    : 4         :                
 GND                          : U13       : gnd    :                   :         :           :                
 VCCIO4                       : U14       : power  :                   : 2.5V    : 4         :                
-crc_reg8bit_out[7]           : U15       : output : 2.5 V             :         : 4         : N              
+rgb_leds[78]                 : U15       : output : 2.5 V             :         : 4         : N              
 VCCD_PLL4                    : U16       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U17       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U18       :        :                   :         : 5         :                
-rgb_leds[50]                 : U19       : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : U20       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U21       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U19       :        :                   :         : 5         :                
+rgb_leds[69]                 : U20       : output : 2.5 V             :         : 5         : N              
+green_leds[4]                : U21       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U22       :        :                   :         : 5         :                
-rgb_leds[74]                 : V1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 2         :                
 GND                          : V2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V3        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V4        :        :                   :         : 3         :                
@@ -496,61 +496,61 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :      
 GND                          : V6        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V8        :        :                   :         : 3         :                
-rgb_leds[60]                 : V9        : output : 2.5 V             :         : 3         : N              
-rgb_leds[36]                 : V10       : output : 2.5 V             :         : 3         : N              
-rgb_leds[88]                 : V11       : output : 2.5 V             :         : 4         : N              
-rgb_leds[86]                 : V12       : output : 2.5 V             :         : 4         : N              
-rgb_leds[56]                 : V13       : output : 2.5 V             :         : 4         : N              
-rgb_leds[4]                  : V14       : output : 2.5 V             :         : 4         : N              
-crc_reg8bit_out[5]           : V15       : output : 2.5 V             :         : 4         : N              
-crc_reg8bit_out[1]           : V16       : output : 2.5 V             :         : 4         : N              
-crc8bit_out                  : V17       : output : 2.5 V             :         : 4         : N              
-rgb_leds[52]                 : V18       : output : 2.5 V             :         : 5         : N              
+rgb_leds[40]                 : V9        : output : 2.5 V             :         : 3         : N              
+rgb_leds[42]                 : V10       : output : 2.5 V             :         : 3         : N              
+rgb_leds[35]                 : V11       : output : 2.5 V             :         : 4         : N              
+rgb_leds[38]                 : V12       : output : 2.5 V             :         : 4         : N              
+rgb_leds[61]                 : V13       : output : 2.5 V             :         : 4         : N              
+rgb_leds[87]                 : V14       : output : 2.5 V             :         : 4         : N              
+rgb_leds[85]                 : V15       : output : 2.5 V             :         : 4         : N              
+rgb_leds[60]                 : V16       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V17       :        :                   :         : 4         :                
+rgb_leds[67]                 : V18       : output : 2.5 V             :         : 5         : N              
 GND                          : V19       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 5         :                
+rgb_leds[68]                 : V20       : output : 2.5 V             :         : 5         : N              
+rgb_leds[70]                 : V21       : output : 2.5 V             :         : 5         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W2        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W3        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W5        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : W6        :        :                   :         : 3         :                
-rgb_leds[59]                 : W7        : output : 2.5 V             :         : 3         : N              
-rgb_leds[9]                  : W8        : output : 2.5 V             :         : 3         : N              
-rgb_leds[41]                 : W9        : output : 2.5 V             :         : 3         : N              
-rgb_leds[15]                 : W10       : output : 2.5 V             :         : 3         : N              
-rgb_leds[40]                 : W11       : output : 2.5 V             :         : 4         : N              
-rgb_leds[12]                 : W12       : output : 2.5 V             :         : 4         : N              
-rgb_leds[10]                 : W13       : output : 2.5 V             :         : 4         : N              
-rgb_leds[47]                 : W14       : output : 2.5 V             :         : 4         : N              
-rgb_leds[3]                  : W15       : output : 2.5 V             :         : 4         : N              
-crc_reg8bit_out[4]           : W16       : output : 2.5 V             :         : 4         : N              
-rgb_leds[2]                  : W17       : output : 2.5 V             :         : 4         : N              
-rgb_leds[92]                 : W18       : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : W19       :        :                   :         : 5         :                
-main_clk                     : W20       : output : 2.5 V             :         : 5         : N              
+rgb_leds[25]                 : W6        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W9        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W10       :        :                   :         : 3         :                
+rgb_leds[46]                 : W11       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W12       :        :                   :         : 4         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W13       :        :                   :         : 4         :                
+rgb_leds[94]                 : W14       : output : 2.5 V             :         : 4         : N              
+main_clk                     : W15       : output : 2.5 V             :         : 4         : N              
+rgb_leds[76]                 : W16       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W17       :        :                   :         : 4         :                
+rgb_leds[75]                 : W18       : output : 2.5 V             :         : 4         : N              
+rgb_leds[74]                 : W19       : output : 2.5 V             :         : 5         : N              
+rgb_leds[71]                 : W20       : output : 2.5 V             :         : 5         : N              
 GND                          : W21       : gnd    :                   :         :           :                
-load_leds                    : W22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W22       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y1        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y2        :        :                   :         : 3         :                
-rgb_leds[27]                 : Y3        : output : 2.5 V             :         : 3         : N              
-rgb_leds[57]                 : Y4        : output : 2.5 V             :         : 3         : N              
+green_leds[7]                : Y3        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y5        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y6        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y8        :        :                   :         : 3         :                
 GND                          : Y9        : gnd    :                   :         :           :                
-rgb_leds[38]                 : Y10       : output : 2.5 V             :         : 3         : N              
-rgb_leds[39]                 : Y11       : output : 2.5 V             :         : 4         : N              
+rgb_leds[44]                 : Y10       : output : 2.5 V             :         : 3         : N              
+rgb_leds[47]                 : Y11       : output : 2.5 V             :         : 4         : N              
 GND                          : Y12       : gnd    :                   :         :           :                
-green_leds[0]                : Y13       : output : 2.5 V             :         : 4         : N              
-green_leds[1]                : Y14       : output : 2.5 V             :         : 4         : N              
+rgb_leds[77]                 : Y13       : output : 2.5 V             :         : 4         : N              
+rgb_leds[90]                 : Y14       : output : 2.5 V             :         : 4         : N              
 GND                          : Y15       : gnd    :                   :         :           :                
-green_leds[2]                : Y16       : output : 2.5 V             :         : 4         : N              
-rgb_leds[94]                 : Y17       : output : 2.5 V             :         : 4         : N              
-crc_reg8bit_out[0]           : Y18       : output : 2.5 V             :         : 4         : N              
-rgb_leds[90]                 : Y19       : output : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y20       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : Y21       :        :                   :         : 5         :                
-nrzl_data                    : Y22       : output : 2.5 V             :         : 5         : N              
+rgb_leds[83]                 : Y16       : output : 2.5 V             :         : 4         : N              
+rgb_leds[65]                 : Y17       : output : 2.5 V             :         : 4         : N              
+rgb_leds[80]                 : Y18       : output : 2.5 V             :         : 4         : N              
+rgb_leds[79]                 : Y19       : output : 2.5 V             :         : 4         : N              
+rgb_leds[72]                 : Y20       : output : 2.5 V             :         : 5         : N              
+rgb_leds[73]                 : Y21       : output : 2.5 V             :         : 5         : N              
+rgb_leds[37]                 : Y22       : output : 2.5 V             :         : 5         : N              

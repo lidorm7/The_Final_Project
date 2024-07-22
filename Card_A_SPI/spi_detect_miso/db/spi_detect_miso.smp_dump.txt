@@ -1,0 +1,7 @@
+
+State Machine - |spi_detect_miso|state_wr
+Name state_wr.s3 state_wr.s2 state_wr.s1 state_wr.s0 
+state_wr.s0 0 0 0 0 
+state_wr.s1 0 0 1 1 
+state_wr.s2 0 1 0 1 
+state_wr.s3 1 0 0 1 

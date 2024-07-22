@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Card_B_Design
-Thu Oct 19 19:16:58 2023
+Wed Jul 10 11:51:28 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -16,13 +16,14 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   8. State Machine - |Card_B_Design|RGB:RGB_Leds|state_leds
   9. State Machine - |Card_B_Design|Data_Orgenizer:DO|state_Do
  10. State Machine - |Card_B_Design|CRC8BIT:CRC8|state_crc
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 11. State Machine - |Card_B_Design|CRC8BIT:CRC8|state_xor
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -49,15 +50,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 19 19:16:58 2023          ;
+; Analysis & Synthesis Status        ; Successful - Wed Jul 10 11:51:28 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Card_B_Design                                  ;
 ; Top-level Entity Name              ; Card_B_Design                                  ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 931                                            ;
-;     Total combinational functions  ; 671                                            ;
-;     Dedicated logic registers      ; 736                                            ;
-; Total registers                    ; 736                                            ;
+; Total logic elements               ; 999                                            ;
+;     Total combinational functions  ; 703                                            ;
+;     Dedicated logic registers      ; 780                                            ;
+; Total registers                    ; 780                                            ;
 ; Total pins                         ; 7                                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -193,20 +194,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 931          ;
+; Estimated Total logic elements              ; 999          ;
 ;                                             ;              ;
-; Total combinational functions               ; 671          ;
+; Total combinational functions               ; 703          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 164          ;
-;     -- 3 input functions                    ; 137          ;
-;     -- <=2 input functions                  ; 370          ;
+;     -- 4 input functions                    ; 181          ;
+;     -- 3 input functions                    ; 142          ;
+;     -- <=2 input functions                  ; 380          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 339          ;
-;     -- arithmetic mode                      ; 332          ;
+;     -- normal mode                          ; 367          ;
+;     -- arithmetic mode                      ; 336          ;
 ;                                             ;              ;
-; Total registers                             ; 736          ;
-;     -- Dedicated logic registers            ; 736          ;
+; Total registers                             ; 780          ;
+;     -- Dedicated logic registers            ; 780          ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 7            ;
@@ -214,8 +215,8 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; sysclk~input ;
-; Maximum fan-out                             ; 736          ;
-; Total fan-out                               ; 4703         ;
+; Maximum fan-out                             ; 780          ;
+; Total fan-out                               ; 4951         ;
 ; Average fan-out                             ; 3.31         ;
 +---------------------------------------------+--------------+
 
@@ -225,11 +226,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name              ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+----------------+--------------+
-; |Card_B_Design             ; 671 (0)             ; 736 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 7    ; 0            ; 0          ; |Card_B_Design                   ; Card_B_Design  ; work         ;
+; |Card_B_Design             ; 703 (0)             ; 780 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 7    ; 0            ; 0          ; |Card_B_Design                   ; Card_B_Design  ; work         ;
 ;    |BS_Filter:Filter|      ; 10 (10)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|BS_Filter:Filter  ; BS_Filter      ; work         ;
-;    |CRC8BIT:CRC8|          ; 35 (35)             ; 54 (54)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|CRC8BIT:CRC8      ; CRC8BIT        ; work         ;
-;    |Data_Orgenizer:DO|     ; 167 (167)           ; 316 (316)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|Data_Orgenizer:DO ; Data_Orgenizer ; work         ;
-;    |RGB:RGB_Leds|          ; 430 (430)           ; 325 (325)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|RGB:RGB_Leds      ; RGB            ; work         ;
+;    |CRC8BIT:CRC8|          ; 79 (79)             ; 93 (93)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|CRC8BIT:CRC8      ; CRC8BIT        ; work         ;
+;    |Data_Orgenizer:DO|     ; 157 (157)           ; 321 (321)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|Data_Orgenizer:DO ; Data_Orgenizer ; work         ;
+;    |RGB:RGB_Leds|          ; 428 (428)           ; 325 (325)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|RGB:RGB_Leds      ; RGB            ; work         ;
 ;    |Simple_BS:Simple|      ; 29 (29)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|Simple_BS:Simple  ; Simple_BS      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -289,52 +290,62 @@ Encoding Type:  One-Hot
 +--------------+--------------+--------------+--------------+--------------+--------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                          ;
-+----------------------------------------+----------------------------------------------------+
-; Register name                          ; Reason for Removal                                 ;
-+----------------------------------------+----------------------------------------------------+
-; Simple_BS:Simple|sig_00_cut            ; Merged with Data_Orgenizer:DO|sig_main_clk_cut     ;
-; CRC8BIT:CRC8|sig_cut_main_clk          ; Merged with Data_Orgenizer:DO|sig_main_clk_cut     ;
-; Simple_BS:Simple|sig_00_cut_not        ; Merged with Data_Orgenizer:DO|sig_main_clk_cut_not ;
-; CRC8BIT:CRC8|sig_cut_main_clk_not      ; Merged with Data_Orgenizer:DO|sig_main_clk_cut_not ;
-; Data_Orgenizer:DO|sig_sf_reg[31]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[31]            ;
-; Data_Orgenizer:DO|sig_sf_reg[17]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[17]            ;
-; Data_Orgenizer:DO|sig_sf_reg[16]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[16]            ;
-; Data_Orgenizer:DO|sig_sf_reg[15]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[15]            ;
-; Data_Orgenizer:DO|sig_sf_reg[14]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[14]            ;
-; Data_Orgenizer:DO|sig_sf_reg[13]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[13]            ;
-; Data_Orgenizer:DO|sig_sf_reg[12]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[12]            ;
-; Data_Orgenizer:DO|sig_sf_reg[11]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[11]            ;
-; Data_Orgenizer:DO|sig_sf_reg[10]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[10]            ;
-; Data_Orgenizer:DO|sig_sf_reg[9]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[9]             ;
-; Data_Orgenizer:DO|sig_sf_reg[8]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[8]             ;
-; Data_Orgenizer:DO|sig_sf_reg[7]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[7]             ;
-; Data_Orgenizer:DO|sig_sf_reg[6]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[6]             ;
-; Data_Orgenizer:DO|sig_sf_reg[5]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[5]             ;
-; Data_Orgenizer:DO|sig_sf_reg[4]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[4]             ;
-; Data_Orgenizer:DO|sig_sf_reg[3]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[3]             ;
-; Data_Orgenizer:DO|sig_sf_reg[2]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[2]             ;
-; Data_Orgenizer:DO|sig_sf_reg[1]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[1]             ;
-; Data_Orgenizer:DO|sig_sf_reg[0]        ; Merged with CRC8BIT:CRC8|sig_sf_reg[0]             ;
-; Data_Orgenizer:DO|sig_sf_reg[18]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[18]            ;
-; Data_Orgenizer:DO|sig_sf_reg[19]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[19]            ;
-; Data_Orgenizer:DO|sig_sf_reg[20]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[20]            ;
-; Data_Orgenizer:DO|sig_sf_reg[21]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[21]            ;
-; Data_Orgenizer:DO|sig_sf_reg[22]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[22]            ;
-; Data_Orgenizer:DO|sig_sf_reg[23]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[23]            ;
-; Data_Orgenizer:DO|sig_sf_reg[24]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[24]            ;
-; Data_Orgenizer:DO|sig_sf_reg[25]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[25]            ;
-; Data_Orgenizer:DO|sig_sf_reg[26]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[26]            ;
-; Data_Orgenizer:DO|sig_sf_reg[27]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[27]            ;
-; Data_Orgenizer:DO|sig_sf_reg[28]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[28]            ;
-; Data_Orgenizer:DO|sig_sf_reg[29]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[29]            ;
-; Data_Orgenizer:DO|sig_sf_reg[30]       ; Merged with CRC8BIT:CRC8|sig_sf_reg[30]            ;
-; RGB:RGB_Leds|state_leds.s5a            ; Lost fanout                                        ;
-; RGB:RGB_Leds|state_leds.s8             ; Lost fanout                                        ;
-; RGB:RGB_Leds|state_leds.s9             ; Lost fanout                                        ;
-; Total Number of Removed Registers = 39 ;                                                    ;
-+----------------------------------------+----------------------------------------------------+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Card_B_Design|CRC8BIT:CRC8|state_xor                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Name          ; state_xor.s32 ; state_xor.s31 ; state_xor.s30 ; state_xor.s29 ; state_xor.s28 ; state_xor.s27 ; state_xor.s26 ; state_xor.s25 ; state_xor.s24 ; state_xor.s23 ; state_xor.s22 ; state_xor.s21 ; state_xor.s20 ; state_xor.s19 ; state_xor.s18 ; state_xor.s17 ; state_xor.s16 ; state_xor.s15 ; state_xor.s14 ; state_xor.s13 ; state_xor.s12 ; state_xor.s11 ; state_xor.s10 ; state_xor.s9 ; state_xor.s8 ; state_xor.s7 ; state_xor.s6 ; state_xor.s5 ; state_xor.s4 ; state_xor.s3 ; state_xor.s2 ; state_xor.s1 ; state_xor.s0 ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; state_xor.s0  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; state_xor.s1  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; state_xor.s2  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; state_xor.s3  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; state_xor.s4  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s5  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s6  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s7  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s8  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s9  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s10 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s11 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s12 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s13 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s14 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s15 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s16 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s17 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s18 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s19 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s20 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s21 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s22 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s23 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s24 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s25 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s26 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s27 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s28 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s29 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s30 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s31 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; state_xor.s32 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++---------------------------------------+----------------------------------------------------+
+; Register name                         ; Reason for Removal                                 ;
++---------------------------------------+----------------------------------------------------+
+; Simple_BS:Simple|sig_00_cut           ; Merged with Data_Orgenizer:DO|sig_main_clk_cut     ;
+; CRC8BIT:CRC8|sig_cut_main_clk         ; Merged with Data_Orgenizer:DO|sig_main_clk_cut     ;
+; Simple_BS:Simple|sig_00_cut_not       ; Merged with Data_Orgenizer:DO|sig_main_clk_cut_not ;
+; CRC8BIT:CRC8|sig_cut_main_clk_not     ; Merged with Data_Orgenizer:DO|sig_main_clk_cut_not ;
+; RGB:RGB_Leds|state_leds.s5a           ; Lost fanout                                        ;
+; RGB:RGB_Leds|state_leds.s8            ; Lost fanout                                        ;
+; RGB:RGB_Leds|state_leds.s9            ; Lost fanout                                        ;
+; Total Number of Removed Registers = 7 ;                                                    ;
++---------------------------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -342,12 +353,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 736   ;
+; Total registers                              ; 780   ;
 ; Number of registers using Synchronous Clear  ; 115   ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 621   ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 665   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 684   ;
+; Number of registers using Clock Enable       ; 694   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -357,13 +368,17 @@ Encoding Type:  One-Hot
 +-----------------------------------------------+---------+
 ; Inverted Register                             ; Fan out ;
 +-----------------------------------------------+---------+
+; CRC8BIT:CRC8|sig_correlation[4]               ; 5       ;
+; CRC8BIT:CRC8|sig_correlation[2]               ; 2       ;
+; CRC8BIT:CRC8|sig_correlation[3]               ; 2       ;
+; CRC8BIT:CRC8|sig_correlation[0]               ; 2       ;
+; CRC8BIT:CRC8|sig_correlation[1]               ; 2       ;
 ; Data_Orgenizer:DO|load_leds                   ; 5       ;
-; Data_Orgenizer:DO|sig_main_clk_cut_not        ; 8       ;
+; Data_Orgenizer:DO|sig_main_clk_cut_not        ; 10      ;
 ; Simple_BS:Simple|sig_00_clk                   ; 4       ;
 ; CRC8BIT:CRC8|crc8bit_out                      ; 3       ;
 ; Simple_BS:Simple|sig_bi_phase_filterd_cut_not ; 2       ;
 ; BS_Filter:Filter|sig_total_check              ; 1       ;
-; Simple_BS:Simple|sig_90_cut_not               ; 2       ;
 ; BS_Filter:Filter|sig_check_0                  ; 1       ;
 ; BS_Filter:Filter|sig_check_1                  ; 1       ;
 ; BS_Filter:Filter|sig_check_2                  ; 1       ;
@@ -371,7 +386,8 @@ Encoding Type:  One-Hot
 ; BS_Filter:Filter|sig_check_4                  ; 1       ;
 ; BS_Filter:Filter|sig_check_5                  ; 1       ;
 ; BS_Filter:Filter|sig_check_6                  ; 1       ;
-; Total number of inverted registers = 14       ;         ;
+; Simple_BS:Simple|sig_90_cut_not               ; 2       ;
+; Total number of inverted registers = 19       ;         ;
 +-----------------------------------------------+---------+
 
 
@@ -380,12 +396,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 3:1                ; 100 bits  ; 200 LEs       ; 100 LEs              ; 100 LEs                ; Yes        ; |Card_B_Design|RGB:RGB_Leds|sig_cnt[8]            ;
-; 4:1                ; 95 bits   ; 190 LEs       ; 95 LEs               ; 95 LEs                 ; Yes        ; |Card_B_Design|RGB:RGB_Leds|sig_shift_led_rgb[86] ;
-; 7:1                ; 101 bits  ; 404 LEs       ; 101 LEs              ; 303 LEs                ; Yes        ; |Card_B_Design|Data_Orgenizer:DO|sig_cnt[18]      ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 15 LEs               ; 10 LEs                 ; No         ; |Card_B_Design|RGB:RGB_Leds|Selector3             ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |Card_B_Design|RGB:RGB_Leds|Selector8             ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |Card_B_Design|Data_Orgenizer:DO|state_Do         ;
+; 3:1                ; 100 bits  ; 200 LEs       ; 100 LEs              ; 100 LEs                ; Yes        ; |Card_B_Design|RGB:RGB_Leds|sig_cnt[30]           ;
+; 4:1                ; 95 bits   ; 190 LEs       ; 95 LEs               ; 95 LEs                 ; Yes        ; |Card_B_Design|RGB:RGB_Leds|sig_shift_led_rgb[84] ;
+; 7:1                ; 101 bits  ; 404 LEs       ; 101 LEs              ; 303 LEs                ; Yes        ; |Card_B_Design|Data_Orgenizer:DO|sig_cnt[20]      ;
+; 34:1               ; 5 bits    ; 110 LEs       ; 5 LEs                ; 105 LEs                ; Yes        ; |Card_B_Design|CRC8BIT:CRC8|sig_correlation[4]    ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 15 LEs               ; 10 LEs                 ; No         ; |Card_B_Design|RGB:RGB_Leds|Selector11            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |Card_B_Design|RGB:RGB_Leds|Selector9             ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |Card_B_Design|Data_Orgenizer:DO|state_Do         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
@@ -395,24 +412,26 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 7                           ;
-; cycloneiii_ff         ; 736                         ;
-;     CLR               ; 37                          ;
+; cycloneiii_ff         ; 780                         ;
+;     CLR               ; 71                          ;
 ;     CLR SCLR          ; 14                          ;
 ;     ENA               ; 114                         ;
-;     ENA CLR           ; 469                         ;
+;     ENA CLR           ; 474                         ;
 ;     ENA CLR SCLR      ; 101                         ;
+;     ENA CLR SLD       ; 5                           ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 671                         ;
-;     arith             ; 332                         ;
-;         2 data inputs ; 332                         ;
-;     normal            ; 339                         ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 31                          ;
-;         3 data inputs ; 137                         ;
-;         4 data inputs ; 164                         ;
+; cycloneiii_lcell_comb ; 703                         ;
+;     arith             ; 336                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 335                         ;
+;     normal            ; 367                         ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 142                         ;
+;         4 data inputs ; 181                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.90                       ;
-; Average LUT depth     ; 5.59                        ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 5.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -421,7 +440,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -431,7 +450,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Oct 19 19:16:50 2023
+    Info: Processing started: Wed Jul 10 11:51:19 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Card_B_Design -c Card_B_Design
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file /final_project/the_final_project/card_a/rom_x/rom_x.v
@@ -459,13 +478,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file /final_
     Info (12022): Found design unit 1: RGB-ab File: C:/Final_Project/The_Final_Project/Card_B/RGB/RGB.vhdl Line: 20
     Info (12023): Found entity 1: RGB File: C:/Final_Project/The_Final_Project/Card_B/RGB/RGB.vhdl Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/data_orgenizer/data_orgenizer.vhdl
-    Info (12022): Found design unit 1: Data_Orgenizer-ab File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 19
+    Info (12022): Found design unit 1: Data_Orgenizer-ab File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 20
     Info (12023): Found entity 1: Data_Orgenizer File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/crc8bit/crc8bit.vhdl
-    Info (12022): Found design unit 1: CRC8BIT-ab File: C:/Final_Project/The_Final_Project/Card_B/CRC8BIT/CRC8BIT.vhdl Line: 19
+    Info (12022): Found design unit 1: CRC8BIT-ab File: C:/Final_Project/The_Final_Project/Card_B/CRC8BIT/CRC8BIT.vhdl Line: 20
     Info (12023): Found entity 1: CRC8BIT File: C:/Final_Project/The_Final_Project/Card_B/CRC8BIT/CRC8BIT.vhdl Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/simple_bs/simple_bs.vhdl
-    Info (12022): Found design unit 1: Simple_BS-ab File: C:/Final_Project/The_Final_Project/Card_B/Simple_BS/Simple_BS.vhdl Line: 16
+    Info (12022): Found design unit 1: Simple_BS-ab File: C:/Final_Project/The_Final_Project/Card_B/Simple_BS/Simple_BS.vhdl Line: 18
     Info (12023): Found entity 1: Simple_BS File: C:/Final_Project/The_Final_Project/Card_B/Simple_BS/Simple_BS.vhdl Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_b/bs_filter/bs_filter.vhdl
     Info (12022): Found design unit 1: BS_Filter-ab File: C:/Final_Project/The_Final_Project/Card_B/BS_Filter/BS_Filter.vhdl Line: 15
@@ -474,25 +493,25 @@ Info (12021): Found 2 design units, including 1 entities, in source file card_b_
     Info (12022): Found design unit 1: Card_B_Design-ab File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 19
     Info (12023): Found entity 1: Card_B_Design File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 6
 Info (12127): Elaborating entity "Card_B_Design" for the top level hierarchy
-Info (12128): Elaborating entity "BS_Filter" for hierarchy "BS_Filter:Filter" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 133
-Info (12128): Elaborating entity "Simple_BS" for hierarchy "Simple_BS:Simple" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 141
-Info (12128): Elaborating entity "CRC8BIT" for hierarchy "CRC8BIT:CRC8" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 150
-Info (12128): Elaborating entity "Data_Orgenizer" for hierarchy "Data_Orgenizer:DO" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 160
-Info (12128): Elaborating entity "RGB" for hierarchy "RGB:RGB_Leds" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 174
-Info (13000): Registers with preset signals will power-up high File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 13
+Info (12128): Elaborating entity "BS_Filter" for hierarchy "BS_Filter:Filter" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 137
+Info (12128): Elaborating entity "Simple_BS" for hierarchy "Simple_BS:Simple" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 145
+Info (12128): Elaborating entity "CRC8BIT" for hierarchy "CRC8BIT:CRC8" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 154
+Info (12128): Elaborating entity "Data_Orgenizer" for hierarchy "Data_Orgenizer:DO" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 165
+Info (12128): Elaborating entity "RGB" for hierarchy "RGB:RGB_Leds" File: C:/Final_Project/The_Final_Project/Card_B/Card_B_Design/Card_B_Design.vhdl Line: 180
+Info (13000): Registers with preset signals will power-up high File: C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer/Data_Orgenizer.vhdl Line: 14
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 950 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1018 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 943 logic cells
+    Info (21061): Implemented 1011 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Thu Oct 19 19:16:58 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Wed Jul 10 11:51:28 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
 
 

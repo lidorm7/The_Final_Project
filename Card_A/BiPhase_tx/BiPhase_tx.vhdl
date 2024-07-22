@@ -5,14 +5,14 @@ use ieee.std_logic_unsigned.all;
 
 entity BiPhase_tx is
     port(
-        resetn                : in std_logic;
-        sysclk                : in std_logic;
-        q_data_ram            : in std_logic_vector(7 downto 0);
-        BiPhase_tx_out        : out std_logic;
-        start_strobe_tx       : out std_logic;
-        read_address          : out std_logic_vector(5 downto 0);
-        rd                    : out std_logic;
-        toggle                : out std_logic
+        resetn                : in std_logic; -- Asynchronous reset input
+        sysclk                : in std_logic; -- System clock input (operating at 50 MHz)
+        q_data_ram            : in std_logic_vector(7 downto 0); -- The data input from ram
+        BiPhase_tx_out        : out std_logic; -- Bi-phase encoded output
+        start_strobe_tx       : out std_logic; -- Signal indicating the start of transmission
+        read_address          : out std_logic_vector(5 downto 0); -- Provides the address used for reading
+        rd                    : out std_logic; -- Signal indicating a read operation
+        toggle                : out std_logic -- Toggle the MSB bit of address for read/ write mode
     --    q_data_bit            : out std_logic;
     --    main_rising_edge      : out std_logic
         
@@ -27,27 +27,27 @@ architecture ab of BiPhase_tx is
 
 type state_biphase is (s0,s1,s2,s3,s4,s5,s6,s7);
 type state_biphase_1 is (s0a,s1a,s2a,s3a,s4a,s5a);
-signal state_bi                  : state_biphase;
-signal state_mini                : state_biphase_1;
+signal state_bi                  : state_biphase; -- A signal of type state, which is an enumeration representing the different states of the "BiPhase_tx"
+signal state_mini                : state_biphase_1; -- A signal of type state, which is an enumeration representing the different states of the "side_state_mashine"
 
-signal sig_main                  : std_logic_vector(13 downto 0);
-signal sig_q_ram_out             : std_logic_vector(7 downto 0);
-signal sig_read_address          : std_logic_vector(5 downto 0);
-signal sig_read_address_cnt      : std_logic_vector(4 downto 0);
-signal sig_shift_data            : std_logic_vector(7 downto 0);
-signal sig_main_rising_edge      : std_logic;
-signal sig_rd_rising_edge        : std_logic;
-signal sig_main_falling_edge     : std_logic;
-signal sig_read                  : std_logic;
-signal sig_BiPhase_tx_out        : std_logic;
-signal sig_q_data_bit            : std_logic;
-signal sig_cut                   : std_logic;
-signal sig_cut_not               : std_logic;
-signal sig_cut_rd_not            : std_logic;
-signal sig_cut_rd                : std_logic;
-signal sig_main_clk              : std_logic;
-signal sig_inc                   : std_logic;
-signal sig_toggle                : std_logic := '0';
+signal sig_main                  : std_logic_vector(13 downto 0); -- This signal used to hold a count related to the main clock operation
+signal sig_q_ram_out             : std_logic_vector(7 downto 0); -- This signal representing output data from a RAM
+signal sig_read_address          : std_logic_vector(5 downto 0); -- This signal used to represent an address for reading from RAM
+signal sig_read_address_cnt      : std_logic_vector(4 downto 0); -- This is signal used for counting purposes, possibly related to address generation
+signal sig_shift_data            : std_logic_vector(7 downto 0); -- This signal used for shifting data
+signal sig_main_rising_edge      : std_logic; -- This signal indicates the rising edge of the main clock
+signal sig_rd_rising_edge        : std_logic; -- This signal indicates the rising edge of the read clock
+signal sig_main_falling_edge     : std_logic; -- This signal indicates the falling edge of the main clock
+signal sig_read                  : std_logic; -- This signal is used to control reading operations
+signal sig_BiPhase_tx_out        : std_logic; -- This signal represents the output of the Bi-Phase transmitter
+signal sig_q_data_bit            : std_logic; -- This signal represents a single bit of data from the shifted data
+signal sig_cut                   : std_logic; -- Signal used to create a rising and falling edge detector for "sig_main_clk"
+signal sig_cut_not               : std_logic; -- Signal used to create a rising and falling edge detector for "sig_main_clk"
+signal sig_cut_rd_not            : std_logic; -- Signal used to create a rising edge detector for "sig_read"
+signal sig_cut_rd                : std_logic; -- Signal used to create a rising edge detector for "sig_read"
+signal sig_main_clk              : std_logic; -- This signal used to represent the clock derived from "sig_main" counter
+signal sig_inc                   : std_logic; -- This signal used to create pulse to start the "state_mini"
+signal sig_toggle                : std_logic := '0'; -- This signal is used to separate the sending of data in RAM between reading and writing 
 
     begin
 
@@ -55,7 +55,7 @@ signal sig_toggle                : std_logic := '0';
 
         -- set processes
 
-        -- this transmiter is working with 3000hz
+        -- this transmiter is working with 3000hz (333.333us)
         main_clk : process(resetn,sysclk)
         begin
             if resetn = '0' then

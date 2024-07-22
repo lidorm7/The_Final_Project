@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Jul  8 16:54:10 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : spi_display_modelsim
+Top-level Entity Name : spi_display_modelsim
+Family : MAX 10
+Total logic elements : 27
+    Total combinational functions : 14
+    Dedicated logic registers : 22
+Total registers : 22
+Total pins : 25
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

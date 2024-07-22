@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Final_Project/The_Final_Project/Card_A/Card_A_Design/output_files/") File("Card_A_Design.pof") MfrSpec(OpMask(1) Child_OpMask(2 1 1));
+		Device PartName(10M50DAF484) Path("C:/Final_Project/The_Final_Project/Card_A/Card_A_Design/output_files/") File("Card_A_Design.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

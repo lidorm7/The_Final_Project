@@ -1,0 +1,715 @@
+Analysis & Synthesis report for top_spi_cc1101
+Tue Jul  9 13:26:31 2024
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |top_spi_cc1101|spi_cc1101_read:reading|state
+ 11. State Machine - |top_spi_cc1101|spi_cc1101_write:writing|state
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for spi_ROM:ROM_memory|altsyncram:altsyncram_component|altsyncram_djq3:auto_generated
+ 18. Source assignments for spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0|shift_taps_1vl:auto_generated|altsyncram_ica1:altsyncram2
+ 19. Parameter Settings for User Entity Instance: spi_ROM:ROM_memory|altsyncram:altsyncram_component
+ 20. Parameter Settings for Inferred Entity Instance: spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. altshift_taps Parameter Settings by Entity Instance
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jul  9 13:26:31 2024          ;
+; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                      ; top_spi_cc1101                                 ;
+; Top-level Entity Name              ; top_spi_cc1101                                 ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; 285                                            ;
+;     Total combinational functions  ; 272                                            ;
+;     Dedicated logic registers      ; 168                                            ;
+; Total registers                    ; 168                                            ;
+; Total pins                         ; 6                                              ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 554                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; top_spi_cc1101     ; top_spi_cc1101     ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; 4                  ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++-------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                         ; Library ;
++-------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
+; ../spi_cc1101_write/spi_cc1101_write.vhdl ; yes             ; User VHDL File                         ; C:/Final_Project/The_Final_Project/Card_A_SPI/spi_cc1101_write/spi_cc1101_write.vhdl ;         ;
+; ../spi_ROM/spi_ROM.vhd                    ; yes             ; User Wizard-Generated File             ; C:/Final_Project/The_Final_Project/Card_A_SPI/spi_ROM/spi_ROM.vhd                    ;         ;
+; ../spi_wr_rd_toggle/spi_wr_rd_toggle.vhdl ; yes             ; User VHDL File                         ; C:/Final_Project/The_Final_Project/Card_A_SPI/spi_wr_rd_toggle/spi_wr_rd_toggle.vhdl ;         ;
+; ../spi_control_led/spi_control_led.vhdl   ; yes             ; User VHDL File                         ; C:/Final_Project/The_Final_Project/Card_A_SPI/spi_control_led/spi_control_led.vhdl   ;         ;
+; ../spi_trigger/spi_trigger.vhdl           ; yes             ; User VHDL File                         ; C:/Final_Project/The_Final_Project/Card_A_SPI/spi_trigger/spi_trigger.vhdl           ;         ;
+; ../spi_cc1101_read/spi_cc1101_read.vhdl   ; yes             ; User VHDL File                         ; C:/Final_Project/The_Final_Project/Card_A_SPI/spi_cc1101_read/spi_cc1101_read.vhdl   ;         ;
+; top_spi_cc1101.vhdl                       ; yes             ; User VHDL File                         ; C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/top_spi_cc1101.vhdl     ;         ;
+; altsyncram.tdf                            ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/altsyncram.tdf                      ;         ;
+; stratix_ram_block.inc                     ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/stratix_ram_block.inc               ;         ;
+; lpm_mux.inc                               ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/lpm_mux.inc                         ;         ;
+; lpm_decode.inc                            ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/lpm_decode.inc                      ;         ;
+; aglobal221.inc                            ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/aglobal221.inc                      ;         ;
+; a_rdenreg.inc                             ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/a_rdenreg.inc                       ;         ;
+; altrom.inc                                ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/altrom.inc                          ;         ;
+; altram.inc                                ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/altram.inc                          ;         ;
+; altdpram.inc                              ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/altdpram.inc                        ;         ;
+; db/altsyncram_djq3.tdf                    ; yes             ; Auto-Generated Megafunction            ; C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/altsyncram_djq3.tdf  ;         ;
+; ../spi_ROM/spi_ROM.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Final_Project/The_Final_Project/Card_A_SPI/spi_ROM/spi_ROM.mif                    ;         ;
+; altshift_taps.tdf                         ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/altshift_taps.tdf                   ;         ;
+; lpm_counter.inc                           ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/lpm_counter.inc                     ;         ;
+; lpm_compare.inc                           ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/lpm_compare.inc                     ;         ;
+; lpm_constant.inc                          ; yes             ; Megafunction                           ; c:/final_project/quartus/libraries/megafunctions/lpm_constant.inc                    ;         ;
+; db/shift_taps_1vl.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/shift_taps_1vl.tdf   ;         ;
+; db/altsyncram_ica1.tdf                    ; yes             ; Auto-Generated Megafunction            ; C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/altsyncram_ica1.tdf  ;         ;
+; db/cntr_f5f.tdf                           ; yes             ; Auto-Generated Megafunction            ; C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/cntr_f5f.tdf         ;         ;
+; db/cmpr_hrb.tdf                           ; yes             ; Auto-Generated Megafunction            ; C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/cmpr_hrb.tdf         ;         ;
+; db/cntr_5lg.tdf                           ; yes             ; Auto-Generated Megafunction            ; C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/cntr_5lg.tdf         ;         ;
++-------------------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 285          ;
+;                                             ;              ;
+; Total combinational functions               ; 272          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 127          ;
+;     -- 3 input functions                    ; 30           ;
+;     -- <=2 input functions                  ; 115          ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 182          ;
+;     -- arithmetic mode                      ; 90           ;
+;                                             ;              ;
+; Total registers                             ; 168          ;
+;     -- Dedicated logic registers            ; 168          ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 6            ;
+; Total memory bits                           ; 554          ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; sysclk~input ;
+; Maximum fan-out                             ; 178          ;
+; Total fan-out                               ; 1493         ;
+; Average fan-out                             ; 3.23         ;
++---------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                          ;
++---------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                     ; Entity Name      ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; |top_spi_cc1101                             ; 272 (1)             ; 168 (0)                   ; 554         ; 0          ; 0            ; 0       ; 0         ; 6    ; 0            ; 0          ; |top_spi_cc1101                                                                                                                         ; top_spi_cc1101   ; work         ;
+;    |spi_ROM:ROM_memory|                     ; 0 (0)               ; 0 (0)                     ; 512         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_ROM:ROM_memory                                                                                                      ; spi_ROM          ; work         ;
+;       |altsyncram:altsyncram_component|     ; 0 (0)               ; 0 (0)                     ; 512         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_ROM:ROM_memory|altsyncram:altsyncram_component                                                                      ; altsyncram       ; work         ;
+;          |altsyncram_djq3:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 512         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_ROM:ROM_memory|altsyncram:altsyncram_component|altsyncram_djq3:auto_generated                                       ; altsyncram_djq3  ; work         ;
+;    |spi_cc1101_read:reading|                ; 72 (54)             ; 53 (42)                   ; 42          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_cc1101_read:reading                                                                                                 ; spi_cc1101_read  ; work         ;
+;       |altshift_taps:sig_spi_clock_2_rtl_0| ; 18 (0)              ; 11 (0)                    ; 42          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0                                                             ; altshift_taps    ; work         ;
+;          |shift_taps_1vl:auto_generated|    ; 18 (0)              ; 11 (1)                    ; 42          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0|shift_taps_1vl:auto_generated                               ; shift_taps_1vl   ; work         ;
+;             |altsyncram_ica1:altsyncram2|   ; 0 (0)               ; 0 (0)                     ; 42          ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0|shift_taps_1vl:auto_generated|altsyncram_ica1:altsyncram2   ; altsyncram_ica1  ; work         ;
+;             |cntr_5lg:cntr3|                ; 6 (6)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0|shift_taps_1vl:auto_generated|cntr_5lg:cntr3                ; cntr_5lg         ; work         ;
+;             |cntr_f5f:cntr1|                ; 12 (11)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0|shift_taps_1vl:auto_generated|cntr_f5f:cntr1                ; cntr_f5f         ; work         ;
+;                |cmpr_hrb:cmpr6|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0|shift_taps_1vl:auto_generated|cntr_f5f:cntr1|cmpr_hrb:cmpr6 ; cmpr_hrb         ; work         ;
+;    |spi_cc1101_write:writing|               ; 67 (67)             ; 53 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_cc1101_write:writing                                                                                                ; spi_cc1101_write ; work         ;
+;    |spi_control_led:blinking|               ; 51 (51)             ; 30 (30)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_control_led:blinking                                                                                                ; spi_control_led  ; work         ;
+;    |spi_trigger:trigger|                    ; 78 (78)             ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_trigger:trigger                                                                                                     ; spi_trigger      ; work         ;
+;    |spi_wr_rd_toggle:toggle|                ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_spi_cc1101|spi_wr_rd_toggle:toggle                                                                                                 ; spi_wr_rd_toggle ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+-------------+
+; Name                                                                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF         ;
++----------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+-------------+
+; spi_ROM:ROM_memory|altsyncram:altsyncram_component|altsyncram_djq3:auto_generated|ALTSYNCRAM                                     ; AUTO ; ROM              ; 64           ; 8            ; --           ; --           ; 512  ; spi_ROM.mif ;
+; spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0|shift_taps_1vl:auto_generated|altsyncram_ica1:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 21           ; 2            ; 21           ; 2            ; 42   ; None        ;
++----------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                       ;
++--------+--------------+---------+--------------+--------------+------------------------------------+------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                    ; IP Include File        ;
++--------+--------------+---------+--------------+--------------+------------------------------------+------------------------+
+; Altera ; ROM: 1-PORT  ; 22.1    ; N/A          ; N/A          ; |top_spi_cc1101|spi_ROM:ROM_memory ; ../spi_ROM/spi_ROM.vhd ;
++--------+--------------+---------+--------------+--------------+------------------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_spi_cc1101|spi_cc1101_read:reading|state                                               ;
++----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; Name     ; state.s8 ; state.s7 ; state.s6 ; state.s5 ; state.s4 ; state.s3 ; state.s2 ; state.s1 ; state.s0 ;
++----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; state.s0 ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; state.s1 ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 1        ;
+; state.s2 ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 1        ;
+; state.s3 ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 1        ;
+; state.s4 ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 1        ;
+; state.s5 ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.s6 ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.s7 ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.s8 ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_spi_cc1101|spi_cc1101_write:writing|state                                                                      ;
++-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; Name      ; state.s10 ; state.s9 ; state.s8 ; state.s7 ; state.s6 ; state.s5 ; state.s4 ; state.s3 ; state.s2 ; state.s1 ; state.s0 ;
++-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+; state.s0  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ;
+; state.s1  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 1        ;
+; state.s2  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 1        ;
+; state.s3  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 1        ;
+; state.s4  ; 0         ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 1        ;
+; state.s5  ; 0         ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.s6  ; 0         ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.s7  ; 0         ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.s8  ; 0         ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.s9  ; 0         ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
+; state.s10 ; 1         ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
++-----------+-----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                 ;
++--------------------------------------------+-------------------------------------------------------+
+; Register name                              ; Reason for Removal                                    ;
++--------------------------------------------+-------------------------------------------------------+
+; spi_cc1101_write:writing|sig_CLK_A_q       ; Merged with spi_cc1101_read:reading|sig_CLK_A_q       ;
+; spi_cc1101_write:writing|sig_CLK_A_q_not   ; Merged with spi_cc1101_read:reading|sig_CLK_A_q_not   ;
+; spi_cc1101_write:writing|sig_spi_raw_clock ; Merged with spi_cc1101_read:reading|sig_spi_raw_clock ;
+; spi_cc1101_write:writing|sig_raw_cntr[3]   ; Merged with spi_cc1101_read:reading|sig_raw_cntr[3]   ;
+; spi_cc1101_write:writing|sig_raw_cntr[2]   ; Merged with spi_cc1101_read:reading|sig_raw_cntr[2]   ;
+; spi_cc1101_write:writing|sig_raw_cntr[1]   ; Merged with spi_cc1101_read:reading|sig_raw_cntr[1]   ;
+; spi_cc1101_write:writing|sig_raw_cntr[0]   ; Merged with spi_cc1101_read:reading|sig_raw_cntr[0]   ;
+; Total Number of Removed Registers = 7      ;                                                       ;
++--------------------------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 168   ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 107   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 115   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                              ;
++-------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                               ; Fan out ;
++-------------------------------------------------------------------------------------------------+---------+
+; spi_cc1101_write:writing|sig_cs                                                                 ; 2       ;
+; spi_cc1101_read:reading|sig_cs                                                                  ; 2       ;
+; spi_cc1101_read:reading|sig_CLK_A_q_not                                                         ; 2       ;
+; spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0|shift_taps_1vl:auto_generated|dffe4 ; 2       ;
+; spi_cc1101_read:reading|sig_cs_stop                                                             ; 5       ;
+; spi_cc1101_write:writing|sig_cs_stop                                                            ; 5       ;
+; Total number of inverted registers = 6                                                          ;         ;
++-------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                 ;
++-------------------------------------------------+-----------------------------------------------+------------+
+; Register Name                                   ; Megafunction                                  ; Type       ;
++-------------------------------------------------+-----------------------------------------------+------------+
+; spi_cc1101_read:reading|sig_spi_clk_out         ; spi_cc1101_read:reading|sig_spi_clock_2_rtl_0 ; SHIFT_TAPS ;
+; spi_cc1101_read:reading|sig_spi_clk_dly[0..20]  ; spi_cc1101_read:reading|sig_spi_clock_2_rtl_0 ; SHIFT_TAPS ;
+; spi_cc1101_read:reading|sig_spi_clock_2         ; spi_cc1101_read:reading|sig_spi_clock_2_rtl_0 ; SHIFT_TAPS ;
+; spi_cc1101_write:writing|sig_spi_clk_out        ; spi_cc1101_read:reading|sig_spi_clock_2_rtl_0 ; SHIFT_TAPS ;
+; spi_cc1101_write:writing|sig_spi_clk_dly[0..20] ; spi_cc1101_read:reading|sig_spi_clock_2_rtl_0 ; SHIFT_TAPS ;
+; spi_cc1101_write:writing|sig_spi_clock_2        ; spi_cc1101_read:reading|sig_spi_clock_2_rtl_0 ; SHIFT_TAPS ;
++-------------------------------------------------+-----------------------------------------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |top_spi_cc1101|spi_trigger:trigger|sig_time_cntr[0]           ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top_spi_cc1101|spi_cc1101_read:reading|sig_tx_reg[5]          ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |top_spi_cc1101|spi_cc1101_write:writing|sig_tx_reg[15]        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_spi_cc1101|spi_cc1101_read:reading|sig_cc1101_rd_adr[0]   ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_spi_cc1101|spi_cc1101_write:writing|sig_ROM_address[4]    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_spi_cc1101|spi_cc1101_write:writing|sig_cc1101_wr_adr[4]  ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |top_spi_cc1101|spi_cc1101_read:reading|sig_spi_state_cntr[0]  ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |top_spi_cc1101|spi_cc1101_write:writing|sig_spi_state_cntr[1] ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |top_spi_cc1101|spi_cc1101_read:reading|state                  ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_spi_cc1101|spi_cc1101_read:reading|state                  ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |top_spi_cc1101|spi_cc1101_write:writing|state                 ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_spi_cc1101|spi_cc1101_write:writing|state                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Source assignments for spi_ROM:ROM_memory|altsyncram:altsyncram_component|altsyncram_djq3:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                         ;
++---------------------------------+--------------------+------+--------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                          ;
++---------------------------------+--------------------+------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0|shift_taps_1vl:auto_generated|altsyncram_ica1:altsyncram2 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                             ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                              ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi_ROM:ROM_memory|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------------+
+; Parameter Name                     ; Value                ; Type                                ;
++------------------------------------+----------------------+-------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                             ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                             ;
+; WIDTH_A                            ; 8                    ; Signed Integer                      ;
+; WIDTHAD_A                          ; 6                    ; Signed Integer                      ;
+; NUMWORDS_A                         ; 64                   ; Signed Integer                      ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                             ;
+; WIDTH_B                            ; 1                    ; Signed Integer                      ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                      ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                             ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                             ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                             ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                             ;
+; INIT_FILE                          ; spi_ROM.mif          ; Untyped                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                      ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                             ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                      ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                             ;
+; CBXI_PARAMETER                     ; altsyncram_djq3      ; Untyped                             ;
++------------------------------------+----------------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0 ;
++----------------+----------------+----------------------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                                       ;
++----------------+----------------+----------------------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                                    ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                                    ;
+; TAP_DISTANCE   ; 23             ; Untyped                                                                    ;
+; WIDTH          ; 2              ; Untyped                                                                    ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                                    ;
+; CBXI_PARAMETER ; shift_taps_1vl ; Untyped                                                                    ;
++----------------+----------------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                               ;
++-------------------------------------------+----------------------------------------------------+
+; Name                                      ; Value                                              ;
++-------------------------------------------+----------------------------------------------------+
+; Number of entity instances                ; 1                                                  ;
+; Entity Instance                           ; spi_ROM:ROM_memory|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                ;
+;     -- WIDTH_A                            ; 8                                                  ;
+;     -- NUMWORDS_A                         ; 64                                                 ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                             ;
+;     -- WIDTH_B                            ; 1                                                  ;
+;     -- NUMWORDS_B                         ; 0                                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                       ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                          ;
++-------------------------------------------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                                      ;
++----------------------------+-------------------------------------------------------------+
+; Name                       ; Value                                                       ;
++----------------------------+-------------------------------------------------------------+
+; Number of entity instances ; 1                                                           ;
+; Entity Instance            ; spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                                           ;
+;     -- TAP_DISTANCE        ; 23                                                          ;
+;     -- WIDTH               ; 2                                                           ;
++----------------------------+-------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 6                           ;
+; cycloneiii_ff         ; 168                         ;
+;     CLR               ; 45                          ;
+;     ENA               ; 53                          ;
+;     ENA CLR           ; 30                          ;
+;     ENA CLR SCLR      ; 24                          ;
+;     ENA CLR SLD       ; 8                           ;
+;     plain             ; 8                           ;
+; cycloneiii_lcell_comb ; 272                         ;
+;     arith             ; 90                          ;
+;         2 data inputs ; 90                          ;
+;     normal            ; 182                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 30                          ;
+;         4 data inputs ; 127                         ;
+; cycloneiii_ram_block  ; 10                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.50                        ;
+; Average LUT depth     ; 3.30                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Tue Jul  9 13:26:23 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_spi_cc1101 -c top_spi_cc1101
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a_spi/spi_detect_miso/spi_detect_miso.vhdl
+    Info (12022): Found design unit 1: spi_detect_miso-ab File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_detect_miso/spi_detect_miso.vhdl Line: 30
+    Info (12023): Found entity 1: spi_detect_miso File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_detect_miso/spi_detect_miso.vhdl Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a_spi/spi_display_modelsim/spi_display_modelsim.vhdl
+    Info (12022): Found design unit 1: spi_display_modelsim-ab File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_display_modelsim/spi_display_modelsim.vhdl Line: 27
+    Info (12023): Found entity 1: spi_display_modelsim File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_display_modelsim/spi_display_modelsim.vhdl Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a_spi/spi_miso_ram/spi_miso_ram.vhd
+    Info (12022): Found design unit 1: spi_miso_ram-SYN File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_miso_RAM/spi_miso_RAM.vhd Line: 56
+    Info (12023): Found entity 1: spi_miso_RAM File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_miso_RAM/spi_miso_RAM.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a_spi/spi_cc1101_write/spi_cc1101_write.vhdl
+    Info (12022): Found design unit 1: spi_cc1101_write-ab File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_cc1101_write/spi_cc1101_write.vhdl Line: 22
+    Info (12023): Found entity 1: spi_cc1101_write File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_cc1101_write/spi_cc1101_write.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a_spi/spi_rom/spi_rom.vhd
+    Info (12022): Found design unit 1: spi_rom-SYN File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_ROM/spi_ROM.vhd Line: 53
+    Info (12023): Found entity 1: spi_ROM File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_ROM/spi_ROM.vhd Line: 43
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a_spi/spi_wr_rd_toggle/spi_wr_rd_toggle.vhdl
+    Info (12022): Found design unit 1: spi_wr_rd_toggle-ab File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_wr_rd_toggle/spi_wr_rd_toggle.vhdl Line: 33
+    Info (12023): Found entity 1: spi_wr_rd_toggle File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_wr_rd_toggle/spi_wr_rd_toggle.vhdl Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a_spi/spi_control_led/spi_control_led.vhdl
+    Info (12022): Found design unit 1: spi_control_led-ab File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_control_led/spi_control_led.vhdl Line: 24
+    Info (12023): Found entity 1: spi_control_led File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_control_led/spi_control_led.vhdl Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a_spi/spi_trigger/spi_trigger.vhdl
+    Info (12022): Found design unit 1: spi_trigger-ab File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_trigger/spi_trigger.vhdl Line: 24
+    Info (12023): Found entity 1: spi_trigger File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_trigger/spi_trigger.vhdl Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /final_project/the_final_project/card_a_spi/spi_cc1101_read/spi_cc1101_read.vhdl
+    Info (12022): Found design unit 1: spi_cc1101_read-ab File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_cc1101_read/spi_cc1101_read.vhdl Line: 32
+    Info (12023): Found entity 1: spi_cc1101_read File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_cc1101_read/spi_cc1101_read.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file top_spi_cc1101.vhdl
+    Info (12022): Found design unit 1: top_spi_cc1101-ab File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/top_spi_cc1101.vhdl Line: 24
+    Info (12023): Found entity 1: top_spi_cc1101 File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/top_spi_cc1101.vhdl Line: 8
+Info (12127): Elaborating entity "top_spi_cc1101" for the top level hierarchy
+Info (12128): Elaborating entity "spi_control_led" for hierarchy "spi_control_led:blinking" File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/top_spi_cc1101.vhdl Line: 163
+Info (12128): Elaborating entity "spi_ROM" for hierarchy "spi_ROM:ROM_memory" File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/top_spi_cc1101.vhdl Line: 170
+Info (12128): Elaborating entity "altsyncram" for hierarchy "spi_ROM:ROM_memory|altsyncram:altsyncram_component" File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_ROM/spi_ROM.vhd Line: 60
+Info (12130): Elaborated megafunction instantiation "spi_ROM:ROM_memory|altsyncram:altsyncram_component" File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_ROM/spi_ROM.vhd Line: 60
+Info (12133): Instantiated megafunction "spi_ROM:ROM_memory|altsyncram:altsyncram_component" with the following parameter: File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_ROM/spi_ROM.vhd Line: 60
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "spi_ROM.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "64"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "6"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_djq3.tdf
+    Info (12023): Found entity 1: altsyncram_djq3 File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/altsyncram_djq3.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_djq3" for hierarchy "spi_ROM:ROM_memory|altsyncram:altsyncram_component|altsyncram_djq3:auto_generated" File: c:/final_project/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "spi_trigger" for hierarchy "spi_trigger:trigger" File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/top_spi_cc1101.vhdl Line: 177
+Info (12128): Elaborating entity "spi_cc1101_write" for hierarchy "spi_cc1101_write:writing" File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/top_spi_cc1101.vhdl Line: 184
+Info (12128): Elaborating entity "spi_cc1101_read" for hierarchy "spi_cc1101_read:reading" File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/top_spi_cc1101.vhdl Line: 198
+Info (12128): Elaborating entity "spi_wr_rd_toggle" for hierarchy "spi_wr_rd_toggle:toggle" File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/top_spi_cc1101.vhdl Line: 208
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "spi_cc1101_read:reading|sig_spi_clock_2_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 23
+        Info (286033): Parameter WIDTH set to 2
+Info (12130): Elaborated megafunction instantiation "spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0"
+Info (12133): Instantiated megafunction "spi_cc1101_read:reading|altshift_taps:sig_spi_clock_2_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "23"
+    Info (12134): Parameter "WIDTH" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_1vl.tdf
+    Info (12023): Found entity 1: shift_taps_1vl File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/shift_taps_1vl.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ica1.tdf
+    Info (12023): Found entity 1: altsyncram_ica1 File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/altsyncram_ica1.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_f5f.tdf
+    Info (12023): Found entity 1: cntr_f5f File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/cntr_f5f.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_hrb.tdf
+    Info (12023): Found entity 1: cmpr_hrb File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/cmpr_hrb.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_5lg.tdf
+    Info (12023): Found entity 1: cntr_5lg File: C:/Final_Project/The_Final_Project/Card_A_SPI/top_spi_cc1101/db/cntr_5lg.tdf Line: 26
+Info (13000): Registers with preset signals will power-up high File: C:/Final_Project/The_Final_Project/Card_A_SPI/spi_cc1101_write/spi_cc1101_write.vhdl Line: 60
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 305 logic cells
+    Info (21064): Implemented 10 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4809 megabytes
+    Info: Processing ended: Tue Jul  9 13:26:31 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
+
+

@@ -5,10 +5,10 @@ use ieee.std_logic_unsigned.all;
 
 entity BS_Filter is
     port(
-        resetn         : in std_logic;
-        sysclk         : in std_logic;
-        bi_pahse_out   : in std_logic;
-        signal_out     : out std_logic
+        resetn         : in std_logic; -- Asynchronous reset input
+        sysclk         : in std_logic; -- System clock input (operating at 50 MHz)
+        bi_pahse_out   : in std_logic; -- The input BiPhase signal from card A
+        signal_out     : out std_logic -- The filtered output signal
     );
 end BS_Filter;
 
@@ -18,15 +18,15 @@ architecture ab of BS_Filter is
 
 -- set signals
 
-signal sig_filter       : std_logic_vector(7 downto 0);
-signal sig_check_0      : std_logic;
-signal sig_check_1      : std_logic;
-signal sig_check_2      : std_logic;
-signal sig_check_3      : std_logic;
-signal sig_check_4      : std_logic;
-signal sig_check_5      : std_logic;
-signal sig_check_6      : std_logic;
-signal sig_total_check  : std_logic;
+signal sig_filter       : std_logic_vector(7 downto 0); -- A 8-bit vector used as a shift register to store the history of input signals
+signal sig_check_0      : std_logic; -- Individual signals representing the XOR outputs of consecutive elements of the "sig_filter" vector
+signal sig_check_1      : std_logic; -- Individual signals representing the XOR outputs of consecutive elements of the "sig_filter" vector
+signal sig_check_2      : std_logic; -- Individual signals representing the XOR outputs of consecutive elements of the "sig_filter" vector
+signal sig_check_3      : std_logic; -- Individual signals representing the XOR outputs of consecutive elements of the "sig_filter" vector
+signal sig_check_4      : std_logic; -- Individual signals representing the XOR outputs of consecutive elements of the "sig_filter" vector
+signal sig_check_5      : std_logic; -- Individual signals representing the XOR outputs of consecutive elements of the "sig_filter" vector
+signal sig_check_6      : std_logic; -- Individual signals representing the XOR outputs of consecutive elements of the "sig_filter" vector
+signal sig_total_check  : std_logic; -- A signal used to determine the total check result based on the XOR outputs
 
     begin
 

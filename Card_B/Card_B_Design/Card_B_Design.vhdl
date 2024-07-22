@@ -21,12 +21,12 @@ architecture ab of Card_B_Design is
     -- set components
 
 --    component BiPhase_Generator
---	port
---	(
---		resetn		        :	 in std_logic;
---		sysclk		        :	 in std_logic;
---		BiPhase_tx_out		:	 out std_logic
---	);
+--    port
+--    (
+--    	  resetn		        :	 in std_logic;
+--    	  sysclk		        :	 in std_logic;
+--    	  BiPhase_tx_out		:	 out std_logic
+--    );
 --    end component;
 
 --    component Card_A_Design
@@ -67,7 +67,8 @@ architecture ab of Card_B_Design is
 		nrzl_in		        :	 in std_logic;
 		main_clk		    :	 in std_logic;
 		-- crc_reg8bit_out		:	 out std_logic_vector(7 downto 0); -- only for simulation
-		crc8bit_out		    :	 out std_logic
+		crc8bit_out		    :	 out std_logic;
+        correlation         : out std_logic_vector(4 downto 0)
 	);
     end component;
 
@@ -79,6 +80,7 @@ architecture ab of Card_B_Design is
 		main_clk		:	 in std_logic;
 		nrzl_data		:	 in std_logic;
         crc8bit_in      :    in std_logic;
+        correlation     :    in std_logic_vector(4 downto 0);
 		load_leds		:	 out std_logic;
 		green_leds		:	 out std_logic_vector(7 downto 0);
 		rgb_leds		:	 out std_logic_vector(95 downto 0)
@@ -112,6 +114,8 @@ architecture ab of Card_B_Design is
     signal sig_green_leds           : std_logic_vector(7 downto 0);
     signal sig_rgb_leds             : std_logic_vector(95 downto 0);
 
+    signal sig_correlation          : std_logic_vector(4 downto 0);
+
     begin
 
         -- set port maps
@@ -134,7 +138,7 @@ architecture ab of Card_B_Design is
         port map(       
             resetn          => resetn,
             sysclk          => sysclk,
-            bi_pahse_out    => BiPhase_rx_in, -- sig_bi_phase
+            bi_pahse_out    => BiPhase_rx_in, -- sig_bi_phase,
             signal_out      => sig_bi_phase_filtered
         );
 
@@ -154,7 +158,8 @@ architecture ab of Card_B_Design is
             nrzl_in             => sig_nrzl_data, 
             main_clk            => sig_main_clk, 
             -- crc_reg8bit_out     => 
-            crc8bit_out         => sig_crc8bit_check
+            crc8bit_out         => sig_crc8bit_check,
+            correlation         => sig_correlation
         );
 
         DO : Data_Orgenizer
@@ -164,6 +169,7 @@ architecture ab of Card_B_Design is
             main_clk            => sig_main_clk,
             nrzl_data           => sig_nrzl_data,
             crc8bit_in          => sig_crc8bit_check,-- '0' if we want without crc8
+            correlation         => sig_correlation,
             load_leds           => sig_load_leds,
             green_leds          => sig_green_leds,
             rgb_leds            => sig_rgb_leds

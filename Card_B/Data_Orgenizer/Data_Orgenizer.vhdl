@@ -5,14 +5,15 @@ use ieee.std_logic_unsigned.all;
 
 entity Data_Orgenizer is 
 port(
-    resetn      : in std_logic;
-    sysclk      : in std_logic;
-    main_clk    : in std_logic;
-    nrzl_data   : in std_logic;
-    crc8bit_in  : in std_logic;
-    load_leds   : out std_logic;
-    green_leds  : out std_logic_vector(7 downto 0);
-    rgb_leds    : out std_logic_vector(95 downto 0)
+    resetn      : in std_logic; -- Asynchronous reset input
+    sysclk      : in std_logic; -- System clock input (operating at 50 MHz)
+    main_clk    : in std_logic; -- Represents the main clock signal used for timing synchronization within the module
+    nrzl_data   : in std_logic; -- Data input signal
+    crc8bit_in  : in std_logic; -- Represents the result of a CRC-8 error detection calculation
+    correlation : in std_logic_vector(4 downto 0);
+    load_leds   : out std_logic; -- Used to control the loading of LEDs, likely indicating when the LEDs should be updated with new data
+    green_leds  : out std_logic_vector(7 downto 0); -- Serves as the data signal for three green LEDs in the system
+    rgb_leds    : out std_logic_vector(95 downto 0) -- Serves as the data signal for controlling RGB LEDs in the system
 );
 end Data_Orgenizer;
 
@@ -23,18 +24,18 @@ architecture ab of Data_Orgenizer is
 -- set signals
 
 type state is (s0,s1,s2,s3,s4,s5,s5a,s6,s7,s8,s9);
-signal state_Do : state;
+signal state_Do : state; -- Signal that governs the behavior and operation of the "Data_Organizer" module
 
-signal sig_main_clk_cut     : std_logic;
-signal sig_main_clk_cut_not : std_logic;
-signal sig_main_clk_r       : std_logic;
-signal sig_main_clk_f       : std_logic;
-signal sig_sf_reg           : std_logic_vector(31 downto 0);
+signal sig_main_clk_cut     : std_logic; -- Used to synchronize internal operations with the rising and falling edges of the "main_clk" signal
+signal sig_main_clk_cut_not : std_logic; -- Used to synchronize internal operations with the rising and falling edges of the "main_clk" signal
+signal sig_main_clk_r       : std_logic; -- Represent the rising edge of the clock signal "main_clk"
+signal sig_main_clk_f       : std_logic; -- Represent the falling edge of the clock signal "main_clk"
+signal sig_sf_reg           : std_logic_vector(31 downto 0); -- Serves as a buffer to hold the incoming data stream
 
-signal sig_cnt              : std_logic_vector(100 downto 0);
-signal sig_green_leds_reg   : std_logic_vector(7 downto 0); -- 23 downto 0
-signal sig_green_leds_out   : std_logic_vector(7 downto 0);
-signal sig_rgb_leds_out     : std_logic_vector(95 downto 0);
+signal sig_cnt              : std_logic_vector(100 downto 0); -- Used as a counter to manage the input data shifting process into the "sig_rgb_leds_out" signal
+signal sig_green_leds_reg   : std_logic_vector(7 downto 0); -- 23 downto 0 -- Serves as a register to temporarily store the input data for the green LEDs
+signal sig_green_leds_out   : std_logic_vector(7 downto 0); -- Represents the output data signal for the green LEDs
+signal sig_rgb_leds_out     : std_logic_vector(95 downto 0); -- Serves as the output data signal for controlling RGB LEDs
 
     begin
 
@@ -81,10 +82,11 @@ signal sig_rgb_leds_out     : std_logic_vector(95 downto 0);
                     case state_Do is
 
                         when s0 =>
-                        if sig_sf_reg = X"C0CAFEAB" then
+                        -- if sig_sf_reg = X"C0CAFEAB" then
+                        --     state_Do <= s1;
+                        -- end if;
+                        if correlation < 3 then
                             state_Do <= s1;
-                        else
-                            state_Do <= s0;
                         end if;
                             
                         when s1 =>

@@ -1,0 +1,18 @@
+Fitter Status : Successful - Tue Jul  9 13:26:38 2024
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : top_spi_cc1101
+Top-level Entity Name : top_spi_cc1101
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 277 / 49,760 ( < 1 % )
+    Total combinational functions : 272 / 49,760 ( < 1 % )
+    Dedicated logic registers : 168 / 49,760 ( < 1 % )
+Total registers : 168
+Total pins : 6 / 360 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 554 / 1,677,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

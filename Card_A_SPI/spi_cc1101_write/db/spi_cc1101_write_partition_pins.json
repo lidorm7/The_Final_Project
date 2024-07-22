@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ROM_address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "start_read_cc1101",
+					"strict" : false
+				},
+				{
+					"name" : "wr_rd_toggle",
+					"strict" : false
+				},
+				{
+					"name" : "cs",
+					"strict" : false
+				},
+				{
+					"name" : "mosi",
+					"strict" : false
+				},
+				{
+					"name" : "spi_clock",
+					"strict" : false
+				},
+				{
+					"name" : "sysclk",
+					"strict" : false
+				},
+				{
+					"name" : "resetn",
+					"strict" : false
+				},
+				{
+					"name" : "start_state_machine",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "q_data_in[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

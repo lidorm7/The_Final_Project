@@ -90,14 +90,14 @@ signal sig_detected_byte    :  std_logic_vector(7 downto 0);
         biphase : BiPhase_tx
         port map (
 
-            resetn            => resetn,
-            sysclk            => sysclk,
-            q_data_ram        => sig_q_data_ram,
-            BiPhase_tx_out    => BiPhase_tx_out,
-            start_strobe_tx   => sig_start_strobe_tx,
-            read_address      => sig_read_address,
-            rd                => sig_rd,
-            toggle            => sig_toggle
+            resetn              => resetn,
+            sysclk              => sysclk,
+            q_data_ram          => sig_q_data_ram,
+            BiPhase_tx_out      => BiPhase_tx_out,
+            start_strobe_tx     => sig_start_strobe_tx,
+            read_address        => sig_read_address,
+            rd                  => sig_rd,
+            toggle              => sig_toggle
         --    q_data_bit        => q_data_bit,
         --    main_rising_edge  => main_rising_edge
         
@@ -106,36 +106,36 @@ signal sig_detected_byte    :  std_logic_vector(7 downto 0);
         tx : Uart_tx_Rom
         port map (
 
-            resetn                 => resetn,
-            sysclk                 => sysclk,
-            start_triger           => sig_start_strobe_tx,
-            uart_tx_triger         => sig_detected_bit
+            resetn              => resetn,
+            sysclk              => sysclk,
+            start_triger        => sig_start_strobe_tx,
+            uart_tx_triger      => sig_detected_bit
                     
         );
 
         rx : Uart_rx
         port map (
 
-            resetn            => resetn,
-            sysclk            => sysclk,
-            toggle            => sig_toggle,
-            detected_bit      => sig_detected_bit,
-            ram_address       => sig_wr_address,
-            wr_ram		      => sig_wr,
-            detected_byte     => sig_detected_byte
+            resetn              => resetn,
+            sysclk              => sysclk,
+            toggle              => sig_toggle,
+            detected_bit        => sig_detected_bit,
+            ram_address         => sig_wr_address,
+            wr_ram		        => sig_wr,
+            detected_byte       => sig_detected_byte
                         
         );
 
         memory : Ram2_X
         port map (
 
-            clock            => sysclk,
-            data             => sig_detected_byte,
-            rdaddress        => sig_read_address,
-            rden             => sig_rd,
-            wraddress        => sig_wr_address,
-            wren             => sig_wr,
-            q                => sig_q_data_ram
+            clock               => sysclk,
+            data                => sig_detected_byte,
+            rdaddress           => sig_read_address,
+            rden                => sig_rd,
+            wraddress           => sig_wr_address,
+            wren                => sig_wr,
+            q                   => sig_q_data_ram
                         
         );
 
