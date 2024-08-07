@@ -3,6 +3,8 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
+-- this block design to connect all the blocks component for card B
+
 entity Card_B_Design is
     port(
         resetn              : in std_logic;
@@ -68,7 +70,7 @@ architecture ab of Card_B_Design is
 		main_clk		    :	 in std_logic;
 		-- crc_reg8bit_out		:	 out std_logic_vector(7 downto 0); -- only for simulation
 		crc8bit_out		    :	 out std_logic;
-        correlation         : out std_logic_vector(4 downto 0)
+        correlation         :    out std_logic_vector(4 downto 0)
 	);
     end component;
 

@@ -1,5 +1,5 @@
 Flow report for Data_Orgenizer
-Wed Jul 10 11:49:43 2024
+Thu Aug  1 15:22:56 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Wed Jul 10 11:49:43 2024          ;
+; Flow Status                        ; Successful - Thu Aug  1 15:22:56 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Data_Orgenizer                                 ;
 ; Top-level Entity Name              ; Data_Orgenizer                                 ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 369 / 49,760 ( < 1 % )                         ;
+; Total logic elements               ; 365 / 49,760 ( < 1 % )                         ;
 ;     Total combinational functions  ; 159 / 49,760 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 321 / 49,760 ( < 1 % )                         ;
-; Total registers                    ; 321                                            ;
+;     Dedicated logic registers      ; 316 / 49,760 ( < 1 % )                         ;
+; Total registers                    ; 316                                            ;
 ; Total pins                         ; 115 / 360 ( 32 % )                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/10/2024 11:49:14 ;
+; Start date & time ; 08/01/2024 15:22:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Data_Orgenizer      ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 130071501961069.172060135401696                          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 130071501961069.172251494016840                          ; --            ; --          ; --             ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Final_Project/The_Final_Project/Card_B/Data_Orgenizer ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (VHDL)                                 ; <None>        ; --          ; --             ;
@@ -100,12 +100,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4789 MB             ; 00:00:15                           ;
-; Fitter               ; 00:00:13     ; 1.0                     ; 5641 MB             ; 00:00:15                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4721 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4837 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4648 MB             ; 00:00:00                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:35                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4795 MB             ; 00:00:21                           ;
+; Fitter               ; 00:00:17     ; 1.0                     ; 5645 MB             ; 00:00:20                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4716 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4839 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4648 MB             ; 00:00:01                           ;
+; Total                ; 00:00:32     ; --                      ; --                  ; 00:00:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

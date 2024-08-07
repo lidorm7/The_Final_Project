@@ -3,6 +3,8 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
+-- this block design to connect all the blocks component for card A
+
 entity Card_A_Design_Python is
     port(
         resetn                : in std_logic;

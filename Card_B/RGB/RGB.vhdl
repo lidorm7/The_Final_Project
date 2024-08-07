@@ -38,7 +38,7 @@ architecture ab of RGB is
 
         -- set processes
 
-        set_leds : process( resetn, sysclk )
+        set_leds : process( resetn, sysclk ) -- transferring the data to the leds and rgb leds, create the OB_LED_RGB_DIN signal for the rgb leds according to the requirements of the max10 card
         variable sig_cnt_delay : integer range 0 to 20000;
         begin
             if resetn = '0' then

@@ -1,5 +1,5 @@
 Fitter report for Top_Design
-Thu Oct 19 19:17:40 2023
+Thu Aug  1 15:24:36 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -70,17 +70,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Oct 19 19:17:40 2023          ;
+; Fitter Status                      ; Successful - Thu Aug  1 15:24:36 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Top_Design                                     ;
 ; Top-level Entity Name              ; Top_Design                                     ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 1,133 / 49,760 ( 2 % )                         ;
-;     Total combinational functions  ; 852 / 49,760 ( 2 % )                           ;
-;     Dedicated logic registers      ; 905 / 49,760 ( 2 % )                           ;
-; Total registers                    ; 905                                            ;
+; Total logic elements               ; 1,174 / 49,760 ( 2 % )                         ;
+;     Total combinational functions  ; 888 / 49,760 ( 2 % )                           ;
+;     Dedicated logic registers      ; 944 / 49,760 ( 2 % )                           ;
+; Total registers                    ; 944                                            ;
 ; Total pins                         ; 10 / 360 ( 3 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 512 / 1,677,312 ( < 1 % )                      ;
@@ -157,14 +157,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.14        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.4%      ;
-;     Processor 3            ;   4.4%      ;
-;     Processor 4            ;   4.4%      ;
+;     Processor 2            ;   4.7%      ;
+;     Processor 3            ;   4.7%      ;
+;     Processor 4            ;   4.6%      ;
 +----------------------------+-------------+
 
 
@@ -174,8 +174,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 1805 ) ; 0.00 % ( 0 / 1805 )        ; 0.00 % ( 0 / 1805 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 1805 ) ; 0.00 % ( 0 / 1805 )        ; 0.00 % ( 0 / 1805 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 1880 ) ; 0.00 % ( 0 / 1880 )        ; 0.00 % ( 0 / 1880 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1880 ) ; 0.00 % ( 0 / 1880 )        ; 0.00 % ( 0 / 1880 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -198,7 +198,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 1789 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 1864 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -214,26 +214,26 @@ The pin-out file can be found in C:/Final_Project/The_Final_Project/Tools/Top_De
 +---------------------------------------------+-----------------------------+
 ; Resource                                    ; Usage                       ;
 +---------------------------------------------+-----------------------------+
-; Total logic elements                        ; 1,133 / 49,760 ( 2 % )      ;
-;     -- Combinational with no register       ; 228                         ;
-;     -- Register only                        ; 281                         ;
-;     -- Combinational with a register        ; 624                         ;
+; Total logic elements                        ; 1,174 / 49,760 ( 2 % )      ;
+;     -- Combinational with no register       ; 230                         ;
+;     -- Register only                        ; 286                         ;
+;     -- Combinational with a register        ; 658                         ;
 ;                                             ;                             ;
 ; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 219                         ;
-;     -- 3 input functions                    ; 168                         ;
-;     -- <=2 input functions                  ; 465                         ;
-;     -- Register only                        ; 281                         ;
+;     -- 4 input functions                    ; 234                         ;
+;     -- 3 input functions                    ; 180                         ;
+;     -- <=2 input functions                  ; 474                         ;
+;     -- Register only                        ; 286                         ;
 ;                                             ;                             ;
 ; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 469                         ;
-;     -- arithmetic mode                      ; 383                         ;
+;     -- normal mode                          ; 501                         ;
+;     -- arithmetic mode                      ; 387                         ;
 ;                                             ;                             ;
-; Total registers*                            ; 905 / 51,509 ( 2 % )        ;
-;     -- Dedicated logic registers            ; 905 / 49,760 ( 2 % )        ;
+; Total registers*                            ; 944 / 51,509 ( 2 % )        ;
+;     -- Dedicated logic registers            ; 944 / 49,760 ( 2 % )        ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )           ;
 ;                                             ;                             ;
-; Total LABs:  partially or completely used   ; 104 / 3,110 ( 3 % )         ;
+; Total LABs:  partially or completely used   ; 105 / 3,110 ( 3 % )         ;
 ; Virtual pins                                ; 0                           ;
 ; I/O pins                                    ; 10 / 360 ( 3 % )            ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )              ;
@@ -253,11 +253,11 @@ The pin-out file can be found in C:/Final_Project/The_Final_Project/Tools/Top_De
 ; Remote update blocks                        ; 0 / 1 ( 0 % )               ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )               ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )               ;
-; Average interconnect usage (total/H/V)      ; 0.3% / 0.2% / 0.3%          ;
-; Peak interconnect usage (total/H/V)         ; 2.8% / 2.4% / 3.5%          ;
-; Maximum fan-out                             ; 907                         ;
-; Highest non-global fan-out                  ; 766                         ;
-; Total fan-out                               ; 5987                        ;
+; Average interconnect usage (total/H/V)      ; 0.2% / 0.2% / 0.3%          ;
+; Peak interconnect usage (total/H/V)         ; 3.4% / 2.9% / 4.0%          ;
+; Maximum fan-out                             ; 946                         ;
+; Highest non-global fan-out                  ; 805                         ;
+; Total fan-out                               ; 6230                        ;
 ; Average fan-out                             ; 3.02                        ;
 +---------------------------------------------+-----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -271,26 +271,26 @@ The pin-out file can be found in C:/Final_Project/The_Final_Project/Tools/Top_De
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 1133 / 49760 ( 2 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 228                  ; 0                              ;
-;     -- Register only                        ; 281                  ; 0                              ;
-;     -- Combinational with a register        ; 624                  ; 0                              ;
+; Total logic elements                        ; 1174 / 49760 ( 2 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 230                  ; 0                              ;
+;     -- Register only                        ; 286                  ; 0                              ;
+;     -- Combinational with a register        ; 658                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 219                  ; 0                              ;
-;     -- 3 input functions                    ; 168                  ; 0                              ;
-;     -- <=2 input functions                  ; 465                  ; 0                              ;
-;     -- Register only                        ; 281                  ; 0                              ;
+;     -- 4 input functions                    ; 234                  ; 0                              ;
+;     -- 3 input functions                    ; 180                  ; 0                              ;
+;     -- <=2 input functions                  ; 474                  ; 0                              ;
+;     -- Register only                        ; 286                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 469                  ; 0                              ;
-;     -- arithmetic mode                      ; 383                  ; 0                              ;
+;     -- normal mode                          ; 501                  ; 0                              ;
+;     -- arithmetic mode                      ; 387                  ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 905                  ; 0                              ;
-;     -- Dedicated logic registers            ; 905 / 49760 ( 2 % )  ; 0 / 49760 ( 0 % )              ;
+; Total registers                             ; 944                  ; 0                              ;
+;     -- Dedicated logic registers            ; 944 / 49760 ( 2 % )  ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 104 / 3110 ( 3 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 105 / 3110 ( 3 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 10                   ; 0                              ;
@@ -309,8 +309,8 @@ The pin-out file can be found in C:/Final_Project/The_Final_Project/Tools/Top_De
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 5995                 ; 8                              ;
-;     -- Registered Connections               ; 1934                 ; 0                              ;
+;     -- Total Connections                    ; 6238                 ; 8                              ;
+;     -- Registered Connections               ; 2049                 ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -344,8 +344,8 @@ The pin-out file can be found in C:/Final_Project/The_Final_Project/Tools/Top_De
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+-----------------------+---------------------------+----------------------+-----------+
 ; BiPhase_rx_in ; AB8   ; 3        ; 31           ; 0            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3 V Schmitt Trigger ; --                        ; User                 ; 0         ;
 ; detected_bit  ; AA6   ; 3        ; 29           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
-; resetn        ; AB9   ; 3        ; 34           ; 0            ; 14           ; 766                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
-; sysclk        ; P11   ; 3        ; 34           ; 0            ; 28           ; 907                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
+; resetn        ; AB9   ; 3        ; 34           ; 0            ; 14           ; 805                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
+; sysclk        ; P11   ; 3        ; 34           ; 0            ; 28           ; 946                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+-----------------------+---------------------------+----------------------+-----------+
 
 
@@ -894,19 +894,19 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                                                                                  ; Entity Name          ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |Top_Design                                  ; 1133 (1)    ; 905 (0)                   ; 0 (0)         ; 512         ; 1    ; 1          ; 0            ; 0       ; 0         ; 10   ; 0            ; 228 (1)      ; 281 (0)           ; 624 (0)          ; 0          ; |Top_Design                                                                                                          ; Top_Design           ; work         ;
-;    |Card_A_Design_Python:Card_A|             ; 223 (0)     ; 169 (0)                   ; 0 (0)         ; 512         ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 54 (0)       ; 37 (0)            ; 132 (0)          ; 0          ; |Top_Design|Card_A_Design_Python:Card_A                                                                              ; Card_A_Design_Python ; work         ;
-;       |BiPhase_tx:biphase|                   ; 61 (61)     ; 56 (56)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 16 (16)           ; 41 (41)          ; 0          ; |Top_Design|Card_A_Design_Python:Card_A|BiPhase_tx:biphase                                                           ; BiPhase_tx           ; work         ;
+; |Top_Design                                  ; 1174 (1)    ; 944 (0)                   ; 0 (0)         ; 512         ; 1    ; 1          ; 0            ; 0       ; 0         ; 10   ; 0            ; 230 (1)      ; 286 (0)           ; 658 (0)          ; 0          ; |Top_Design                                                                                                          ; Top_Design           ; work         ;
+;    |Card_A_Design_Python:Card_A|             ; 222 (0)     ; 169 (0)                   ; 0 (0)         ; 512         ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 53 (0)       ; 35 (0)            ; 134 (0)          ; 0          ; |Top_Design|Card_A_Design_Python:Card_A                                                                              ; Card_A_Design_Python ; work         ;
+;       |BiPhase_tx:biphase|                   ; 59 (59)     ; 56 (56)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 14 (14)           ; 43 (43)          ; 0          ; |Top_Design|Card_A_Design_Python:Card_A|BiPhase_tx:biphase                                                           ; BiPhase_tx           ; work         ;
 ;       |Ram2_X:memory|                        ; 2 (0)       ; 1 (0)                     ; 0 (0)         ; 512         ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0          ; |Top_Design|Card_A_Design_Python:Card_A|Ram2_X:memory                                                                ; Ram2_X               ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 2 (0)       ; 1 (0)                     ; 0 (0)         ; 512         ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0          ; |Top_Design|Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component                                ; altsyncram           ; work         ;
 ;             |altsyncram_64s1:auto_generated| ; 2 (2)       ; 1 (1)                     ; 0 (0)         ; 512         ; 1    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0          ; |Top_Design|Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated ; altsyncram_64s1      ; work         ;
-;       |Uart_rx:rx|                           ; 106 (106)   ; 78 (78)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 19 (19)           ; 59 (59)          ; 0          ; |Top_Design|Card_A_Design_Python:Card_A|Uart_rx:rx                                                                   ; Uart_rx              ; work         ;
+;       |Uart_rx:rx|                           ; 107 (107)   ; 78 (78)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 19 (19)           ; 59 (59)          ; 0          ; |Top_Design|Card_A_Design_Python:Card_A|Uart_rx:rx                                                                   ; Uart_rx              ; work         ;
 ;       |Uart_tx_Constant:tx|                  ; 56 (56)     ; 34 (34)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 2 (2)             ; 32 (32)          ; 0          ; |Top_Design|Card_A_Design_Python:Card_A|Uart_tx_Constant:tx                                                          ; Uart_tx_Constant     ; work         ;
-;    |Card_B_Design:Card_B|                    ; 909 (0)     ; 736 (0)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 173 (0)      ; 244 (0)           ; 492 (0)          ; 0          ; |Top_Design|Card_B_Design:Card_B                                                                                     ; Card_B_Design        ; work         ;
+;    |Card_B_Design:Card_B|                    ; 951 (0)     ; 775 (0)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 176 (0)      ; 251 (0)           ; 524 (0)          ; 0          ; |Top_Design|Card_B_Design:Card_B                                                                                     ; Card_B_Design        ; work         ;
 ;       |BS_Filter:Filter|                     ; 18 (18)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 8 (8)             ; 9 (9)            ; 0          ; |Top_Design|Card_B_Design:Card_B|BS_Filter:Filter                                                                    ; BS_Filter            ; work         ;
-;       |CRC8BIT:CRC8|                         ; 69 (69)     ; 54 (54)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 25 (25)           ; 29 (29)          ; 0          ; |Top_Design|Card_B_Design:Card_B|CRC8BIT:CRC8                                                                        ; CRC8BIT              ; work         ;
-;       |Data_Orgenizer:DO|                    ; 372 (372)   ; 316 (316)                 ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 47 (47)      ; 206 (206)         ; 119 (119)        ; 0          ; |Top_Design|Card_B_Design:Card_B|Data_Orgenizer:DO                                                                   ; Data_Orgenizer       ; work         ;
-;       |RGB:RGB_Leds|                         ; 429 (429)   ; 325 (325)                 ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 104 (104)    ; 4 (4)             ; 321 (321)        ; 0          ; |Top_Design|Card_B_Design:Card_B|RGB:RGB_Leds                                                                        ; RGB                  ; work         ;
+;       |CRC8BIT:CRC8|                         ; 113 (113)   ; 93 (93)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 33 (33)           ; 60 (60)          ; 0          ; |Top_Design|Card_B_Design:Card_B|CRC8BIT:CRC8                                                                        ; CRC8BIT              ; work         ;
+;       |Data_Orgenizer:DO|                    ; 362 (362)   ; 316 (316)                 ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (46)      ; 205 (205)         ; 111 (111)        ; 0          ; |Top_Design|Card_B_Design:Card_B|Data_Orgenizer:DO                                                                   ; Data_Orgenizer       ; work         ;
+;       |RGB:RGB_Leds|                         ; 428 (428)   ; 325 (325)                 ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 103 (103)    ; 4 (4)             ; 321 (321)        ; 0          ; |Top_Design|Card_B_Design:Card_B|RGB:RGB_Leds                                                                        ; RGB                  ; work         ;
 ;       |Simple_BS:Simple|                     ; 30 (30)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 1 (1)             ; 23 (23)          ; 0          ; |Top_Design|Card_B_Design:Card_B|Simple_BS:Simple                                                                    ; Simple_BS            ; work         ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+----------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -925,7 +925,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; BiPhase_tx_out ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; sysclk         ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; resetn         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; BiPhase_rx_in  ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; BiPhase_rx_in  ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; detected_bit   ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 +----------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1058,6 +1058,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_cnt[98]                        ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_cnt[99]                        ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_cnt[100]                       ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_correlation[0]                      ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_correlation[1]                      ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_correlation[2]                      ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_correlation[3]                      ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_correlation[4]                      ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_main[11]               ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address_cnt[1]    ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address_cnt[2]    ; 0                 ; 6       ;
@@ -1336,14 +1341,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Card_B_Design:Card_B|RGB:RGB_Leds|sig_cnt_loop[5]                         ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|RGB:RGB_Leds|sig_cnt_loop[7]                         ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|RGB:RGB_Leds|sig_cnt_loop[4]                         ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_reg[2]              ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_reg[0]              ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s4                        ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_out[0]~0            ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_00_clk                          ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|crc8bit_out                             ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s5a                       ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_reg[1]              ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_reg[0]              ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_reg[2]              ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|sig_wr_ram                         ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_cut_rd                 ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_cut_rd_not             ; 0                 ; 6       ;
@@ -1356,6 +1361,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Card_A_Design_Python:Card_A|Uart_tx_Constant:tx|state_tx.s1               ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|RGB:RGB_Leds|sig_shift_led_rgb[95]                   ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|RGB:RGB_Leds|sig_bit~0                               ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Simple_BS:Simple|nrzl_data                           ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s2                        ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s3                        ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_enable                          ; 0                 ; 6       ;
@@ -1372,7 +1378,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|crc_reg8bit[0]                          ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s5                        ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s1                        ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Simple_BS:Simple|nrzl_data                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s0                        ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|state_rx.s5                        ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|state_rx.s0                        ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|state_rx.s4                        ; 0                 ; 6       ;
@@ -1410,44 +1416,76 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|start_strobe_tx~0          ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|start_strobe_tx~2          ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|RGB:RGB_Leds|sig_shift_led_rgb[94]                   ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_ff_A                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_ff_B                            ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|BS_Filter:Filter|signal_out                          ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_crc.s1                            ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_crc.s3                            ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[31]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[30]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[29]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[28]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[27]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[26]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[25]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[24]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[23]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[22]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[21]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[20]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[19]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[17]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[18]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[16]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[15]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[14]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[13]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[12]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[11]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[10]                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[9]                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s0                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s1                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s2                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[2]                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s3                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s4                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[3]                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s5                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[4]                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s6                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[5]                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s7                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[6]                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s8                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s9                            ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[8]                           ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[7]                           ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[5]                           ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[6]                           ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[4]                           ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[3]                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s12                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s10                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s11                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s16                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s15                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s13                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s14                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s17                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[16]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s19                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[18]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s18                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[17]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s20                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[19]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s21                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[20]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s22                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[21]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[22]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s23                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s25                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s26                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[26]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s28                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[27]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s27                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[28]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s29                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[29]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s30                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s32                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[30]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[31]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[24]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[25]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s24                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[23]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[12]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[13]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[14]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[15]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[9]                           ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[11]                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[10]                          ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[1]                           ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[0]                           ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|CRC8BIT:CRC8|sig_sf_reg[2]                           ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s0                        ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_ff_A                            ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_ff_B                            ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s9                        ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|state_rx.s3                        ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|\main_rx:var_clk_cntr[0]           ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|\main_rx:var_clk_cntr[3]           ; 0                 ; 6       ;
@@ -1475,12 +1513,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|state_mini.s1a             ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|RGB:RGB_Leds|sig_shift_led_rgb[93]                   ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_rgb_leds_out[95]               ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_90_cut                          ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_90_cut_not                      ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|BS_Filter:Filter|sig_total_check                     ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_crc.s0                            ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|\crc8bit_operation:cnt[7]~0             ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do.s9                        ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_90_cut                          ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_90_cut_not                      ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|flag                                    ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_xor.s31                           ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|sig_baudx32                        ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_shift_data[2]          ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|state_bi.s6                ; 0                 ; 6       ;
@@ -1488,6 +1527,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_inc~0                  ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|RGB:RGB_Leds|sig_shift_led_rgb[92]                   ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_rgb_leds_out[94]               ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_90_clk                          ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|BS_Filter:Filter|sig_check_0                         ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|BS_Filter:Filter|sig_check_1                         ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|BS_Filter:Filter|sig_check_2                         ; 0                 ; 6       ;
@@ -1496,7 +1536,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Card_B_Design:Card_B|BS_Filter:Filter|sig_check_5                         ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|BS_Filter:Filter|sig_check_6                         ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|CRC8BIT:CRC8|state_crc.s4                            ; 0                 ; 6       ;
-;      - Card_B_Design:Card_B|Simple_BS:Simple|sig_90_clk                          ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|\baud_rate_clk:var_cntr[5]         ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|\baud_rate_clk:var_cntr[4]         ; 0                 ; 6       ;
 ;      - Card_A_Design_Python:Card_A|Uart_rx:rx|\baud_rate_clk:var_cntr[3]         ; 0                 ; 6       ;
@@ -1704,10 +1743,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_rgb_leds_out[1]                ; 0                 ; 6       ;
 ;      - Card_B_Design:Card_B|Data_Orgenizer:DO|sig_rgb_leds_out[0]                ; 0                 ; 6       ;
 ; BiPhase_rx_in                                                                    ;                   ;         ;
-;      - Card_B_Design:Card_B|BS_Filter:Filter|signal_out~0                        ; 1                 ; 6       ;
-;      - Card_B_Design:Card_B|BS_Filter:Filter|sig_filter[0]~feeder                ; 1                 ; 6       ;
+;      - Card_B_Design:Card_B|BS_Filter:Filter|signal_out~0                        ; 0                 ; 6       ;
+;      - Card_B_Design:Card_B|BS_Filter:Filter|sig_filter[0]~feeder                ; 0                 ; 6       ;
 ; detected_bit                                                                     ;                   ;         ;
-;      - Card_A_Design_Python:Card_A|Uart_rx:rx|sig_bit[0]                         ; 0                 ; 6       ;
+;      - Card_A_Design_Python:Card_A|Uart_rx:rx|sig_bit[0]~feeder                  ; 0                 ; 6       ;
 +----------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1716,40 +1755,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                                    ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|rd                                                                       ; LCCOMB_X35_Y6_N30  ; 2       ; Read enable                ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_main_rising_edge                                                     ; LCCOMB_X36_Y4_N2   ; 17      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address[0]~0                                                    ; LCCOMB_X35_Y4_N6   ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|state_mini.s3a                                                           ; FF_X35_Y4_N9       ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~0 ; LCCOMB_X35_Y6_N12  ; 1       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|Selector11~0                                                                     ; LCCOMB_X29_Y6_N4   ; 22      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|\main_rx:var_bit_cntr[1]~0                                                       ; LCCOMB_X32_Y6_N2   ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|\main_rx:var_clk_cntr[5]~0                                                       ; LCCOMB_X32_Y6_N10  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[7]~0                                                               ; LCCOMB_X32_Y6_N28  ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_detected_byte[7]~1                                                           ; LCCOMB_X32_Y6_N30  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[0]~7                                                             ; LCCOMB_X34_Y6_N14  ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_wr_ram                                                                       ; FF_X32_Y6_N13      ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_tx_Constant:tx|\transmission:sig_cntr[0]~1                                             ; LCCOMB_X34_Y4_N14  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_tx_Constant:tx|sig_packet[2]~5                                                         ; LCCOMB_X39_Y4_N28  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_A_Design_Python:Card_A|Uart_tx_Constant:tx|state_tx.s7                                                             ; FF_X39_Y4_N5       ; 13      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|CRC8BIT:CRC8|\crc8bit_operation:cnt[7]~0                                                           ; LCCOMB_X40_Y15_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|CRC8BIT:CRC8|sig_main_clk_f~0                                                                      ; LCCOMB_X40_Y15_N20 ; 32      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|Data_Orgenizer:DO|green_leds[0]~0                                                                  ; LCCOMB_X40_Y15_N2  ; 99      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_cnt[100]~107                                                                 ; LCCOMB_X36_Y15_N16 ; 101     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_cnt[70]~106                                                                  ; LCCOMB_X32_Y17_N18 ; 101     ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_out[0]~0                                                          ; LCCOMB_X36_Y15_N2  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_reg[2]~0                                                          ; LCCOMB_X40_Y15_N16 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_main_clk_r                                                                   ; LCCOMB_X40_Y15_N6  ; 25      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_rgb_leds_out[95]~0                                                           ; LCCOMB_X36_Y15_N26 ; 96      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do~27                                                                      ; LCCOMB_X36_Y15_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|RGB:RGB_Leds|LED_1~0                                                                               ; LCCOMB_X34_Y9_N30  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|RGB:RGB_Leds|Selector7~1                                                                           ; LCCOMB_X34_Y9_N4   ; 101     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|RGB:RGB_Leds|Selector8~0                                                                           ; LCCOMB_X34_Y9_N24  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|RGB:RGB_Leds|sig_shift_led_rgb[3]~0                                                                ; LCCOMB_X34_Y9_N22  ; 96      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|RGB:RGB_Leds|state_leds.s0                                                                         ; FF_X31_Y6_N5       ; 19      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|RGB:RGB_Leds|state_leds.s4                                                                         ; FF_X34_Y9_N3       ; 103     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Card_B_Design:Card_B|Simple_BS:Simple|clk_00~0                                                                          ; LCCOMB_X40_Y7_N30  ; 15      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; resetn                                                                                                                  ; PIN_AB9            ; 766     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; sysclk                                                                                                                  ; PIN_P11            ; 906     ; Clock                      ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|rd                                                                       ; LCCOMB_X31_Y4_N28  ; 2       ; Read enable                ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_main_rising_edge                                                     ; LCCOMB_X31_Y3_N28  ; 17      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address[0]~0                                                    ; LCCOMB_X35_Y2_N22  ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|state_mini.s3a                                                           ; FF_X35_Y2_N1       ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~0 ; LCCOMB_X31_Y4_N18  ; 1       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|Selector11~0                                                                     ; LCCOMB_X36_Y3_N2   ; 21      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|\main_rx:var_bit_cntr[3]~0                                                       ; LCCOMB_X35_Y4_N2   ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|\main_rx:var_clk_cntr[5]~0                                                       ; LCCOMB_X35_Y4_N14  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[7]~0                                                               ; LCCOMB_X34_Y4_N20  ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_detected_byte[7]~1                                                           ; LCCOMB_X35_Y4_N22  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[0]~7                                                             ; LCCOMB_X34_Y4_N8   ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_wr_ram                                                                       ; FF_X36_Y3_N1       ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_tx_Constant:tx|\transmission:sig_cntr[0]~1                                             ; LCCOMB_X32_Y2_N14  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_tx_Constant:tx|sig_packet[2]~5                                                         ; LCCOMB_X30_Y2_N28  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_A_Design_Python:Card_A|Uart_tx_Constant:tx|state_tx.s7                                                             ; FF_X30_Y2_N13      ; 13      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|CRC8BIT:CRC8|\crc8bit_operation:cnt[7]~0                                                           ; LCCOMB_X41_Y10_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|CRC8BIT:CRC8|sig_correlation[4]~50                                                                 ; LCCOMB_X40_Y11_N4  ; 5       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|CRC8BIT:CRC8|sig_correlation[4]~51                                                                 ; LCCOMB_X40_Y11_N8  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|CRC8BIT:CRC8|sig_main_clk_f~0                                                                      ; LCCOMB_X40_Y11_N30 ; 33      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|Data_Orgenizer:DO|green_leds[0]~0                                                                  ; LCCOMB_X36_Y11_N18 ; 99      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_cnt[100]~107                                                                 ; LCCOMB_X41_Y7_N6   ; 101     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_cnt[22]~106                                                                  ; LCCOMB_X41_Y7_N18  ; 101     ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_out[0]~0                                                          ; LCCOMB_X41_Y7_N30  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_green_leds_reg[0]~0                                                          ; LCCOMB_X41_Y7_N8   ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_main_clk_r                                                                   ; LCCOMB_X36_Y11_N2  ; 24      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|Data_Orgenizer:DO|sig_rgb_leds_out[95]~0                                                           ; LCCOMB_X41_Y7_N24  ; 96      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|Data_Orgenizer:DO|state_Do~28                                                                      ; LCCOMB_X41_Y7_N20  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|RGB:RGB_Leds|LED_1~0                                                                               ; LCCOMB_X34_Y12_N4  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|RGB:RGB_Leds|Selector7~1                                                                           ; LCCOMB_X34_Y12_N12 ; 101     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|RGB:RGB_Leds|Selector8~0                                                                           ; LCCOMB_X34_Y12_N30 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|RGB:RGB_Leds|sig_shift_led_rgb[21]~0                                                               ; LCCOMB_X34_Y12_N10 ; 96      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|RGB:RGB_Leds|state_leds.s0                                                                         ; FF_X31_Y12_N17     ; 19      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|RGB:RGB_Leds|state_leds.s4                                                                         ; FF_X34_Y12_N7      ; 103     ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Card_B_Design:Card_B|Simple_BS:Simple|clk_00~0                                                                          ; LCCOMB_X38_Y4_N30  ; 15      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; resetn                                                                                                                  ; PIN_AB9            ; 805     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
+; sysclk                                                                                                                  ; PIN_P11            ; 945     ; Clock                      ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 +-------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1758,7 +1799,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name   ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; sysclk ; PIN_P11  ; 906     ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
+; sysclk ; PIN_P11  ; 945     ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
 +--------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1767,7 +1808,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+------------------+
 ; Name         ; Fan-Out          ;
 +--------------+------------------+
-; resetn~input ; 766              ;
+; resetn~input ; 805              ;
 +--------------+------------------+
 
 
@@ -1776,7 +1817,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-----------------+---------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Name                                                                                                                ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF             ; Location      ; Mixed Width RDW Mode ; Port A RDW Mode        ; Port B RDW Mode        ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs ;
 +---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-----------------+---------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
-; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 64           ; 8            ; 64           ; 8            ; yes                    ; no                      ; yes                    ; yes                     ; 512  ; 64                          ; 8                           ; 64                          ; 8                           ; 512                 ; 1    ; Ram2_X_data.mif ; M9K_X33_Y5_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 64           ; 8            ; 64           ; 8            ; yes                    ; no                      ; yes                    ; yes                     ; 512  ; 64                          ; 8                           ; 64                          ; 8                           ; 512                 ; 1    ; Ram2_X_data.mif ; M9K_X33_Y4_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+-----------------+---------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1802,161 +1843,160 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 884 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 8 / 5,382 ( < 1 % )     ;
-; C4 interconnects      ; 383 / 106,704 ( < 1 % ) ;
-; Direct links          ; 276 / 148,641 ( < 1 % ) ;
+; Block interconnects   ; 955 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 4 / 5,382 ( < 1 % )     ;
+; C4 interconnects      ; 294 / 106,704 ( < 1 % ) ;
+; Direct links          ; 385 / 148,641 ( < 1 % ) ;
 ; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 910 / 49,760 ( 2 % )    ;
+; Local interconnects   ; 935 / 49,760 ( 2 % )    ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 3 / 5,406 ( < 1 % )     ;
-; R4 interconnects      ; 336 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 5 / 5,406 ( < 1 % )     ;
+; R4 interconnects      ; 329 / 147,764 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 10.89) ; Number of LABs  (Total = 104) ;
+; Number of Logic Elements  (Average = 11.18) ; Number of LABs  (Total = 105) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 23                            ;
-; 2                                           ; 2                             ;
+; 1                                           ; 13                            ;
+; 2                                           ; 8                             ;
 ; 3                                           ; 2                             ;
-; 4                                           ; 1                             ;
+; 4                                           ; 3                             ;
 ; 5                                           ; 2                             ;
-; 6                                           ; 0                             ;
+; 6                                           ; 2                             ;
 ; 7                                           ; 2                             ;
-; 8                                           ; 0                             ;
+; 8                                           ; 3                             ;
 ; 9                                           ; 2                             ;
-; 10                                          ; 2                             ;
+; 10                                          ; 1                             ;
 ; 11                                          ; 1                             ;
-; 12                                          ; 3                             ;
-; 13                                          ; 5                             ;
-; 14                                          ; 6                             ;
-; 15                                          ; 10                            ;
-; 16                                          ; 43                            ;
+; 12                                          ; 1                             ;
+; 13                                          ; 4                             ;
+; 14                                          ; 0                             ;
+; 15                                          ; 12                            ;
+; 16                                          ; 49                            ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 1.97) ; Number of LABs  (Total = 104) ;
+; LAB-wide Signals  (Average = 2.07) ; Number of LABs  (Total = 105) ;
 +------------------------------------+-------------------------------+
-; 1 Async. clear                     ; 62                            ;
-; 1 Clock                            ; 74                            ;
-; 1 Clock enable                     ; 42                            ;
+; 1 Async. clear                     ; 69                            ;
+; 1 Clock                            ; 79                            ;
+; 1 Clock enable                     ; 41                            ;
 ; 1 Sync. clear                      ; 8                             ;
-; 1 Sync. load                       ; 1                             ;
-; 2 Clock enables                    ; 18                            ;
+; 2 Clock enables                    ; 20                            ;
 +------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 18.68) ; Number of LABs  (Total = 104) ;
+; Number of Signals Sourced  (Average = 19.26) ; Number of LABs  (Total = 105) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
-; 1                                            ; 22                            ;
-; 2                                            ; 2                             ;
-; 3                                            ; 2                             ;
-; 4                                            ; 2                             ;
-; 5                                            ; 1                             ;
-; 6                                            ; 0                             ;
-; 7                                            ; 1                             ;
-; 8                                            ; 1                             ;
-; 9                                            ; 0                             ;
-; 10                                           ; 1                             ;
-; 11                                           ; 1                             ;
-; 12                                           ; 0                             ;
-; 13                                           ; 1                             ;
-; 14                                           ; 0                             ;
-; 15                                           ; 2                             ;
-; 16                                           ; 2                             ;
-; 17                                           ; 1                             ;
+; 1                                            ; 11                            ;
+; 2                                            ; 6                             ;
+; 3                                            ; 3                             ;
+; 4                                            ; 5                             ;
+; 5                                            ; 3                             ;
+; 6                                            ; 1                             ;
+; 7                                            ; 0                             ;
+; 8                                            ; 2                             ;
+; 9                                            ; 1                             ;
+; 10                                           ; 0                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 1                             ;
+; 13                                           ; 0                             ;
+; 14                                           ; 1                             ;
+; 15                                           ; 1                             ;
+; 16                                           ; 1                             ;
+; 17                                           ; 0                             ;
 ; 18                                           ; 0                             ;
-; 19                                           ; 1                             ;
+; 19                                           ; 0                             ;
 ; 20                                           ; 1                             ;
 ; 21                                           ; 0                             ;
-; 22                                           ; 2                             ;
-; 23                                           ; 6                             ;
-; 24                                           ; 6                             ;
+; 22                                           ; 1                             ;
+; 23                                           ; 2                             ;
+; 24                                           ; 10                            ;
 ; 25                                           ; 6                             ;
-; 26                                           ; 7                             ;
-; 27                                           ; 9                             ;
-; 28                                           ; 4                             ;
+; 26                                           ; 9                             ;
+; 27                                           ; 4                             ;
+; 28                                           ; 5                             ;
 ; 29                                           ; 3                             ;
-; 30                                           ; 4                             ;
-; 31                                           ; 1                             ;
-; 32                                           ; 15                            ;
+; 30                                           ; 5                             ;
+; 31                                           ; 3                             ;
+; 32                                           ; 17                            ;
 +----------------------------------------------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 5.70) ; Number of LABs  (Total = 104) ;
+; Number of Signals Sourced Out  (Average = 5.81) ; Number of LABs  (Total = 105) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 0                             ;
-; 1                                               ; 41                            ;
-; 2                                               ; 7                             ;
-; 3                                               ; 8                             ;
-; 4                                               ; 8                             ;
-; 5                                               ; 4                             ;
-; 6                                               ; 1                             ;
-; 7                                               ; 2                             ;
+; 1                                               ; 32                            ;
+; 2                                               ; 11                            ;
+; 3                                               ; 15                            ;
+; 4                                               ; 5                             ;
+; 5                                               ; 2                             ;
+; 6                                               ; 3                             ;
+; 7                                               ; 4                             ;
 ; 8                                               ; 6                             ;
 ; 9                                               ; 2                             ;
-; 10                                              ; 2                             ;
-; 11                                              ; 0                             ;
-; 12                                              ; 0                             ;
-; 13                                              ; 3                             ;
+; 10                                              ; 1                             ;
+; 11                                              ; 2                             ;
+; 12                                              ; 1                             ;
+; 13                                              ; 2                             ;
 ; 14                                              ; 1                             ;
-; 15                                              ; 1                             ;
-; 16                                              ; 18                            ;
+; 15                                              ; 3                             ;
+; 16                                              ; 15                            ;
 +-------------------------------------------------+-------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +---------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 8.00) ; Number of LABs  (Total = 104) ;
+; Number of Distinct Inputs  (Average = 8.35) ; Number of LABs  (Total = 105) ;
 +---------------------------------------------+-------------------------------+
 ; 0                                           ; 0                             ;
 ; 1                                           ; 0                             ;
 ; 2                                           ; 2                             ;
-; 3                                           ; 7                             ;
-; 4                                           ; 38                            ;
-; 5                                           ; 9                             ;
-; 6                                           ; 4                             ;
-; 7                                           ; 4                             ;
+; 3                                           ; 5                             ;
+; 4                                           ; 26                            ;
+; 5                                           ; 11                            ;
+; 6                                           ; 12                            ;
+; 7                                           ; 8                             ;
 ; 8                                           ; 8                             ;
-; 9                                           ; 1                             ;
-; 10                                          ; 4                             ;
-; 11                                          ; 2                             ;
+; 9                                           ; 2                             ;
+; 10                                          ; 2                             ;
+; 11                                          ; 1                             ;
 ; 12                                          ; 3                             ;
-; 13                                          ; 3                             ;
-; 14                                          ; 5                             ;
-; 15                                          ; 1                             ;
-; 16                                          ; 2                             ;
-; 17                                          ; 4                             ;
-; 18                                          ; 1                             ;
-; 19                                          ; 0                             ;
+; 13                                          ; 2                             ;
+; 14                                          ; 1                             ;
+; 15                                          ; 9                             ;
+; 16                                          ; 3                             ;
+; 17                                          ; 1                             ;
+; 18                                          ; 3                             ;
+; 19                                          ; 1                             ;
 ; 20                                          ; 0                             ;
 ; 21                                          ; 0                             ;
 ; 22                                          ; 1                             ;
 ; 23                                          ; 0                             ;
-; 24                                          ; 1                             ;
-; 25                                          ; 0                             ;
+; 24                                          ; 0                             ;
+; 25                                          ; 1                             ;
 ; 26                                          ; 0                             ;
 ; 27                                          ; 0                             ;
-; 28                                          ; 0                             ;
+; 28                                          ; 1                             ;
 ; 29                                          ; 0                             ;
 ; 30                                          ; 0                             ;
 ; 31                                          ; 0                             ;
-; 32                                          ; 1                             ;
-; 33                                          ; 1                             ;
+; 32                                          ; 0                             ;
+; 33                                          ; 0                             ;
 ; 34                                          ; 1                             ;
 +---------------------------------------------+-------------------------------+
 
@@ -2076,38 +2116,33 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; sysclk          ; sysclk               ; 3.1               ;
+; sysclk          ; sysclk               ; 4.9               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                                                                                                     ;
-+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; Source Register                                                    ; Destination Register                                                                                                                     ; Delay Added in ns ;
-+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[1]            ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a1~porta_datain_reg0  ; 0.357             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[3]            ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a3~porta_datain_reg0  ; 0.357             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[2]            ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a2~porta_datain_reg0  ; 0.357             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[4]            ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a4~porta_datain_reg0  ; 0.357             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[5]            ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a5~porta_datain_reg0  ; 0.357             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[6]            ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a6~porta_datain_reg0  ; 0.357             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[7]            ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_datain_reg0  ; 0.357             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[3]          ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.084             ;
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address[3] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~portb_address_reg0 ; 0.070             ;
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address[1] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~portb_address_reg0 ; 0.069             ;
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address[5] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~portb_address_reg0 ; 0.069             ;
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address[4] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~portb_address_reg0 ; 0.064             ;
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address[2] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~portb_address_reg0 ; 0.052             ;
-; Card_A_Design_Python:Card_A|BiPhase_tx:biphase|sig_read_address[0] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~portb_address_reg0 ; 0.046             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[0]          ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.033             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[1]          ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.033             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[2]          ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.033             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[4]          ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.033             ;
-; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[5]          ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.033             ;
-+--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 19 path(s) that have the largest delay added for hold.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                                                            ;
++-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register                                           ; Destination Register                                                                                                                     ; Delay Added in ns ;
++-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[1]   ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a1~porta_datain_reg0  ; 0.357             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[3]   ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a3~porta_datain_reg0  ; 0.357             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[0]   ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a0~porta_datain_reg0  ; 0.357             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[2]   ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a2~porta_datain_reg0  ; 0.357             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[4]   ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a4~porta_datain_reg0  ; 0.357             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[5]   ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a5~porta_datain_reg0  ; 0.357             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[6]   ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a6~porta_datain_reg0  ; 0.357             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|detected_byte[7]   ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_datain_reg0  ; 0.357             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[0] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.343             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[3] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.343             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[4] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.343             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[1] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.343             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[2] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.343             ;
+; Card_A_Design_Python:Card_A|Uart_rx:rx|sig_ram_address[5] ; Card_A_Design_Python:Card_A|Ram2_X:memory|altsyncram:altsyncram_component|altsyncram_64s1:auto_generated|ram_block1a7~porta_address_reg0 ; 0.343             ;
++-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 14 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2160,7 +2195,7 @@ Info (176353): Automatically promoted node sysclk~input (placed in PIN P11 (CLK7
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -2173,13 +2208,13 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.26 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (169177): 4 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin sysclk uses I/O standard 3.3-V LVTTL at P11 File: C:/Final_Project/The_Final_Project/Tools/Top_Design/Top_Design.vhdl Line: 9
     Info (169178): Pin resetn uses I/O standard 3.3-V LVTTL at AB9 File: C:/Final_Project/The_Final_Project/Tools/Top_Design/Top_Design.vhdl Line: 8
@@ -2187,10 +2222,10 @@ Warning (169177): 4 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin detected_bit uses I/O standard 3.3-V LVTTL at AA6 File: C:/Final_Project/The_Final_Project/Tools/Top_Design/Top_Design.vhdl Line: 11
 Info (144001): Generated suppressed messages file C:/Final_Project/The_Final_Project/Tools/Top_Design/output_files/Top_Design.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 5650 megabytes
-    Info: Processing ended: Thu Oct 19 19:17:40 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 5661 megabytes
+    Info: Processing ended: Thu Aug  1 15:24:37 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +----------------------------+

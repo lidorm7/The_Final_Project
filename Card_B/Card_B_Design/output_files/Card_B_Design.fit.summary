@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed Jul 10 11:51:36 2024
+Fitter Status : Successful - Thu Aug  1 15:23:43 2024
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : Card_B_Design
 Top-level Entity Name : Card_B_Design
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 961 / 49,760 ( 2 % )
-    Total combinational functions : 704 / 49,760 ( 1 % )
-    Dedicated logic registers : 780 / 49,760 ( 2 % )
-Total registers : 780
+Total logic elements : 959 / 49,760 ( 2 % )
+    Total combinational functions : 705 / 49,760 ( 1 % )
+    Dedicated logic registers : 775 / 49,760 ( 2 % )
+Total registers : 775
 Total pins : 7 / 360 ( 2 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )

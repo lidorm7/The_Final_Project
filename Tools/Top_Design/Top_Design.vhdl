@@ -5,17 +5,17 @@ use ieee.std_logic_unsigned.all;
 
 entity Top_Design is
     port(
-        resetn              : in std_logic;
-        sysclk              : in std_logic;
-        BiPhase_rx_in       : in std_logic; -- not for simulation
-        detected_bit	    : in std_logic;
-        uart_tx_triger		: out std_logic;
-        OB_LED_RGB_Din      : out std_logic;
+        resetn              : in std_logic; -- AB9
+        sysclk              : in std_logic; -- P11
+        BiPhase_rx_in       : in std_logic; -- AB8 not for simulation
+        detected_bit	    : in std_logic; -- AA6
+        uart_tx_triger		: out std_logic; -- AB6
+        OB_LED_RGB_Din      : out std_logic; -- D19
         -- rgb_leds_out		: out std_logic_vector(95 downto 0);
-        LED_1               : out std_logic;
-        LED_2               : out std_logic;
-        LED_3               : out std_logic;
-        BiPhase_tx_out		: out std_logic
+        LED_1               : out std_logic; -- AA14
+        LED_2               : out std_logic; -- AA15
+        LED_3               : out std_logic; -- AB15
+        BiPhase_tx_out		: out std_logic -- AA7
     );
 end Top_Design;
 

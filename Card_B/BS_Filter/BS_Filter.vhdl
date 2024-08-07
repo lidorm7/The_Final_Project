@@ -34,7 +34,7 @@ signal sig_total_check  : std_logic; -- A signal used to determine the total che
 
         -- set processes 
 
-        signal_in : process( resetn,sysclk )
+        signal_in : process( resetn,sysclk ) -- receiving the data after transmission
         begin
             if resetn = '0' then
                 sig_filter <= (others => '0');
@@ -43,7 +43,7 @@ signal sig_total_check  : std_logic; -- A signal used to determine the total che
             end if; 
         end process signal_in; -- signal in
 
-        xor_debouncer: process(resetn,sysclk)
+        xor_debouncer: process(resetn,sysclk) -- craete the form of the fiter 
         begin
             if resetn = '0' then
                 sig_check_0 <= '1'; 
@@ -64,7 +64,7 @@ signal sig_total_check  : std_logic; -- A signal used to determine the total che
             end if;
         end process xor_debouncer;
 
-        main_check: process(resetn,sysclk)
+        main_check: process(resetn,sysclk) -- preforming filter on the data in
         begin
             if resetn = '0' then
                 sig_total_check <= '1';
@@ -77,7 +77,7 @@ signal sig_total_check  : std_logic; -- A signal used to determine the total che
             end if;
         end process main_check;
 
-        sign_out : process(resetn,sysclk)
+        sign_out : process(resetn,sysclk) -- create the filter data out signal
         begin
             if resetn ='0' then
                 signal_out <= '0';

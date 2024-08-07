@@ -48,7 +48,7 @@ architecture ab of Simple_BS is
 
         -- set processes
 
-        cut_bi_phase : process(resetn,sysclk)
+        cut_bi_phase : process(resetn,sysclk) -- rising & falling edge of biphase signal process
         begin
             if resetn = '0' then
                 sig_bi_phase_filterd_cut     <= '0';
@@ -62,7 +62,7 @@ architecture ab of Simple_BS is
         sig_bi_phase_filterd_r <= sig_bi_phase_filterd_cut and sig_bi_phase_filterd_cut_not;
         sig_bi_phase_filterd_f <= not(sig_bi_phase_filterd_cut or sig_bi_phase_filterd_cut_not);
 
-        ena : process(resetn,sysclk)
+        ena : process(resetn,sysclk) -- create the enable signal for synchronization
         begin
             if resetn = '0' then
                 cnt_clk <= (others => '0');
@@ -79,7 +79,7 @@ architecture ab of Simple_BS is
             end if;
         end process ena;
 
-        clk_00 : process(resetn,sysclk)
+        clk_00 : process(resetn,sysclk) -- create the main clock signal and synchronize with the enable and the biphase signal
         begin
             if resetn = '0' then
                 sig_00_clk <= '1';
@@ -95,7 +95,7 @@ architecture ab of Simple_BS is
 
         main_clk <= sig_00_clk;
 
-        cut_clk_00 : process(resetn,sysclk)
+        cut_clk_00 : process(resetn,sysclk) -- rising edge of main clock process
         begin
             if resetn = '0' then
                 sig_00_cut     <= '0';
@@ -108,7 +108,7 @@ architecture ab of Simple_BS is
 
         sig_00_r <= sig_00_cut and sig_00_cut_not;
 
-        clk_90 : process(resetn,sysclk)
+        clk_90 : process(resetn,sysclk) -- creation of a clock that is moved by quarter main clock cycle time
         begin
             if resetn = '0' then
                 sig_90_clk <= '0';
@@ -122,7 +122,7 @@ architecture ab of Simple_BS is
             end if;
         end process clk_90;
 
-        cut_clk_90 : process(resetn,sysclk)
+        cut_clk_90 : process(resetn,sysclk) -- rising edge of main clock_90 process
         begin
             if resetn = '0' then
                 sig_90_cut     <= '0';
@@ -136,7 +136,7 @@ architecture ab of Simple_BS is
         sig_90_r <= sig_90_cut and sig_90_cut_not;
         sig_90_f <= not(sig_90_cut or sig_90_cut_not);
 
-        sample_bs : process(resetn,sysclk)
+        sample_bs : process(resetn,sysclk) -- sampling process of the bipahse signal to nrzl signal generation
         begin
             if resetn = '0' then
                 sig_ff_A <= '0';
@@ -151,7 +151,7 @@ architecture ab of Simple_BS is
             end if;
         end process sample_bs;
 
-        nrzl_creation : process(resetn,sysclk)
+        nrzl_creation : process(resetn,sysclk) -- generate the nrzl signal by preforming an XNOR operation between every 2 samples
         begin
             if resetn = '0' then
                 nrzl_data <= '0';

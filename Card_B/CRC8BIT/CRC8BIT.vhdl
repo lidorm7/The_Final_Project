@@ -45,7 +45,7 @@ architecture ab of CRC8BIT is
 
         -- set processes
 
-        cut_main_clk : process(resetn,sysclk)
+        cut_main_clk : process(resetn,sysclk) -- rising & falling edge of main clock process
         begin
             if resetn = '0' then
                 sig_cut_main_clk     <= '0';
@@ -59,7 +59,7 @@ architecture ab of CRC8BIT is
         sig_main_clk_f <= not(sig_cut_main_clk or sig_cut_main_clk_not);
         sig_main_clk_r <= sig_cut_main_clk and sig_cut_main_clk_not;
 
-        shift_register : process(resetn,sysclk)
+        shift_register : process(resetn,sysclk) -- autocorrelation of 30/32 correct bits of the header process
         variable xor_cntr : integer range 0 to 50;
 
         begin
@@ -295,7 +295,7 @@ architecture ab of CRC8BIT is
 
         correlation <= sig_correlation;
 
-        crc8bit_operation : process(resetn,sysclk)
+        crc8bit_operation : process(resetn,sysclk) -- crc8bit check FSM operation
         variable cnt : integer range 0 to 216;
 
         begin

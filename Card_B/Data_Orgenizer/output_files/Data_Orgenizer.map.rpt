@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Data_Orgenizer
-Wed Jul 10 11:49:22 2024
+Thu Aug  1 15:22:29 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -48,15 +48,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 10 11:49:22 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Aug  1 15:22:29 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Data_Orgenizer                                 ;
 ; Top-level Entity Name              ; Data_Orgenizer                                 ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 372                                            ;
+; Total logic elements               ; 367                                            ;
 ;     Total combinational functions  ; 158                                            ;
-;     Dedicated logic registers      ; 321                                            ;
-; Total registers                    ; 321                                            ;
+;     Dedicated logic registers      ; 316                                            ;
+; Total registers                    ; 316                                            ;
 ; Total pins                         ; 115                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -185,7 +185,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 372          ;
+; Estimated Total logic elements              ; 367          ;
 ;                                             ;              ;
 ; Total combinational functions               ; 158          ;
 ; Logic element usage by number of LUT inputs ;              ;
@@ -197,8 +197,8 @@ https://fpgasoftware.intel.com/eula.
 ;     -- normal mode                          ; 58           ;
 ;     -- arithmetic mode                      ; 100          ;
 ;                                             ;              ;
-; Total registers                             ; 321          ;
-;     -- Dedicated logic registers            ; 321          ;
+; Total registers                             ; 316          ;
+;     -- Dedicated logic registers            ; 316          ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 115          ;
@@ -206,9 +206,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; sysclk~input ;
-; Maximum fan-out                             ; 321          ;
-; Total fan-out                               ; 1906         ;
-; Average fan-out                             ; 2.69         ;
+; Maximum fan-out                             ; 316          ;
+; Total fan-out                               ; 1886         ;
+; Average fan-out                             ; 2.68         ;
 +---------------------------------------------+--------------+
 
 
@@ -217,7 +217,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
-; |Data_Orgenizer            ; 158 (158)           ; 321 (321)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 115  ; 0            ; 0          ; |Data_Orgenizer     ; Data_Orgenizer ; work         ;
+; |Data_Orgenizer            ; 158 (158)           ; 316 (316)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 115  ; 0            ; 0          ; |Data_Orgenizer     ; Data_Orgenizer ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -280,12 +280,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 321   ;
+; Total registers                              ; 316   ;
 ; Number of registers using Synchronous Clear  ; 101   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 219   ;
+; Number of registers using Asynchronous Clear ; 214   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 319   ;
+; Number of registers using Clock Enable       ; 314   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -317,10 +317,10 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 115                         ;
-; cycloneiii_ff         ; 321                         ;
+; cycloneiii_ff         ; 316                         ;
 ;     CLR               ; 2                           ;
 ;     ENA               ; 102                         ;
-;     ENA CLR           ; 116                         ;
+;     ENA CLR           ; 111                         ;
 ;     ENA CLR SCLR      ; 101                         ;
 ; cycloneiii_lcell_comb ; 160                         ;
 ;     arith             ; 100                         ;
@@ -333,7 +333,7 @@ Encoding Type:  One-Hot
 ;         4 data inputs ; 44                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 4.64                        ;
+; Average LUT depth     ; 4.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -352,7 +352,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Jul 10 11:49:14 2024
+    Info: Processing started: Thu Aug  1 15:22:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Data_Orgenizer -c Data_Orgenizer
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 2 design units, including 1 entities, in source file data_orgenizer.vhdl
@@ -370,14 +370,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 487 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 482 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 105 output pins
-    Info (21061): Implemented 372 logic cells
+    Info (21061): Implemented 367 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Wed Jul 10 11:49:22 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Thu Aug  1 15:22:29 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:21
 
 

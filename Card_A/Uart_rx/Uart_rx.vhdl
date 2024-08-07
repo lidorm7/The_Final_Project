@@ -45,7 +45,7 @@ begin
 -- 1 / 1,228,800 = 813 ns
 -- 813 / 20 = 40 => half period 20 "sysclk" clocks
 
-baud_rate_clk : process(resetn,sysclk)
+baud_rate_clk : process(resetn,sysclk) -- 32 x baud clock creation process
 variable var_cntr : integer range 0 to 100;
 begin
     if resetn = '0' then
@@ -59,7 +59,7 @@ begin
     end if;    
 end process baud_rate_clk;
 
-araising_edge : process(resetn,sysclk)
+araising_edge : process(resetn,sysclk) -- rising edge of baud clock process
 begin
     if resetn = '0' then
         signal_A_q     <= '0';
@@ -72,7 +72,7 @@ end process araising_edge;
 
 sig_araising_edge <= signal_A_q and signal_A_q_not;
 
-debouncer : process(resetn,sysclk)
+debouncer : process(resetn,sysclk) -- process debounces the received data bit by comparing its value over three consecutive cycles
 begin
     if resetn = '0' then
         sig_bit <= (others => '0');
@@ -96,7 +96,7 @@ end process debouncer;
 --  100mSec is the time between transmition (as answer to the riger transmition)	  *	
 -- ************************************************************************************						 
 
-main_rx : process(resetn,sysclk)
+main_rx : process(resetn,sysclk) -- uart reception main FSM
 
 variable var_trns_cntr : integer range 0 to 500000;-- delay between transmit to recieve
 variable var_bit_cntr : integer range 0 to 8;

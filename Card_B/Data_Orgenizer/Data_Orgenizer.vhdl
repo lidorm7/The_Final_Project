@@ -43,7 +43,7 @@ signal sig_rgb_leds_out     : std_logic_vector(95 downto 0); -- Serves as the ou
 
         -- set processes
 
-        main_clk_cut : process(resetn,sysclk)
+        main_clk_cut : process(resetn,sysclk) -- autocorrelation of 30/32 correct bits of the header process
         begin
             if resetn = '0' then
                 sig_main_clk_cut        <= '0';
@@ -68,7 +68,7 @@ signal sig_rgb_leds_out     : std_logic_vector(95 downto 0); -- Serves as the ou
             end if;
         end process shift_register;
 
-        main_state_machine : process(resetn,sysclk)
+        main_state_machine : process(resetn,sysclk) -- orgenize the data before transferring it to the leds FSM process
         begin
             if resetn = '0' then
                 state_Do            <= s0;
@@ -118,9 +118,9 @@ signal sig_rgb_leds_out     : std_logic_vector(95 downto 0); -- Serves as the ou
 
                         when s4 =>
                         sig_green_leds_out(7 downto 3)  <= (others => '0');
-                        sig_green_leds_out(0)           <= sig_green_leds_reg(7); --16
-                        sig_green_leds_out(1)           <= sig_green_leds_reg(6); --8
-                        sig_green_leds_out(2)           <= sig_green_leds_reg(5); --0 
+                        sig_green_leds_out(0)           <= sig_green_leds_reg(0); --16 -- 7
+                        sig_green_leds_out(1)           <= sig_green_leds_reg(1); --8 -- 6
+                        sig_green_leds_out(2)           <= sig_green_leds_reg(2); --0 -- 5
                         state_Do <= s5;
 
                         when s5 =>

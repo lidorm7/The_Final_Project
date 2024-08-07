@@ -55,8 +55,8 @@ signal sig_toggle                : std_logic := '0'; -- This signal is used to s
 
         -- set processes
 
-        -- this transmiter is working with 3000hz (333.333us)
-        main_clk : process(resetn,sysclk)
+       
+        main_clk : process(resetn,sysclk)  -- this transmiter is working with 3000hz (333.333us)
         begin
             if resetn = '0' then
                 sig_main <= (others => '0');
@@ -70,7 +70,7 @@ signal sig_toggle                : std_logic := '0'; -- This signal is used to s
 
         sig_main_clk <= sig_main(13);
         
-        cut_main_clk : process(resetn,sysclk)
+        cut_main_clk : process(resetn,sysclk) -- rising & falling edge of main clock process
         begin
             if resetn = '0' then
                 sig_cut     <= '0';
@@ -85,7 +85,7 @@ signal sig_toggle                : std_logic := '0'; -- This signal is used to s
         sig_main_falling_edge <= not (sig_cut or sig_cut_not);
         -- main_rising_edge      <= sig_main_rising_edge;
 
-        main_state_mashine : process(sysclk,resetn)
+        main_state_mashine : process(sysclk,resetn) -- main management FSM process for transfer
         begin
             if resetn ='0' then
                 state_bi <= s0;
@@ -131,7 +131,7 @@ signal sig_toggle                : std_logic := '0'; -- This signal is used to s
         
         end process main_state_mashine;
 
-        side_state_mashine : process(sysclk,resetn)
+        side_state_mashine : process(sysclk,resetn) -- address management FSM process
         begin          
             if resetn ='0' then
                 state_mini <= s0a;
@@ -178,7 +178,7 @@ signal sig_toggle                : std_logic := '0'; -- This signal is used to s
             end if;          
         end process side_state_mashine;        
 
-        shift_data_out : process(resetn,sysclk)
+        shift_data_out : process(resetn,sysclk) -- shift the data for biphase encoder signal creation
         begin
             if resetn = '0' then
                 sig_shift_data <= (others => '0');
@@ -196,7 +196,7 @@ signal sig_toggle                : std_logic := '0'; -- This signal is used to s
         sig_q_data_bit <= sig_shift_data(7);
         -- q_data_bit <= sig_shift_data(7);
 
-        biphase_signal_out : process(resetn,sysclk)
+        biphase_signal_out : process(resetn,sysclk) -- create the biphase encoder signal process
         begin
             if resetn = '0' then
                 sig_BiPhase_tx_out <= '0';
@@ -207,7 +207,7 @@ signal sig_toggle                : std_logic := '0'; -- This signal is used to s
             end if;
         end process biphase_signal_out;
 
-        cut_rd : process(resetn,sysclk)
+        cut_rd : process(resetn,sysclk) -- cut the read signal to adjustment for the ram
         begin
             if resetn = '0' then
                 sig_cut_rd     <= '0';

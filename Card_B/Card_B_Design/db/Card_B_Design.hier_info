@@ -10,10 +10,10 @@ sysclk => CRC8BIT:CRC8.sysclk
 sysclk => Data_Orgenizer:DO.sysclk
 sysclk => RGB:RGB_Leds.sysclk
 BiPhase_rx_in => BS_Filter:Filter.bi_pahse_out
-OB_LED_RGB_Din <= RGB:RGB_Leds.OB_LED_RGB_Din
-LED_1 <= RGB:RGB_Leds.LED_1
-LED_2 <= RGB:RGB_Leds.LED_2
-LED_3 <= RGB:RGB_Leds.LED_3
+OB_LED_RGB_Din << RGB:RGB_Leds.OB_LED_RGB_Din
+LED_1 << RGB:RGB_Leds.LED_1
+LED_2 << RGB:RGB_Leds.LED_2
+LED_3 << RGB:RGB_Leds.LED_3
 
 
 |Card_B_Design|BS_Filter:Filter
@@ -250,11 +250,6 @@ correlation[4] <= sig_correlation[4].DB_MAX_OUTPUT_PORT_TYPE
 resetn => sig_green_leds_reg[0].ACLR
 resetn => sig_green_leds_reg[1].ACLR
 resetn => sig_green_leds_reg[2].ACLR
-resetn => sig_green_leds_reg[3].ACLR
-resetn => sig_green_leds_reg[4].ACLR
-resetn => sig_green_leds_reg[5].ACLR
-resetn => sig_green_leds_reg[6].ACLR
-resetn => sig_green_leds_reg[7].ACLR
 resetn => sig_rgb_leds_out[0].ACLR
 resetn => sig_rgb_leds_out[1].ACLR
 resetn => sig_rgb_leds_out[2].ACLR
@@ -683,11 +678,6 @@ sysclk => sig_green_leds_out[7].CLK
 sysclk => sig_green_leds_reg[0].CLK
 sysclk => sig_green_leds_reg[1].CLK
 sysclk => sig_green_leds_reg[2].CLK
-sysclk => sig_green_leds_reg[3].CLK
-sysclk => sig_green_leds_reg[4].CLK
-sysclk => sig_green_leds_reg[5].CLK
-sysclk => sig_green_leds_reg[6].CLK
-sysclk => sig_green_leds_reg[7].CLK
 sysclk => sig_rgb_leds_out[0].CLK
 sysclk => sig_rgb_leds_out[1].CLK
 sysclk => sig_rgb_leds_out[2].CLK

@@ -1,4 +1,4 @@
-from os import stat   ##### 08.03.2023 last time changes to fram 32 bytes
+from os import stat   ##### 01.08.2024 last time changes to fram 32 bytes
 from tkinter import *
 import os
 import serial
@@ -8,7 +8,7 @@ import time
 #ser = serial.Serial("COM3", 38400)
 
 ser = serial.Serial(
-    "COM3",
+    "COM5",
     baudrate=38400,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_TWO,
@@ -16,15 +16,10 @@ ser = serial.Serial(
     )
 
 array = [0x01, 0xC0, 0xCA, 0XFE, 0XAB]
-# 01.10.2022
-# array_var = ar.array('i', range(10))   'i' set array to integer
-
-# intger_list = [10, 14, 8, 34, 23, 67, 47, 22]
-# intger_array = array('i', intger_list)
 
 customtkinter.set_appearance_mode("System")
 root = Tk()
-root.geometry('800x800')
+root.geometry('850x700')
 
 horizontal1 = ""
 horizontal2 = ""
@@ -42,7 +37,6 @@ flag = b'\xca'
 
 buttons = 0
 
-
 def updateArray():
     global array, flag
 
@@ -52,13 +46,12 @@ def updateArray():
                   int(horizontal5.get()), int(horizontal6.get()), int(horizontal7.get()), int(horizontal8.get()),
                   int(horizontal9.get()), int(horizontal10.get()), int(horizontal11.get()), int(horizontal12.get()),
                   buttons])
-    for i in range(1, 15):  ### 27.02.2023
-  #  for i in range(1, 48):  ## for loop that appends 0x00 from slot 6 (included) to 64
+    for i in range(1, 15):  # for loop that appends 0x00 from slot 19 (included) to 32
+
         array.append(0x00)
 
     # Example usage with an array of integers representing hexadecimal values:
     hex_data = array[5:31]
-    #print(hex_data)
     crc_value = calculate_crc8(hex_data)
     array[-1] = crc_value
     print(f"CRC8 checksum: 0x{crc_value:02X}")
@@ -77,7 +70,6 @@ def txrx():
     s = ser.read(1)
     flag = s
     
-
 def createLabels():
     #############################################
     ##Led #1
@@ -91,7 +83,6 @@ def createLabels():
 
     horizontal2 = Scale(root, from_=0, to=255,  bg="red", fg="white",font=('Helvetica 18 bold', 15))
     horizontal2.place(x=200, y=50, height=200)
-
 
     horizontal3 = Scale(root, from_=0, to=255, bg="blue", fg="white",font=('Helvetica 18 bold', 15))
     horizontal3.place(x=300, y=50, height=200)
@@ -133,25 +124,27 @@ def createLabels():
     horizontal12.place(x=700, y=350, height=200)
     ###########################################
 
-
 def createText():
-    t1 = Label(root, text="Led #1", font=("Courier", 20))
-    # t1.grid(row=1, column=0)
-    t1.place(x=180, y=0)
+    t1 = Label(root, text="RGB Led #1", font=("Courier", 20))
+    t1.place(x=150, y=0)
 
-    t2 = Label(root, text="Led #2", font=("Courier", 20))
-    # t2.grid(row=2, column=0)
-    #  t2.grid(row=1, column=5)
-    t2.place(x=580, y=0)
+    t2 = Label(root, text="RGB Led #2", font=("Courier", 20))
+    t2.place(x=550, y=0)
 
-    t3 = Label(root, text="Led #3", font=("Courier", 20))
-    #  t3.grid(row=3, column=0)
-    t3.place(x=180, y=300)
+    t3 = Label(root, text="RGB Led #3", font=("Courier", 20))
+    t3.place(x=150, y=300)
 
-    t4 = Label(root, text="Led #4", font=("Courier", 20))
-    #  t3.grid(row=3, column=0)
-    t4.place(x=580, y=300)
+    t4 = Label(root, text="RGB Led #4", font=("Courier", 20))
+    t4.place(x=550, y=300)
 
+    t5 = Label(root, text="Control Button #1", font=("Courier", 15))
+    t5.place(x=70, y=615)
+
+    t6 = Label(root, text="Control Button #2", font=("Courier", 15))
+    t6.place(x=320, y=615)
+
+    t7 = Label(root, text="Control Button #3", font=("Courier", 15))
+    t7.place(x=570, y=615)
 
 def helloCallBack(btn):
     global buttons
@@ -161,59 +154,38 @@ def helloCallBack(btn):
     elif (buttons == 1 or buttons == 3 or buttons == 5 or buttons == 7) and btn == 1:
         buttons = buttons - 1
 
-
     if buttons != 2 and buttons != 3 and buttons != 6 and buttons != 7 and btn == 2:
         buttons = buttons + 2
     elif (buttons == 2 or buttons == 3 or buttons == 6 or buttons == 7) and btn == 2:
         buttons = buttons - 2
         
-
-
     if buttons != 4 and buttons != 5 and buttons != 6 and buttons != 7 and btn == 3:
         buttons = buttons + 4
     elif (buttons == 4 or buttons == 5 or buttons == 6 or buttons == 7) and btn == 3:
         buttons = buttons - 4
 
-
 def delay_time():
      time.sleep(1)
 
-
 def createButtons():
-    #B1 = Button(root, text="ON/OFF", command= lambda: helloCallBack(1), borderwidth=2)
-    B1 = customtkinter.CTkButton(master=root, text="ON/OFF",hover_color=("black", "lightgray"), text_color=("red", "lightgray"), fg_color=("red", "lightgray"), command=lambda: helloCallBack(1))
 
+    B1 = customtkinter.CTkButton(master=root, text="ON/OFF",hover_color=("white", "white"), text_color=("black", "black"), fg_color=("red", "lightgray"), command=lambda: helloCallBack(1))
     B1.place(x=100, y=650)
 
-    #B2 = Button(root, text="ON/OFF", command=lambda: helloCallBack(2), borderwidth=2)
-    B2 = customtkinter.CTkButton(master=root, text="ON/OFF",hover_color=("black", "lightgray"), text_color=("white", "lightgray"), fg_color=("red", "lightgray"), command=lambda: helloCallBack(2))
-
+    B2 = customtkinter.CTkButton(master=root, text="ON/OFF",hover_color=("white", "white"), text_color=("black", "black"), fg_color=("red", "lightgray"), command=lambda: helloCallBack(2))
     B2.place(x=350, y=650)
 
-    #B3 = Button(root, text="ON/OFF", command=lambda: helloCallBack(3), borderwidth=2)
-
-    B3 = customtkinter.CTkButton(master=root, text="ON/OFF",hover_color=("black", "lightgray"), text_color=("black", "lightgray"), fg_color=("red", "lightgray"), command=lambda: helloCallBack(3))
-
+    B3 = customtkinter.CTkButton(master=root, text="ON/OFF",hover_color=("white", "white"), text_color=("black", "black"), fg_color=("red", "lightgray"), command=lambda: helloCallBack(3))
     B3.place(x=600, y=650)
-
 
 def turnOnLed():
     global flag
-
-    # with open("binary_write.bin", "rb") as f:
-    # flag = f.read()
 
     if flag == b'\xca':
         flag = 0
         updateArray()
 
-
-
-    ##   print(array) ## print to make sure that it appended all
-    # ser.write(array)
-    # s = ser.read(64)
     root.after(1, turnOnLed)
-
 
 def calculate_crc8(data):
     crc = 0x00  # Initial CRC value
@@ -236,11 +208,6 @@ createButtons()
 createText()
 createLabels()
 turnOnLed()
-
-#updateArray()
-#delay_time()
-#txrx()
-##### serial
 
 root.mainloop()
 

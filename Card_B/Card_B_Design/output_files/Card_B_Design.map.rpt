@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Card_B_Design
-Wed Jul 10 11:51:28 2024
+Thu Aug  1 15:23:33 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -50,15 +50,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 10 11:51:28 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Aug  1 15:23:33 2024          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; Card_B_Design                                  ;
 ; Top-level Entity Name              ; Card_B_Design                                  ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 999                                            ;
-;     Total combinational functions  ; 703                                            ;
-;     Dedicated logic registers      ; 780                                            ;
-; Total registers                    ; 780                                            ;
+; Total logic elements               ; 995                                            ;
+;     Total combinational functions  ; 704                                            ;
+;     Dedicated logic registers      ; 775                                            ;
+; Total registers                    ; 775                                            ;
 ; Total pins                         ; 7                                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -194,20 +194,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 999          ;
+; Estimated Total logic elements              ; 995          ;
 ;                                             ;              ;
-; Total combinational functions               ; 703          ;
+; Total combinational functions               ; 704          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 181          ;
-;     -- 3 input functions                    ; 142          ;
-;     -- <=2 input functions                  ; 380          ;
+;     -- 4 input functions                    ; 180          ;
+;     -- 3 input functions                    ; 145          ;
+;     -- <=2 input functions                  ; 379          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 367          ;
+;     -- normal mode                          ; 368          ;
 ;     -- arithmetic mode                      ; 336          ;
 ;                                             ;              ;
-; Total registers                             ; 780          ;
-;     -- Dedicated logic registers            ; 780          ;
+; Total registers                             ; 775          ;
+;     -- Dedicated logic registers            ; 775          ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 7            ;
@@ -215,9 +215,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; sysclk~input ;
-; Maximum fan-out                             ; 780          ;
-; Total fan-out                               ; 4951         ;
-; Average fan-out                             ; 3.31         ;
+; Maximum fan-out                             ; 775          ;
+; Total fan-out                               ; 4934         ;
+; Average fan-out                             ; 3.30         ;
 +---------------------------------------------+--------------+
 
 
@@ -226,10 +226,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name              ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+----------------+--------------+
-; |Card_B_Design             ; 703 (0)             ; 780 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 7    ; 0            ; 0          ; |Card_B_Design                   ; Card_B_Design  ; work         ;
+; |Card_B_Design             ; 704 (0)             ; 775 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 7    ; 0            ; 0          ; |Card_B_Design                   ; Card_B_Design  ; work         ;
 ;    |BS_Filter:Filter|      ; 10 (10)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|BS_Filter:Filter  ; BS_Filter      ; work         ;
-;    |CRC8BIT:CRC8|          ; 79 (79)             ; 93 (93)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|CRC8BIT:CRC8      ; CRC8BIT        ; work         ;
-;    |Data_Orgenizer:DO|     ; 157 (157)           ; 321 (321)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|Data_Orgenizer:DO ; Data_Orgenizer ; work         ;
+;    |CRC8BIT:CRC8|          ; 80 (80)             ; 93 (93)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|CRC8BIT:CRC8      ; CRC8BIT        ; work         ;
+;    |Data_Orgenizer:DO|     ; 157 (157)           ; 316 (316)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|Data_Orgenizer:DO ; Data_Orgenizer ; work         ;
 ;    |RGB:RGB_Leds|          ; 428 (428)           ; 325 (325)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|RGB:RGB_Leds      ; RGB            ; work         ;
 ;    |Simple_BS:Simple|      ; 29 (29)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Card_B_Design|Simple_BS:Simple  ; Simple_BS      ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------+----------------+--------------+
@@ -353,12 +353,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 780   ;
+; Total registers                              ; 775   ;
 ; Number of registers using Synchronous Clear  ; 115   ;
 ; Number of registers using Synchronous Load   ; 5     ;
-; Number of registers using Asynchronous Clear ; 665   ;
+; Number of registers using Asynchronous Clear ; 660   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 694   ;
+; Number of registers using Clock Enable       ; 689   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -378,6 +378,7 @@ Encoding Type:  One-Hot
 ; Simple_BS:Simple|sig_00_clk                   ; 4       ;
 ; CRC8BIT:CRC8|crc8bit_out                      ; 3       ;
 ; Simple_BS:Simple|sig_bi_phase_filterd_cut_not ; 2       ;
+; Simple_BS:Simple|sig_90_cut_not               ; 2       ;
 ; BS_Filter:Filter|sig_total_check              ; 1       ;
 ; BS_Filter:Filter|sig_check_0                  ; 1       ;
 ; BS_Filter:Filter|sig_check_1                  ; 1       ;
@@ -386,7 +387,6 @@ Encoding Type:  One-Hot
 ; BS_Filter:Filter|sig_check_4                  ; 1       ;
 ; BS_Filter:Filter|sig_check_5                  ; 1       ;
 ; BS_Filter:Filter|sig_check_6                  ; 1       ;
-; Simple_BS:Simple|sig_90_cut_not               ; 2       ;
 ; Total number of inverted registers = 19       ;         ;
 +-----------------------------------------------+---------+
 
@@ -412,25 +412,25 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 7                           ;
-; cycloneiii_ff         ; 780                         ;
+; cycloneiii_ff         ; 775                         ;
 ;     CLR               ; 71                          ;
 ;     CLR SCLR          ; 14                          ;
 ;     ENA               ; 114                         ;
-;     ENA CLR           ; 474                         ;
+;     ENA CLR           ; 469                         ;
 ;     ENA CLR SCLR      ; 101                         ;
 ;     ENA CLR SLD       ; 5                           ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 703                         ;
+; cycloneiii_lcell_comb ; 704                         ;
 ;     arith             ; 336                         ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 335                         ;
-;     normal            ; 367                         ;
+;     normal            ; 368                         ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 35                          ;
-;         3 data inputs ; 142                         ;
-;         4 data inputs ; 181                         ;
+;         2 data inputs ; 34                          ;
+;         3 data inputs ; 145                         ;
+;         4 data inputs ; 180                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
+; Max LUT depth         ; 11.90                       ;
 ; Average LUT depth     ; 5.82                        ;
 +-----------------------+-----------------------------+
 
@@ -450,7 +450,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Wed Jul 10 11:51:19 2024
+    Info: Processing started: Thu Aug  1 15:23:22 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Card_B_Design -c Card_B_Design
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file /final_project/the_final_project/card_a/rom_x/rom_x.v
@@ -504,14 +504,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1018 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1014 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 1011 logic cells
+    Info (21061): Implemented 1007 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4801 megabytes
-    Info: Processing ended: Wed Jul 10 11:51:28 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Processing ended: Thu Aug  1 15:23:33 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:23
 
 

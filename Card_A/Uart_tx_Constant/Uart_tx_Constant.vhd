@@ -36,7 +36,7 @@ begin
 
 	-- set processes
   
-  	baud_clock : process(sysclk,resetn)
+  	baud_clock : process(sysclk,resetn) -- baud clock creation process
   	variable cnt_baud : integer range 0 to 655; -- A variable  used for counting
   	begin
   	  	if resetn = '0' then
@@ -51,7 +51,7 @@ begin
   	  	end if;
   	end process baud_clock;
   
-  	rising_edg : process(sysclk,resetn)
+  	rising_edg : process(sysclk,resetn) -- rising edge of baud clock process
   	begin
   	 	if resetn = '0' then
 		  	signal_A_q     <= '0';
@@ -64,7 +64,7 @@ begin
 
   	sig_arising_edge <= signal_A_q AND signal_A_q_not;
 
-  	transmission : process(sysclk,resetn)
+  	transmission : process(sysclk,resetn) -- uart transmission main FSM
 
   	variable sig_cntr  : integer range 0 to 15; -- A variable used for counting
   	constant end_bit   : std_logic_vector(2 downto 0) := "111"; -- Constant representing the end bit = "111"
