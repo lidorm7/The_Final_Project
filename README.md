@@ -1,6 +1,6 @@
 # The_Final_Project
 
- Each component folder must include a VHDL or VHD file containing the actual code. Similarly, simulation test files should  
+ Each component folder must include a VHDL or VHD file containing the actual code. Similarly, simulation test files should 
  adhere to the naming convention starting with "t_name".
 
 card A component list:
