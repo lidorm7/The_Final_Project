@@ -1,5 +1,5 @@
 # The_Final_Project
- final project
+
  Each component folder must include a VHDL or VHD file containing the actual code. Similarly, simulation test files should  
  adhere to the naming convention starting with "t_name".
 
